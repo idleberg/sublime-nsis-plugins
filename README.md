@@ -1,6 +1,6 @@
 # NSIS Completions for Sublime Text (Add-ons)
 
-[NSIS](http://nsis.sourceforge.net) syntax completions for [Sublime Text](http://www.sublimetext.com/), extending the [basic package](https://github.com/idleberg/NSIS-Sublime-Text)] with commands for third-party plug-ins.
+[NSIS](http://nsis.sourceforge.net) syntax completions for [Sublime Text](http://www.sublimetext.com/), extending the [basic package](https://github.com/idleberg/NSIS-Sublime-Text) with commands for third-party plug-ins.
 
 ### Supported plugins
 * [AccessControl](http://nsis.sourceforge.net/AccessControl_plug-in)
@@ -11,7 +11,7 @@
 * [Crypto](http://nsis.sourceforge.net/Crypto_plug-in)
 * [Dumpstate](http://nsis.sourceforge.net/DumpState_plug-in)
 * [ExecDos](http://nsis.sourceforge.net/ExecDos_plug-in)
-* [inetc](http://nsis.sourceforge.net/Inetc_plug-in)
+* [Inetc](http://nsis.sourceforge.net/Inetc_plug-in)
 * [InetLoad](http://nsis.sourceforge.net/InetLoad_plug-in)
 * [Locate](http://nsis.sourceforge.net/Locate_plugin)
 * [nsArray](http://nsis.sourceforge.net/Arrays_in_NSIS)
