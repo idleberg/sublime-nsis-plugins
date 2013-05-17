@@ -25,6 +25,7 @@
 * [ShellExecAsUser](http://nsis.sourceforge.net/ShellExecAsUser_plug-in)
 * [StdUtils](http://nsis.sourceforge.net/StdUtils_plug-in)
 * [SysRestore](http://nsis.sourceforge.net/SysRestore_plug-in)
+* [UltraModernUI](http://nsis.sourceforge.net/UltraModernUI)
 * [UserMgr](http://nsis.sourceforge.net/UserMgr_plug-in)
 
 ## Installation
