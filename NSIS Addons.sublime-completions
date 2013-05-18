@@ -43,20 +43,102 @@
                 { "trigger": "Aero::Apply", "contents": "Aero::Apply \"${1:options}\"" },
                 { "trigger": "Aero::Apply /NOBRANDING", "contents": "Aero::Apply /NOBRANDING \"${1:options}\"" },
 
+                // animate.nsh - http://nsis.sourceforge.net/Animate_plug-in
+                { "trigger": "animate::hwnd", "contents": "animate::hwnd" },
+                { "trigger": "animate::show /NOUNLOAD", "contents": "animate::show /NOUNLOAD ${1:options} \"${2:file}\""  },
+                { "trigger": "animate::show", "contents": "animate::show ${1:options} \"${2:file}\"" },
+                { "trigger": "animate::wait", "contents": "animate::wait ${1:options} ${2:time_in_ms}" },
+
+                // AnimGif.nsh - http://nsis.sourceforge.net/AnimGif_plug-in
+                { "trigger": "AnimGif::play /NOUNLOAD", "contents": "AnimGif::play /NOUNLOAD ${1:options} \"${2:file}.gif\""  },
+                { "trigger": "AnimGif::play", "contents": "AnimGif::play ${1:options} \"${2:file}.gif\"" },
+                { "trigger": "AnimGif::stop", "contents": "AnimGif::stop" },
+
+                // AppAssocReg.nsh - http://nsis.sourceforge.net/Application_Association_Registration_plug-in
+                { "trigger": "AppAssocReg::SetAppAsDefault", "contents": "AppAssocReg::SetAppAsDefault \"${1:app_name}\" \"${2:assoc_name}\" \"${1:type}\"" },
+                { "trigger": "AppAssocReg::QueryCurrentDefault", "contents": "AppAssocReg::QueryCurrentDefault \"${1:assoc_name}\" \"${2:type}\" \"${1:level}\"" },
+                { "trigger": "AppAssocReg::QueryAppIsDefault", "contents": "AppAssocReg::QueryAppIsDefault \"${1:app_name}\" \"${2:assoc_name}\" \"${3:type}\" \"${4:level}\"" },
+                { "trigger": "AppAssocReg::QueryAppIsDefaultAll", "contents": "AppAssocReg::QueryAppIsDefaultAll \"${1:app_name}\" \"${2:level}\"" },
+                { "trigger": "AppAssocReg::SetAppAsDefaultAll", "contents": "AppAssocReg::SetAppAsDefaultAll \"${1:app_name}\"" },
+                { "trigger": "AppAssocReg::ClearUserAssociations", "contents": "AppAssocReg::ClearUserAssociations" },
+
+                // ApplicationID.nsh - http://nsis.sourceforge.net/ApplicationID_plug-in
+                { "trigger": "ApplicationID::Set", "contents": "ApplicationID::Set \"${1:shortcut}.lnk\" \"${2:MyAppId}\"" },
+
                 // Base64.nsh - http://nsis.sourceforge.net/Base64
                 { "trigger": "Base64_Decode", "contents": "\\${Base64_Decode} \"${1:text}\"" },
                 { "trigger": "Base64_Encode", "contents": "\\${Base64_Encode} \"${1:text}\"" },
+
+                // BgWorker.dll - http://nsis.sourceforge.net/BgWorker_plug-in
+                { "trigger": "BgWorker::CallAndWait", "contents": "BgWorker::CallAndWait" },
+
+                // Blowfish - http://nsis.sourceforge.net/Blowfish_plug-in
+                { "trigger": "${BlowFish_Decrypt}", "contents": "blowfish::decrypt \\$${1:return_variable} \"${2:text_to_decrypt}\" \"${3:password_key}\"" },
+                { "trigger": "${BlowFish_Encrypt}", "contents": "blowfish::encrypt \\$${1:return_variable} \"${2:text_to_encrypt}\" \"${3:password_key}\"" },
+
+                // Blowfish++ - http://nsis.sourceforge.net/Blowfish%2B%2B_plug-in
+                { "trigger": "blowfish::decrypt", "contents": "blowfish::decrypt \"${1:text_to_decrypt}\" \"${2:password_key}\"" },
+                { "trigger": "blowfish::encrypt", "contents": "blowfish::encrypt \"${1:text_to_encrypt}\" \"${2:password_key}\"" },
 
                 // BrandingURL.dll - http://nsis.sourceforge.net/BrandingURL_plug-in
                 { "trigger": "BrandingURL::Set", "contents": "BrandingURL::Set /NOUNLOAD \"${1:red}\" \"${2:green}\" \"${3:blue}\" \"${4:url}\"" },
                 { "trigger": "BrandingURL::Unload", "contents": "BrandingURL::Unload" },
 
+                // CabDLL.dll - http://nsis.sourceforge.net/CabDLL_plug-in
+                { "trigger": "CabDLL::CabInfo", "contents": "CabDLL::CabInfo \"${1:file}.cab\"" },
+                { "trigger": "CabDLL::CabView", "contents": "CabDLL::CabView \"${1:file}.cab\"" },
+                { "trigger": "CabDLL::CabExtractAll", "contents": "CabExtractAll::CabView \"${1:file}.cab\" \"${2:target}\"" },
+
+                // CABSetup.dll - http://nsis.sourceforge.net/CABSetup_plug-in
+                { "trigger": "CABSetup::DataSetSize", "contents": "CABSetup::DataSetSize \"/REPORTFILE=${1:file}.rpt\" |" },
+                { "trigger": "CABSetup::Extract", "contents": "CABSetup::Extract \"/SOURCE=${1:file}.cab\" \"/TARGET=${2:target}\" ${3:options} |" },
+
+                // CallAnsiPlugin.dll - http://nsis.sourceforge.net/CallAnsiPlugin_plug-in
+                { "trigger": "CallAnsiPlugin::Call", "contents": "CallAnsiPlugin::Call \"${1:plugin_path}\" \"${2:function}\" \"${3:parameter_count}\" ${4:parameters}" },
+
+                // CDRom.dll - http://nsis.sourceforge.net/CharToASCII
+                { "trigger": "CDRom::Close", "contents": "CDRom::Close \"${1:drive}\" .${2:R0}" },
+                { "trigger": "CDRom::FindNext", "contents": "CDRom::FindNext /NOUNLOAD \"${1:drive}\" .${2:R0}" },
+                { "trigger": "CDRom::Open", "contents": "CDRom::Open \"${1:drive}\" .${2:R0}" },
+                { "trigger": "CDRom::Status", "contents": "CDRom::Status \"${1:drive}\" .${2:R0}" },
+                { "trigger": "CDRom::VolumeName", "contents": "CDRom::VolumeName \"${1:drive}\" .${2:R0}" },
+                { "trigger": "CDRom::VolumeSerialNumber", "contents": "CDRom::VolumeSerialNumber \"${1:drive}\" .${2:R0}" },
+
+                // ChangeRes.dll - http://nsis.sourceforge.net/ChangeRes_plug-in
+                { "trigger": "ChangeRes::ChangeResolution", "contents": "ChangeRes::ChangeResolution ${1:width} ${2:height} ${3:color_depth} ${4:frequency}" },
+
                 // CharToAscii.nsh - http://nsis.sourceforge.net/CharToASCII
                 { "trigger": "${CharToASCII}", "contents": "\\${CharToASCII} \\$${1:result_var} \"${2:character}\"" },
+
+                // CLR.dll - http://nsis.sourceforge.net/Call_.NET_DLL_methods_plug-in
+                { "trigger": "CLR::Call /NOUNLOAD", "contents": "CLR::Call /NOUNLOAD \"${1:file}.dll\" \"${2:class}\" ${options}" },
+                { "trigger": "CLR::Destroy", "contents": "CLR::Destroy" },
+
+                // CPUDesc.dll - http://nsis.sourceforge.net/CPUDesc_plug-in
+                { "trigger": "cpudesc::tell", "contents": "cpudesc::tell" },
+
+                // CPUFeatures.dll - http://nsis.sourceforge.net/CPUFeatures_plug-in
+                { "trigger": "${CPUFeatures.CheckFeature}", "contents": "\\${CPUFeatures.CheckFeature} \"${1:feature(s)}\" \\$${2:out_var}" },
+                { "trigger": "${CPUFeatures.CPUIsAMD}", "contents": "\\${CPUFeatures.CPUIsAMD}" },
+                { "trigger": "${CPUFeatures.CPUIsIntel}", "contents": "\\${CPUFeatures.CPUIsIntel}" },
+                { "trigger": "${CPUFeatures.CPUSupportsAll}", "contents": "\\${CPUFeatures.CPUSupportsAll}" },
+                { "trigger": "${CPUFeatures.CPUSupports}", "contents": "\\${CPUFeatures.CPUSupports}" },
+                { "trigger": "${CPUFeatures.GetCount}", "contents": "\\${CPUFeatures.GetCount} \\$${1:out_var}" },
+                { "trigger": "${CPUFeatures.GetFeatures}", "contents": "\\${CPUFeatures.GetFeatures} \\$${1:out_var}" },
+                { "trigger": "${CPUFeatures.GetFlags}", "contents": "\\${CPUFeatures.GetFlags} \\$${1:out_var}" },
+                { "trigger": "${CPUFeatures.GetVendor}", "contents": "\\${CPUFeatures.GetVendor} \\$${1:out_var}" },
+
+                // CRCCheck.dll - http://nsis.sourceforge.net/CRCCheck_plug-in
+                { "trigger": "CRCCheck::GenCRC", "contents": "CRCCheck::GenCRC \"${1:file}\"" },
 
                 // Crypto.dll - http://nsis.sourceforge.net/Crypto_plug-in
                 { "trigger": "Crypto::HashData", "contents": "Crypto::HashData \"${1:algorithm}\" \"${2:string}\"" },
                 { "trigger": "Crypto::HashFile", "contents": "Crypto::HashFile \"${1:algorithm}\" \"${2:file}\"" },
+
+                // CustomLicense.dll - http://nsis.sourceforge.net/CustomLicense_plug-in
+                { "trigger": "CustomLicense::LoadFile rtf", "contents": "CustomLicense::LoadFile \"${1:file}.rtf\" \\${2:hwnd}" },
+                { "trigger": "CustomLicense::LoadFile txt", "contents": "CustomLicense::LoadFile \"${1:file}.txt\" \\${2:hwnd}" },
+                { "trigger": "CustomLicense::LoadFile", "contents": "CustomLicense::LoadFile \"${1:file}\" \\${2:hwnd}" },
 
                 // DlgHost.dll - http://nsis.sourceforge.net/DlgHost_plug-in
                 { "trigger": "DlgHost::Close", "contents": "DlgHost::Close" },
@@ -157,6 +239,17 @@
                 { "trigger": "NsisIIS::IterateChunk", "contents": "NsisIIS::IterateChunk /NOUNLOAD \"${1:url}\"" },
                 { "trigger": "NsisIIS::IterateLine", "contents": "NsisIIS::IterateLine /NOUNLOAD \"${1:url}\"" },
                 { "trigger": "NsisUrlLib::UrlOpen", "contents": "NsisUrlLib::UrlOpen /NOUNLOAD \"${1:url}\"" },
+
+                // nxs.dll - http://nsis.sourceforge.net/Nxs_plug-in
+                { "trigger": "nxs::Destroy", "contents": "nxs::Destroy" },
+                { "trigger": "nxs::getWindow /NOUNLOAD", "contents": "nxs::getWindow /NOUNLOAD" },
+                { "trigger": "nxs::getWindow", "contents": "nxs::getWindow" },
+                { "trigger": "nxs::HasUserAborted /NOUNLOAD", "contents": "nxs::HasUserAborted /NOUNLOAD" },
+                { "trigger": "nxs::HasUserAborted", "contents": "nxs::HasUserAborted" },
+                { "trigger": "nxs::Show /NOUNLOAD", "contents": "nxs::Show /NOUNLOAD \"${1:caption}\" ${1:options}" },
+                { "trigger": "nxs::Show", "contents": "nxs::Show \"${1:caption}\" ${1:options}" },
+                { "trigger": "nxs::Update /NOUNLOAD", "contents": "nxs::Update /NOUNLOAD \"${1:caption}\" ${1:options}" },
+                { "trigger": "nxs::Update", "contents": "nxs::Update \"${1:caption}\" ${1:options}" },
 
                 // LockedList.dll - http://nsis.sourceforge.net/LockedList_plug-in
                 { "trigger": "LockedList::AddApplications", "contents": "LockedList::AddApplications" },
@@ -400,6 +493,7 @@
                 { "trigger": "ZipDLL::extractfile", "contents": "ZipDLL::extractfile \"${1:SOURCE}\" \"${2:DESTINATION}\" \"${3:FILE}\"" },
 
                 // Includes
+                { "trigger": "!include CPUFeatures", "contents": "!include CPUFeatures.nsh" },
                 { "trigger": "!include DlgHost", "contents": "!include DlgHost.nsh" },
                 { "trigger": "!include Locate", "contents": "!include Locate.nsh" },
                 { "trigger": "!include MUIEx", "contents": "!include MUIEx.nsh" },
@@ -411,14 +505,23 @@
                 { "trigger": "!include ZipDLL", "contents": "!include ZipDLL.nsh" },
 
                 // Plug-in options
+                { "trigger": "/ATIME", "contents": "/ATIME=${1:time_in_ms}" },
                 { "trigger": "/BANNER", "contents": "/BANNER=\"${1:text}\"" },
+                { "trigger": "/REPORTFILE", "contents": "/REPORTFILE=\"${1:file}.rpt\"" },
+                { "trigger": "/BGCOL", "contents": "/BGCOL=0x${1:RRGGBB}" },
+                { "trigger": "/SHOWRATE", "contents": "/SHOWRATE" },
+                { "trigger": "/BORDER", "contents": "/BORDER" },
                 { "trigger": "/CANCELTEXT", "contents": "/CANCELTEXT=\"${1:text}\"" },
                 { "trigger": "/CAPTION", "contents": "/CAPTION=\"${1:text}\"" },
+                { "trigger": "/COLOR", "contents": "/COLOR=0x${1:RRGGBB}" },
                 { "trigger": "/CONNECTTIMEOUT", "contents": "/CONNECTTIMEOUT=${1:time_in_s}" },
                 { "trigger": "/DETAILED", "contents": "/DETAILED" },
                 { "trigger": "/DISABLEFSR", "contents": "/DISABLEFSR" },
                 { "trigger": "/ENDFUNC", "contents": "/ENDFUNC=${1:function_name}" },
+                { "trigger": "/FLAGS", "contents": "/FLAGS=${1:flags}" },
+                { "trigger": "/HALIGN", "contents": "/HALIGN=${x_position}" },
                 { "trigger": "/HEADER", "contents": "/HEADER=\"${1:text}\"" },
+                { "trigger": "/HWND", "contents": "/HWND=${hwnd}" },
                 { "trigger": "/NOCOOKIES", "contents": "/NOCOOKIES" },
                 { "trigger": "/NOPROXY", "contents": "/NOPROXY" },
                 { "trigger": "/PASSWORD", "contents": "/PASSWORD=${1:password}" },
@@ -431,6 +534,7 @@
                 { "trigger": "/TRANSLATE", "contents": "/TRANSLATE=\"${1:language_parameters}\"" },
                 { "trigger": "/USER_AGENT", "contents": "/USER_AGENT=\"${1:user_agent}\"" },
                 { "trigger": "/USERNAME", "contents": "/USERNAME=\"${1:user_name}\"" },
+                { "trigger": "/VALIGN", "contents": "/VALIGN=${y_position}" },
                 { "trigger": "UF_ACCOUNTDISABLE", "contents": "UF_ACCOUNTDISABLE" },
                 { "trigger": "UF_DONT_EXPIRE_PASSWD", "contents": "UF_DONT_EXPIRE_PASSWD" },
                 { "trigger": "UF_PASSWD_CANT_CHANGE", "contents": "UF_PASSWD_CANT_CHANGE" },
