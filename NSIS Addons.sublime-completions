@@ -52,11 +52,16 @@
                 { "trigger": "BrandingURL::Unload", "contents": "BrandingURL::Unload" },
 
                 // CharToAscii.nsh - http://nsis.sourceforge.net/CharToASCII
-                { "trigger": "CharToASCII", "contents": "\\${CharToASCII} \\$${1:result_var} \"${2:character}\"" },
+                { "trigger": "${CharToASCII}", "contents": "\\${CharToASCII} \\$${1:result_var} \"${2:character}\"" },
 
                 // Crypto.dll - http://nsis.sourceforge.net/Crypto_plug-in
                 { "trigger": "Crypto::HashData", "contents": "Crypto::HashData \"${1:algorithm}\" \"${2:string}\"" },
                 { "trigger": "Crypto::HashFile", "contents": "Crypto::HashFile \"${1:algorithm}\" \"${2:file}\"" },
+
+                // DlgHost.dll - http://nsis.sourceforge.net/DlgHost_plug-in
+                { "trigger": "DlgHost::Close", "contents": "DlgHost::Close" },
+                { "trigger": "DlgHost::DlgBox", "contents": "DlgHost::DlgBox \"${1:options}\"" },
+                { "trigger": "DlgHost::SetClient", "contents": "DlgHost::SetClient \\$${1:handle}" },
 
                 // Dumpstate.dll - http://nsis.sourceforge.net/DumpState_plug-in
                 { "trigger": "Dumpstate::debug", "contents": "Dumpstate::debug" },
@@ -66,6 +71,9 @@
                 { "trigger": "ExecDos::exec", "contents": "ExecDos::exec \"${1:application_to_run}.exe\" \"${2:stdin_string}\" \"${3:log_file_name}.log\"" },
                 { "trigger": "ExecDos::isdone", "contents": "ExecDos::isdone /NOUNLOAD ${1:handle}" },
                 { "trigger": "ExecDos::wait", "contents": "ExecDos::wait ${1:handle}" },
+
+                // ExtractDllEx.dll
+                { "trigger": "ExtractDllEx::extract", "contents": "ExtractDllEx::extract" },
 
                 // Inetc.dll - http://nsis.sourceforge.net/Inetc_plug-in
                 { "trigger": "Inetc::get [/options]", "contents": "Inetc::get ${1:options} \"${2:url}\" \"${3:target_file}\"" },
@@ -80,6 +88,34 @@
                 // InetLoad.dll - http://nsis.sourceforge.net/InetLoad_plug-in
                 { "trigger": "InetLoad::load [/options]", "contents": "InetLoad::load ${1:options} \"${2:url}\" \"${3:target_file}\"" },
                 { "trigger": "InetLoad::load", "contents": "InetLoad::load \"${1:url}\" \"${2:target_file}\"" },
+
+                // InstDrv.dll - http://nsis.sourceforge.net/InstDrv_plug-in
+                { "trigger": "InstallOptionsEx::initDialog /NOUNLOAD", "contents": "InstallOptionsEx::initDialog /NOUNLOAD \"${1:file}.ini\"" },
+                { "trigger": "InstallOptionsEx::initDialog", "contents": "InstallOptionsEx::initDialog \"${1:file}.ini\"" },
+                { "trigger": "InstallOptionsEx::show", "contents": "InstallOptionsEx::show" },
+
+                // InstDrv.dll - http://nsis.sourceforge.net/InstDrv_plug-in
+                { "trigger": "InstDrv::CountDevices /NOUNLOAD", "contents": "InstDrv::CountDevices /NOUNLOAD" },
+                { "trigger": "InstDrv::CountDevices", "contents": "InstDrv::CountDevices" },
+                { "trigger": "InstDrv::CreateDevice /NOUNLOAD", "contents": "InstDrv::CreateDevice /NOUNLOAD" },
+                { "trigger": "InstDrv::CreateDevice", "contents": "InstDrv::CreateDevice" },
+                { "trigger": "InstDrv::DeleteOemInfFiles /NOUNLOAD", "contents": "InstDrv::DeleteOemInfFiles /NOUNLOAD" },
+                { "trigger": "InstDrv::DeleteOemInfFiles", "contents": "InstDrv::DeleteOemInfFiles" },
+                { "trigger": "InstDrv::InitDriverSetup /NOUNLOAD", "contents": "InstDrv::InitDriverSetup /NOUNLOAD \"${1:devClass}\" \"${2:drvHWID}\"" },
+                { "trigger": "InstDrv::InitDriverSetup", "contents": "InstDrv::InitDriverSetup \"${1:devClass}\" \"${2:drvHWID}\"" },
+                { "trigger": "InstDrv::InstallDriver /NOUNLOAD", "contents": "InstDrv::InstallDriver /NOUNLOAD \"${1:infPath}\"" },
+                { "trigger": "InstDrv::InstallDriver", "contents": "InstDrv::InstallDriver \"${1:infPath}\"" },
+                { "trigger": "InstDrv::RemoveAllDevices /NOUNLOAD", "contents": "InstDrv::RemoveAllDevices /NOUNLOAD" },
+                { "trigger": "InstDrv::RemoveAllDevices", "contents": "InstDrv::RemoveAllDevices" },
+                { "trigger": "InstDrv::StartSystemService /NOUNLOAD", "contents": "InstDrv::StartSystemService /NOUNLOAD \"${1:serviceName}\"" },
+                { "trigger": "InstDrv::StartSystemService", "contents": "InstDrv::StartSystemService \"${1:serviceName}\"" },
+                { "trigger": "InstDrv::StopSystemService /NOUNLOAD", "contents": "InstDrv::StopSystemService /NOUNLOAD \"${1:serviceName}\"" },
+                { "trigger": "InstDrv::StopSystemService", "contents": "InstDrv::StopSystemService \"${1:serviceName}\"" },
+
+                // Internet.dll - http://nsis.sourceforge.net/Internet_plug-in
+                { "trigger": "Internet::GetLocalHostIP", "contents": "Internet::GetLocalHostIP \\$${1:return_var}" },
+                { "trigger": "Internet::GetLocalHostName", "contents": "Internet::GetLocalHostName \\$${1:return_var}" },
+                { "trigger": "Internet::GetUrlCode", "contents": "Internet::GetUrlCode \"${1:site}\" \"${2:file}\" \\$${3:return_var}" },
 
                 // Locate.dll - http://nsis.sourceforge.net/Locate_plugin
                 { "trigger": "Locate::Close", "contents": "\\${Locate::Close} \"${1:handle}\"" },
@@ -111,11 +147,16 @@
                 { "trigger": "nsArray::Split", "contents": "nsArray::Join ${1:array} ${2:split_string} ${3:delimiter}" },
 
                 // nsArray.nsh - http://nsis.sourceforge.net/Arrays_in_NSIS
-                { "trigger": "ForEachIn", "contents": "\\${ForEachIn} ${1:array} \\$${2:key} \\$${3:value}\n\t${4}\n\\${Next}" },
-                { "trigger": "ForEachInReverse", "contents": "\\${ForEachInReverse} ${1:array} \\$${2:key} \\$${3:value}\n\t${4}\n\\${Next}" },
-                { "trigger": "nsArray_Copy", "contents": "\\${nsArray_Copy} ${1:source_array} ${1:destination_array}" },
-                { "trigger": "nsArray_CopyKeys", "contents": "\\${nsArray_CopyKeys} ${1:source_array} ${1:destination_array}" },
-                { "trigger": "nsArray_ToString", "contents": "\\${nsArray_ToString} ${1:array}" },
+                { "trigger": "${ForEachIn}", "contents": "\\${ForEachIn} ${1:array} \\$${2:key} \\$${3:value}\n\t${4}\n\\${Next}" },
+                { "trigger": "${ForEachInReverse}", "contents": "\\${ForEachInReverse} ${1:array} \\$${2:key} \\$${3:value}\n\t${4}\n\\${Next}" },
+                { "trigger": "${nsArray_Copy}", "contents": "\\${nsArray_Copy} ${1:source_array} ${1:destination_array}" },
+                { "trigger": "${nsArray_CopyKeys}", "contents": "\\${nsArray_CopyKeys} ${1:source_array} ${1:destination_array}" },
+                { "trigger": "${nsArray_ToString}", "contents": "\\${nsArray_ToString} ${1:array}" },
+
+                // NsisUrlLib.dll - http://nsis.sourceforge.net/NsisUrlLib_plug-in
+                { "trigger": "NsisIIS::IterateChunk", "contents": "NsisIIS::IterateChunk /NOUNLOAD \"${1:url}\"" },
+                { "trigger": "NsisIIS::IterateLine", "contents": "NsisIIS::IterateLine /NOUNLOAD \"${1:url}\"" },
+                { "trigger": "NsisUrlLib::UrlOpen", "contents": "NsisUrlLib::UrlOpen /NOUNLOAD \"${1:url}\"" },
 
                 // LockedList.dll - http://nsis.sourceforge.net/LockedList_plug-in
                 { "trigger": "LockedList::AddApplications", "contents": "LockedList::AddApplications" },
@@ -170,6 +211,11 @@
                 { "trigger": "Nsis7z::ExtractWithCallback", "contents": "Nsis7z::ExtractWithCallback \"${1:file}.7z\" \\$${2:var}" },
                 { "trigger": "Nsis7z::ExtractWithDetails", "contents": "Nsis7z::ExtractWithDetails \"${1:file}.7z\" \"${2:%s}\"" },
 
+                // nsisunz.dll - http://nsis.sourceforge.net/Nsisunz_plug-in
+                { "trigger": "nsisunz::Unzip", "contents": "nsisunz::Unzip \"${1:zip_file}\" \"${2:target}\"" },
+                { "trigger": "nsisunz::UnzipToLog", "contents": "nsisunz::UnzipToLog \"${1:zip_file}\" \"${2:target}\"" },
+                { "trigger": "nsisunz::UnzipToStack", "contents": "nsisunz::UnzipToStack \"${1:zip_file}\" \"${2:target}\"" },
+
                 // nsProcess.dll - http://nsis.sourceforge.net/NsProcess_plugin
                 { "trigger": "nsProcess::FindProcess", "contents": "\\${nsProcess::FindProcess} \"${1:file}.exe\" \\$${2:var}" },
                 { "trigger": "nsProcess::KillProcess", "contents": "\\${nsProcess::KillProcess} \"${1:file}.exe\" \\$${2:var}" },
@@ -215,6 +261,29 @@
                 { "trigger": "ShellExecAsUser print", "contents": "ShellExecAsUser::ShellExecAsUser print \"${1:command}\"" },
                 { "trigger": "ShellExecAsUser", "contents": "ShellExecAsUser::ShellExecAsUser ${1:action} \"${2:command}\"" },
 
+                // ShellLink.dll - http://nsis.sourceforge.net/ShellLink_plug-in
+                { "trigger": "ShellLink::GetShortCutWorkingDirectory", "contents": "ShellLink::GetShortCutWorkingDirectory \"${1:shortcut}.lnk\"" },
+                { "trigger": "ShellLink::GetShortCutTarget", "contents": "ShellLink::GetShortCutTarget \"${1:shortcut}.lnk\"" },
+                { "trigger": "ShellLink::GetShortCutArgs", "contents": "ShellLink::GetShortCutArgs \"${1:shortcut}.lnk\"" },
+                { "trigger": "ShellLink::GetShortCutIconLocation", "contents": "ShellLink::GetShortCutIconLocation \"${1:shortcut}.lnk\"" },
+                { "trigger": "ShellLink::GetShortCutIconIndex", "contents": "ShellLink::GetShortCutIconIndex \"${1:shortcut}.lnk\"" },
+                { "trigger": "ShellLink::GetShortCutShowMode", "contents": "ShellLink::GetShortCutShowMode \"${1:shortcut}.lnk\"" },
+                { "trigger": "ShellLink::GetShortCutHotkey", "contents": "ShellLink::GetShortCutHotkey \"${1:shortcut}.lnk\"" },
+                { "trigger": "ShellLink::GetShortCutDescription", "contents": "ShellLink::GetShortCutDescription \"${1:shortcut}.lnk\"" },
+                { "trigger": "ShellLink::SetShortCutWorkingDirectory", "contents": "ShellLink::SetShortCutWorkingDirectory \"${1:shortcut}.lnk\" \"${2:directory}\"" },
+                { "trigger": "ShellLink::SetShortCutTarget", "contents": "ShellLink::SetShortCutTarget \"${1:shortcut}.lnk\" \"${2:target_file}\"" },
+                { "trigger": "ShellLink::SetShortCutArgs", "contents": "ShellLink::SetShortCutArgs \"${1:shortcut}.lnk\" \"${2:parameters}\"" },
+                { "trigger": "ShellLink::SetShortCutIconLocation", "contents": "ShellLink::SetShortCutIconLocation \"${1:shortcut}.lnk\" \"${2:icon}.ico\"" },
+                { "trigger": "ShellLink::SetShortCutIconIndex", "contents": "ShellLink::SetShortCutIconIndex \"${1:shortcut}.lnk\" ${2:icon_index}" },
+                { "trigger": "ShellLink::SetShortCutShowMode", "contents": "ShellLink::SetShortCutShowMode \"${1:shortcut}.lnk\" \"${2:start_options}\"" },
+                { "trigger": "ShellLink::SetShortCutHotkey", "contents": "ShellLink::SetShortCutHotkey \"${1:shortcut}.lnk\" \"${2:keyboard_shortcut}\"" },
+                { "trigger": "ShellLink::SetShortCutDescription", "contents": "ShellLink::SetShortCutDescription \"${1:shortcut}.lnk\" \"${2:description}\"" },
+                { "trigger": "ShellLink::SetRunAsAdministrator", "contents": "ShellLink::SetRunAsAdministrator \"${1:shortcut}.lnk\"" },
+
+                // SkinnedButton.dll - http://nsis.sourceforge.net/SkinnedButton_plug-in
+                { "trigger": "SkinnedButton::skinit 0xRRGGBB", "contents": "SkinnedButton::skinit \"{1:BitmapImage}\" 0x\"${2:RRGGBB}\"" },
+                { "trigger": "SkinnedButton::skinit", "contents": "SkinnedButton::skinit \"{1:BitmapImage}\"" },
+
                 // StdUtils.dll - http://nsis.sourceforge.net/StdUtils_plug-in
                 { "trigger": "StdUtils::ExecShellAsUser", "contents": "\\${StdUtils::ExecShellAsUser} \\$${1:output} \"${2:file}\" ${3:verb} \"${2:args}\"" },
                 { "trigger": "StdUtils::ExecShellWait", "contents": "\\${StdUtils::ExecShellWait} \\$${1:output} \"${2:file}\" ${3:verb} \"${2:args}\"" },
@@ -249,55 +318,55 @@
                 { "trigger": "SysRestore::StartUninstallPoint", "contents": "SysRestore::StartUninstallPoint \"${1:text}\"" },
 
                 // UMUI.nsh - http://nsis.sourceforge.net/UltraModernUI
-                { "trigger": "define UMUI_ALTERNATEUNWELCOMEFINISHABORTPAGE_INI", "contents": "!define UMUI_ALTERNATEUNWELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\"" },
-                { "trigger": "define UMUI_ALTERNATEWELCOMEFINISHABORTPAGE_INI", "contents": "!define UMUI_ALTERNATEWELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\"" },
-                { "trigger": "define UMUI_BOTTOMIMAGE_BMP", "contents": "!define UMUI_BOTTOMIMAGE_BMP \"${1:bmp_file}\"" },
-                { "trigger": "define UMUI_BRANDINGTEXTBACKCOLOR", "contents": "!define UMUI_BRANDINGTEXTBACKCOLOR \"${1:RRGGBBR}\"" },
-                { "trigger": "define UMUI_BRANDINGTEXTFRONTCOLOR", "contents": "!define UMUI_BRANDINGTEXTFRONTCOLOR \"${1:RRGGBBR}\"" },
-                { "trigger": "define UMUI_CUSTOM_SKIN", "contents": "!define UMUI_CUSTOM_SKIN \"${1:custom_skin_path}\"" },
-                { "trigger": "define UMUI_HEADERIMAGE_BMP", "contents": "!define UMUI_HEADERIMAGE_BMP \"${1:bmp_file}\"" },
-                { "trigger": "define UMUI_LEFTIMAGE_BMP", "contents": "!define UMUI_LEFTIMAGE_BMP \"${1:bmp_file}\"" },
-                { "trigger": "define UMUI_NO_BOTTOMIMAGE", "contents": "!define UMUI_NO_BOTTOMIMAGE" },
-                { "trigger": "define UMUI_SKIN", "contents": "!define UMUI_SKIN \"${1:skin_name}\"" },
-                { "trigger": "define UMUI_TEXT_LIGHTCOLOR", "contents": "!define UMUI_TEXT_LIGHTCOLOR \"${1:RRGGBBR}\"" },
-                { "trigger": "define UMUI_UI", "contents": "!define UMUI_UI \"${1:ui_file}\"" },
-                { "trigger": "define UMUI_UI_COMPONENTSPAGE_NODESC", "contents": "!define UMUI_UI_COMPONENTSPAGE_NODESC \"${1:ui_file}\"" },
-                { "trigger": "define UMUI_UI_COMPONENTSPAGE_SMALLDESC", "contents": "!define UMUI_UI_COMPONENTSPAGE_SMALLDESC \"${1:ui_file}\"" },
-                { "trigger": "define UMUI_UNBOTTOMIMAGE_BMP", "contents": "!define UMUI_UNBOTTOMIMAGE_BMP \"${1:bmp_file}\"" },
-                { "trigger": "define UMUI_UNHEADERIMAGE_BMP", "contents": "!define UMUI_UNHEADERIMAGE_BMP \"${1:bmp_file}\"" },
-                { "trigger": "define UMUI_UNLEFTIMAGE_BMP", "contents": "!define UMUI_UNLEFTIMAGE_BMP \"${1:bmp_file}\"" },
-                { "trigger": "define UMUI_UNWELCOMEFINISHABORTPAGE_INI", "contents": "!define UMUI_UNWELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\"" },
-                { "trigger": "define UMUI_USE_ALTERNATE_PAGE", "contents": "!define UMUI_USE_ALTERNATE_PAGE" },
-                { "trigger": "define UMUI_USE_BG", "contents": "!define UMUI_USE_BG \"${1:background_skin_name}\"" },
-                { "trigger": "define UMUI_USE_BG", "contents": "!define UMUI_USE_BG \"${1:bgskin_name}\"" },
-                { "trigger": "define UMUI_USE_CUSTOMBG", "contents": "!define UMUI_USE_CUSTOMBG \"${1:background_skin_name}\"" },
-                { "trigger": "define UMUI_USE_CUSTOMBG", "contents": "!define UMUI_USE_CUSTOMBG" },
-                { "trigger": "define UMUI_USE_UNALTERNATE_PAGE", "contents": "!define UMUI_USE_UNALTERNATE_PAGE" },
-                { "trigger": "define UMUI_USE_UNALTERNATE_PAGE", "contents": "!define UMUI_USE_UNALTERNATE_PAGE" },
-                { "trigger": "define UMUI_WELCOMEFINISHABORTPAGE_INI", "contents": "!define UMUI_WELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\"" },
-                { "trigger": "insertmacro UMUI_PAGE_ABORT", "contents": "!insertmacro UMUI_PAGE_ABORT" },
-                { "trigger": "insertmacro UMUI_PAGE_ADDITIONALTASKS", "contents": "!insertmacro UMUI_PAGE_ADDITIONALTASKS \"${1:page_id}\" \"${1:function}\"" },
-                { "trigger": "insertmacro UMUI_PAGE_ALTERNATIVESTARTMENU", "contents": "!insertmacro UMUI_PAGE_ALTERNATIVESTARTMENU \"${1:page_id}\" \\$${2:var}" },
-                { "trigger": "insertmacro UMUI_PAGE_CONFIRM", "contents": "!insertmacro UMUI_PAGE_CONFIRM" },
-                { "trigger": "insertmacro UMUI_PAGE_FILEDISKREQUEST", "contents": "!insertmacro UMUI_PAGE_FILEDISKREQUEST" },
-                { "trigger": "insertmacro UMUI_PAGE_INFORMATION", "contents": "!insertmacro UMUI_PAGE_INFORMATION \"${1:text_file}\"" },
-                { "trigger": "insertmacro UMUI_PAGE_MAINTENANCE", "contents": "!insertmacro UMUI_PAGE_MAINTENANCE" },
-                { "trigger": "insertmacro UMUI_PAGE_MULTILANGUAGE", "contents": "!insertmacro UMUI_PAGE_MULTILANGUAGE" },
-                { "trigger": "insertmacro UMUI_PAGE_MULTILANGUAGE", "contents": "!insertmacro UMUI_PAGE_MULTILANGUAGE" },
-                { "trigger": "insertmacro UMUI_PAGE_SERIALNUMBER", "contents": "!insertmacro UMUI_PAGE_SERIALNUMBER \"${1:function}\"" },
-                { "trigger": "insertmacro UMUI_PAGE_SETUPTYPE", "contents": "!insertmacro UMUI_PAGE_SETUPTYPE" },
-                { "trigger": "insertmacro UMUI_PAGE_UPDATE", "contents": "!insertmacro UMUI_PAGE_UPDATE" },
-                { "trigger": "insertmacro UMUI_UNPAGE_ABORT", "contents": "!insertmacro UMUI_UNPAGE_ABORT" },
-                { "trigger": "insertmacro UMUI_UNPAGE_ADDITIONALTASKS", "contents": "!insertmacro UMUI_UNPAGE_ADDITIONALTASKS \"${1:page_id}\" \"${1:function}\"" },
-                { "trigger": "insertmacro UMUI_UNPAGE_CONFIRM", "contents": "!insertmacro UMUI_UNPAGE_CONFIRM" },
-                { "trigger": "insertmacro UMUI_UNPAGE_CONFIRM", "contents": "!insertmacro UMUI_UNPAGE_CONFIRM" },
-                { "trigger": "insertmacro UMUI_UNPAGE_FILEDISKREQUEST", "contents": "!insertmacro UMUI_UNPAGE_FILEDISKREQUEST" },
-                { "trigger": "insertmacro UMUI_UNPAGE_INFORMATION", "contents": "!insertmacro UMUI_UNPAGE_INFORMATION \"${1:text_file}\"" },
-                { "trigger": "insertmacro UMUI_UNPAGE_MULTILANGUAGE", "contents": "!insertmacro UMUI_UNPAGE_MULTILANGUAGE" },
-                { "trigger": "insertmacro UMUI_UNPAGE_SERIALNUMBER", "contents": "!insertmacro UMUI_UNPAGE_SERIALNUMBER \"${1:function}\"" },
-                { "trigger": "insertmacro UMUI_UNPAGE_SETUPTYPE", "contents": "!insertmacro UMUI_UNPAGE_SETUPTYPE" },
-                { "trigger": "macro UMUI_BG", "contents": "!macro UMUI_BG\n\t${1}\n!macroend" },
-                { "trigger": "macro UMUI_BG_Destroy", "contents": "!macro UMUI_BG_Destroy\n\t${1}\n!macroend" },
+                { "trigger": "!define UMUI_ALTERNATEUNWELCOMEFINISHABORTPAGE_INI", "contents": "!define UMUI_ALTERNATEUNWELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\"" },
+                { "trigger": "!define UMUI_ALTERNATEWELCOMEFINISHABORTPAGE_INI", "contents": "!define UMUI_ALTERNATEWELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\"" },
+                { "trigger": "!define UMUI_BOTTOMIMAGE_BMP", "contents": "!define UMUI_BOTTOMIMAGE_BMP \"${1:bmp_file}\"" },
+                { "trigger": "!define UMUI_BRANDINGTEXTBACKCOLOR", "contents": "!define UMUI_BRANDINGTEXTBACKCOLOR \"${1:RRGGBB}\"" },
+                { "trigger": "!define UMUI_BRANDINGTEXTFRONTCOLOR", "contents": "!define UMUI_BRANDINGTEXTFRONTCOLOR \"${1:RRGGBB}\"" },
+                { "trigger": "!define UMUI_CUSTOM_SKIN", "contents": "!define UMUI_CUSTOM_SKIN \"${1:custom_skin_path}\"" },
+                { "trigger": "!define UMUI_HEADERIMAGE_BMP", "contents": "!define UMUI_HEADERIMAGE_BMP \"${1:bmp_file}\"" },
+                { "trigger": "!define UMUI_LEFTIMAGE_BMP", "contents": "!define UMUI_LEFTIMAGE_BMP \"${1:bmp_file}\"" },
+                { "trigger": "!define UMUI_NO_BOTTOMIMAGE", "contents": "!define UMUI_NO_BOTTOMIMAGE" },
+                { "trigger": "!define UMUI_SKIN", "contents": "!define UMUI_SKIN \"${1:skin_name}\"" },
+                { "trigger": "!define UMUI_TEXT_LIGHTCOLOR", "contents": "!define UMUI_TEXT_LIGHTCOLOR \"${1:RRGGBB}\"" },
+                { "trigger": "!define UMUI_UI", "contents": "!define UMUI_UI \"${1:ui_file}\"" },
+                { "trigger": "!define UMUI_UI_COMPONENTSPAGE_NODESC", "contents": "!define UMUI_UI_COMPONENTSPAGE_NODESC \"${1:ui_file}\"" },
+                { "trigger": "!define UMUI_UI_COMPONENTSPAGE_SMALLDESC", "contents": "!define UMUI_UI_COMPONENTSPAGE_SMALLDESC \"${1:ui_file}\"" },
+                { "trigger": "!define UMUI_UNBOTTOMIMAGE_BMP", "contents": "!define UMUI_UNBOTTOMIMAGE_BMP \"${1:bmp_file}\"" },
+                { "trigger": "!define UMUI_UNHEADERIMAGE_BMP", "contents": "!define UMUI_UNHEADERIMAGE_BMP \"${1:bmp_file}\"" },
+                { "trigger": "!define UMUI_UNLEFTIMAGE_BMP", "contents": "!define UMUI_UNLEFTIMAGE_BMP \"${1:bmp_file}\"" },
+                { "trigger": "!define UMUI_UNWELCOMEFINISHABORTPAGE_INI", "contents": "!define UMUI_UNWELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\"" },
+                { "trigger": "!define UMUI_USE_ALTERNATE_PAGE", "contents": "!define UMUI_USE_ALTERNATE_PAGE" },
+                { "trigger": "!define UMUI_USE_BG", "contents": "!define UMUI_USE_BG \"${1:background_skin_name}\"" },
+                { "trigger": "!define UMUI_USE_BG", "contents": "!define UMUI_USE_BG \"${1:bgskin_name}\"" },
+                { "trigger": "!define UMUI_USE_CUSTOMBG", "contents": "!define UMUI_USE_CUSTOMBG \"${1:background_skin_name}\"" },
+                { "trigger": "!define UMUI_USE_CUSTOMBG", "contents": "!define UMUI_USE_CUSTOMBG" },
+                { "trigger": "!define UMUI_USE_UNALTERNATE_PAGE", "contents": "!define UMUI_USE_UNALTERNATE_PAGE" },
+                { "trigger": "!define UMUI_USE_UNALTERNATE_PAGE", "contents": "!define UMUI_USE_UNALTERNATE_PAGE" },
+                { "trigger": "!define UMUI_WELCOMEFINISHABORTPAGE_INI", "contents": "!define UMUI_WELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\"" },
+                { "trigger": "!insertmacro UMUI_PAGE_ABORT", "contents": "!insertmacro UMUI_PAGE_ABORT" },
+                { "trigger": "!insertmacro UMUI_PAGE_ADDITIONALTASKS", "contents": "!insertmacro UMUI_PAGE_ADDITIONALTASKS \"${1:page_id}\" \"${1:function}\"" },
+                { "trigger": "!insertmacro UMUI_PAGE_ALTERNATIVESTARTMENU", "contents": "!insertmacro UMUI_PAGE_ALTERNATIVESTARTMENU \"${1:page_id}\" \\$${2:var}" },
+                { "trigger": "!insertmacro UMUI_PAGE_CONFIRM", "contents": "!insertmacro UMUI_PAGE_CONFIRM" },
+                { "trigger": "!insertmacro UMUI_PAGE_FILEDISKREQUEST", "contents": "!insertmacro UMUI_PAGE_FILEDISKREQUEST" },
+                { "trigger": "!insertmacro UMUI_PAGE_INFORMATION", "contents": "!insertmacro UMUI_PAGE_INFORMATION \"${1:text_file}\"" },
+                { "trigger": "!insertmacro UMUI_PAGE_MAINTENANCE", "contents": "!insertmacro UMUI_PAGE_MAINTENANCE" },
+                { "trigger": "!insertmacro UMUI_PAGE_MULTILANGUAGE", "contents": "!insertmacro UMUI_PAGE_MULTILANGUAGE" },
+                { "trigger": "!insertmacro UMUI_PAGE_MULTILANGUAGE", "contents": "!insertmacro UMUI_PAGE_MULTILANGUAGE" },
+                { "trigger": "!insertmacro UMUI_PAGE_SERIALNUMBER", "contents": "!insertmacro UMUI_PAGE_SERIALNUMBER \"${1:function}\"" },
+                { "trigger": "!insertmacro UMUI_PAGE_SETUPTYPE", "contents": "!insertmacro UMUI_PAGE_SETUPTYPE" },
+                { "trigger": "!insertmacro UMUI_PAGE_UPDATE", "contents": "!insertmacro UMUI_PAGE_UPDATE" },
+                { "trigger": "!insertmacro UMUI_UNPAGE_ABORT", "contents": "!insertmacro UMUI_UNPAGE_ABORT" },
+                { "trigger": "!insertmacro UMUI_UNPAGE_ADDITIONALTASKS", "contents": "!insertmacro UMUI_UNPAGE_ADDITIONALTASKS \"${1:page_id}\" \"${1:function}\"" },
+                { "trigger": "!insertmacro UMUI_UNPAGE_CONFIRM", "contents": "!insertmacro UMUI_UNPAGE_CONFIRM" },
+                { "trigger": "!insertmacro UMUI_UNPAGE_CONFIRM", "contents": "!insertmacro UMUI_UNPAGE_CONFIRM" },
+                { "trigger": "!insertmacro UMUI_UNPAGE_FILEDISKREQUEST", "contents": "!insertmacro UMUI_UNPAGE_FILEDISKREQUEST" },
+                { "trigger": "!insertmacro UMUI_UNPAGE_INFORMATION", "contents": "!insertmacro UMUI_UNPAGE_INFORMATION \"${1:text_file}\"" },
+                { "trigger": "!insertmacro UMUI_UNPAGE_MULTILANGUAGE", "contents": "!insertmacro UMUI_UNPAGE_MULTILANGUAGE" },
+                { "trigger": "!insertmacro UMUI_UNPAGE_SERIALNUMBER", "contents": "!insertmacro UMUI_UNPAGE_SERIALNUMBER \"${1:function}\"" },
+                { "trigger": "!insertmacro UMUI_UNPAGE_SETUPTYPE", "contents": "!insertmacro UMUI_UNPAGE_SETUPTYPE" },
+                { "trigger": "!macro UMUI_BG", "contents": "!macro UMUI_BG\n\t${1}\n!macroend" },
+                { "trigger": "!macro UMUI_BG_Destroy", "contents": "!macro UMUI_BG_Destroy\n\t${1}\n!macroend" },
 
                 // UserMgr.dll - http://nsis.sourceforge.net/UltraModernUI
                 { "trigger": "UserMgr::CreateAccount", "contents": "UserMgr::CreateAccount \"${1:USERID}\" \"${2:PASSWORD}\" \"${3:COMMENT}\"" },
@@ -323,14 +392,23 @@
                 { "trigger": "UserMgr::GetSIDFromUserName", "contents": "UserMgr::GetSIDFromUserName \"${1:DOMAIN} \"${2:USERID}\"" },
                 { "trigger": "UserMgr::SetRegKeyAccess", "contents": "UserMgr::SetRegKeyAccess \"${1:USERID}\" \"${2:ROOTKEY}\" \"${3:REGKEY}\" \"${4:ACCESSMASK}\"" },
 
+                 // w7tbp.dll - http://nsis.sourceforge.net/TaskbarProgress_plug-in
+                 { "trigger": "w7tbp::Start", "contents": "w7tbp::Start" },
+
+                // ZipDLL.dll - http://nsis.sourceforge.net/ZipDLL
+                { "trigger": "ZipDLL::extractall", "contents": "ZipDLL::extractall \"${1:SOURCE}\" \"${2:DESTINATION}\"" },
+                { "trigger": "ZipDLL::extractfile", "contents": "ZipDLL::extractfile \"${1:SOURCE}\" \"${2:DESTINATION}\" \"${3:FILE}\"" },
+
                 // Includes
-                { "trigger": "include Locate", "contents": "!include Locate.nsh" },
-                { "trigger": "include MUIEx", "contents": "!include MUIEx.nsh" },
-                { "trigger": "include nsArray", "contents": "!include nsArray.nsh" },
-                { "trigger": "include nsProcess", "contents": "!include nsProcess.nsh" },
-                { "trigger": "include Registry", "contents": "!include Registry.nsh" },
-                { "trigger": "include StdUtils", "contents": "!include StdUtils.nsh" },
-                { "trigger": "include UMUI", "contents": "!include UMUI.nsh" },
+                { "trigger": "!include DlgHost", "contents": "!include DlgHost.nsh" },
+                { "trigger": "!include Locate", "contents": "!include Locate.nsh" },
+                { "trigger": "!include MUIEx", "contents": "!include MUIEx.nsh" },
+                { "trigger": "!include nsArray", "contents": "!include nsArray.nsh" },
+                { "trigger": "!include nsProcess", "contents": "!include nsProcess.nsh" },
+                { "trigger": "!include Registry", "contents": "!include Registry.nsh" },
+                { "trigger": "!include StdUtils", "contents": "!include StdUtils.nsh" },
+                { "trigger": "!include UMUI", "contents": "!include UMUI.nsh" },
+                { "trigger": "!include ZipDLL", "contents": "!include ZipDLL.nsh" },
 
                 // Plug-in options
                 { "trigger": "/BANNER", "contents": "/BANNER=\"${1:text}\"" },
