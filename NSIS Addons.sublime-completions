@@ -286,6 +286,18 @@
                 { "trigger": "HwInfo::GetVideoCardMemory", "contents": "HwInfo::GetVideoCardMemory" },
                 { "trigger": "HwInfo::GetVideoCardName", "contents": "HwInfo::GetVideoCardName" },
 
+                // IEFunctions.dll - http://nsis.sourceforge.net/IEFunctions_plug-in
+                { "trigger": "IEFunctions::CloseBrowser", "contents": "IEFunctions::CloseBrowser" },
+                { "trigger": "IEFunctions::OpenBrowser", "contents": "InstallOptionsEx::show /NOUNLOAD" },
+                { "trigger": "IEFunctions::ReleaseBrowser", "contents": "IEFunctions::ReleaseBrowser" },
+                { "trigger": "IEFunctions::ShowBar", "contents": "IEFunctions::ShowBar /NOUNLOAD \"${1:CLSID}\"" },
+                { "trigger": "IEFunctions::SurfTo", "contents": "IEFunctions::SurfTo /NOUNLOAD \"${1:url}\"" },
+
+                // InetBgDL.dll - http://nsis.sourceforge.net/InetBgDL_plug-in
+                { "trigger": "InetBgDL::Get /RESET", "contents": "InetBgDL::Get /RESET \"${1:url}\" \"local_file1\" /END" },
+                { "trigger": "InetBgDL::Get", "contents": "InetBgDL::Get \"${1:url}\" \"local_file1\" /END" },
+                { "trigger": "InetBgDL::GetStats", "contents": "InetBgDL::GetStats" },
+
                 // Inetc.dll - http://nsis.sourceforge.net/Inetc_plug-in
                 { "trigger": "Inetc::get [/options]", "contents": "Inetc::get ${1:options} \"${2:url}\" \"${3:target_file}\"" },
                 { "trigger": "Inetc::get", "contents": "Inetc::get \"${1:url}\" \"${2:target_file}\"" },
@@ -300,7 +312,7 @@
                 { "trigger": "InetLoad::load [/options]", "contents": "InetLoad::load ${1:options} \"${2:url}\" \"${3:target_file}\"" },
                 { "trigger": "InetLoad::load", "contents": "InetLoad::load \"${1:url}\" \"${2:target_file}\"" },
 
-                // InstDrv.dll - http://nsis.sourceforge.net/InstDrv_plug-in
+                // InstallOptionsEx.dll - http://nsis.sourceforge.net/InstallOptionsEx_plug-inn
                 { "trigger": "InstallOptionsEx::initDialog /NOUNLOAD", "contents": "InstallOptionsEx::initDialog /NOUNLOAD \"${1:file}.ini\"" },
                 { "trigger": "InstallOptionsEx::initDialog", "contents": "InstallOptionsEx::initDialog \"${1:file}.ini\"" },
                 { "trigger": "InstallOptionsEx::show", "contents": "InstallOptionsEx::show" },
@@ -328,6 +340,54 @@
                 { "trigger": "Internet::GetLocalHostName", "contents": "Internet::GetLocalHostName \\$${1:return_var}" },
                 { "trigger": "Internet::GetUrlCode", "contents": "Internet::GetUrlCode \"${1:site}\" \"${2:file}\" \\$${3:return_var}" },
 
+                // InvokeShellVerb.dll - http://nsis.sourceforge.net/Invoke_Shell_Verb_plugin
+                { "trigger": "InvokeShellVerb::DoIt", "contents": "InvokeShellVerb::DoIt \"${1:dir_path}\" \"${2:file_name}\" \"${3:resource_id}\"" },
+
+                // IP.dll - http://nsis.sourceforge.net/IP_plug-in
+                { "trigger": "IP::get_ip", "contents": "IP::get_ip" },
+
+                // IpConfig.dll - http://nsis.sourceforge.net/IpConfig_plugin
+                { "trigger": "IpConfig::GetAllNetworkAdaptersIDs", "contents": "IpConfig::GetAllNetworkAdaptersIDs" },
+                { "trigger": "IpConfig::GetAllNetworkAdaptersIDsCB", "contents": "IpConfig::GetAllNetworkAdaptersIDsCB \"${1:callback}\"" },
+                { "trigger": "IpConfig::GetDNSSuffixSearchList", "contents": "IpConfig::GetDNSSuffixSearchList" },
+                { "trigger": "IpConfig::GetEnabledNetworkAdaptersIDs", "contents": "IpConfig::GetEnabledNetworkAdaptersIDs" },
+                { "trigger": "IpConfig::GetEnabledNetworkAdaptersIDsCB", "contents": "IpConfig::GetEnabledNetworkAdaptersIDsCB \"${1:callback}\"" },
+                { "trigger": "IpConfig::GetHostName", "contents": "IpConfig::GetHostName" },
+                { "trigger": "IpConfig::GetNetworkAdapterConnectionID", "contents": "IpConfig::GetNetworkAdapterConnectionID \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterConnectionSpecificDNSSuffix", "contents": "IpConfig::GetNetworkAdapterConnectionSpecificDNSSuffix \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterDefaultIPGateways", "contents": "IpConfig::GetNetworkAdapterDefaultIPGateways \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterDefaultIPGatewaysCB", "contents": "IpConfig::GetNetworkAdapterDefaultIPGatewaysCB \"${1:network_adapter_id}\" \"${2:callback}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterDescription", "contents": "IpConfig::GetNetworkAdapterDescription \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterDHCPLeaseExpires", "contents": "IpConfig::GetNetworkAdapterDHCPLeaseExpires \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterDHCPLeaseObtained", "contents": "IpConfig::GetNetworkAdapterDHCPLeaseObtained \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterDHCPServer", "contents": "IpConfig::GetNetworkAdapterDHCPServer \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterDNSServers", "contents": "IpConfig::GetNetworkAdapterDNSServers \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterDNSServersCB", "contents": "IpConfig::GetNetworkAdapterDNSServersCB \"${1:network_adapter_id}\" \"${2:callback}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterIDFromDescription", "contents": "IpConfig::GetNetworkAdapterIDFromDescription \"${1:description}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterIDFromIPAddress", "contents": "IpConfig::GetNetworkAdapterIDFromIPAddress \"${1:ip_address}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterIDFromMACAddress", "contents": "IpConfig::GetNetworkAdapterIDFromMACAddress \"${1:mac_address}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterIPAddresses", "contents": "IpConfig::GetNetworkAdapterIPAddresses \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterIPAddressesCB", "contents": "IpConfig::GetNetworkAdapterIPAddressesCB \"${1:network_adapter_id}\" \"${2:callback}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterIPSubNets", "contents": "IpConfig::GetNetworkAdapterIPSubNets \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterIPSubNetsCB", "contents": "IpConfig::GetNetworkAdapterIPSubNetsCB \"${1:network_adapter_id}\" \"${2:callback}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterMACAddress", "contents": "IpConfig::GetNetworkAdapterMACAddress \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterPrimaryWINSServer", "contents": "IpConfig::GetNetworkAdapterPrimaryWINSServer \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterSecondaryWINSServer", "contents": "IpConfig::GetNetworkAdapterSecondaryWINSServer \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNetworkAdapterType", "contents": "IpConfig::GetNetworkAdapterType \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::GetNodeType", "contents": "IpConfig::GetPrimaryDNSSuffix" },
+                { "trigger": "IpConfig::GetPrimaryDNSSuffix", "contents": "IpConfig::GetPrimaryDNSSuffix" },
+                { "trigger": "IpConfig::IsIPRoutingEnabled", "contents": "IpConfig::IsIPRoutingEnabled" },
+                { "trigger": "IpConfig::IsNetworkAdapterAutoSense", "contents": "IpConfig::IsNetworkAdapterAutoSense \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::IsNetworkAdapterDHCPEnabled", "contents": "IpConfig::IsNetworkAdapterDHCPEnabled \"${1:network_adapter_id}\"" },
+                { "trigger": "IpConfig::IsWINSProxyEnabled", "contents": "IpConfig::IsWINSProxyEnabled" },
+
+                // KillProc.dll - http://nsis.sourceforge.net/KillProc_plug-in
+                { "trigger": "KillProc::FindProcesses", "contents": "KillProc::FindProcesses" },
+                { "trigger": "KillProc::KillProcesses", "contents": "KillProc::KillProcesses" },
+
+                // KillProcDLL.dll - http://nsis.sourceforge.net/KillProcDLL_plug-in
+                { "trigger": "KillProcDLL::KillProc", "contents": "KillProcDLL::KillProc \"${1:file}.exe\"" },
+
                 // Locate.dll - http://nsis.sourceforge.net/Locate_plugin
                 { "trigger": "Locate::Close", "contents": "\\${Locate::Close} \"${1:handle}\"" },
                 { "trigger": "Locate::Find", "contents": "\\${Locate::Find} \"${1:handle}\" \\$${2:path\\name} \\$${3:path} \\$${4:name} \\$${5:size} \\$${6:time} \\$${7:attributes}" },
@@ -335,6 +395,71 @@
                 { "trigger": "Locate::Open", "contents": "\\${Locate::Open} \"${1:paths}\" \"${2:options}\"" },
                 { "trigger": "Locate::RMDirEmpty", "contents": "\\${Locate::Find} \"${1:path}\" \"${2:options}\" \\$${3:sum_directories}" },
                 { "trigger": "Locate::Unload", "contents": "\\${Locate::Unload}" },
+
+                // LockedList.dll - http://nsis.sourceforge.net/LockedList_plug-in
+                { "trigger": "LockedList::AddApplications", "contents": "LockedList::AddApplications" },
+                { "trigger": "LockedList::AddCaption", "contents": "LockedList::AddCaption \"${1:caption}\"" },
+                { "trigger": "LockedList::AddClass", "contents": "LockedList::AddClass \"${1:class_with_wildcards}\"" },
+                { "trigger": "LockedList::AddCustom /icon", "contents": "LockedList::AddCustom /icon \"${1:icon}\" \"${2:application_name}\" \"${3:process_name}\" \\$${4:var}" },
+                { "trigger": "LockedList::AddCustom", "contents": "LockedList::AddCustom \"${1:application_name}\" \"${2:process_name}\" \\$${3:var}" },
+                { "trigger": "LockedList::AddFile", "contents": "LockedList::AddFile \"${1:file}\"" },
+                { "trigger": "LockedList::AddFolder", "contents": "LockedList::AddFolder \"${1:folder}\"" },
+                { "trigger": "LockedList::AddModule", "contents": "LockedList::AddModule \"${1:file}\"" },
+                { "trigger": "LockedList::Dialog", "contents": "LockedList::Dialog ${1:parameters}" },
+                { "trigger": "LockedList::EnumProcesses", "contents": "LockedList::EnumProcesses \\$${1:var}" },
+                { "trigger": "LockedList::FindProcess /yesno", "contents": "LockedList::FindProcess /yesno \"${1:file}\"" },
+                { "trigger": "LockedList::FindProcess", "contents": "LockedList::FindProcess \"${1:file}\"" },
+                { "trigger": "LockedList::InitDialog", "contents": "LockedList::InitDialog ${1:parameters}" },
+                { "trigger": "LockedList::IsFileLocked", "contents": "LockedList::IsFileLocked \"${1:file}\"" },
+                { "trigger": "LockedList::Show", "contents": "LockedList::Show" },
+                { "trigger": "LockedList::SilentPercentComplete", "contents": "LockedList::SilentPercentComplete" },
+                { "trigger": "LockedList::SilentWait /time", "contents": "LockedList::SilentWait /time ${1:time_in_ms}" },
+                { "trigger": "LockedList::SilentWait", "contents": "LockedList::SilentWait" },
+
+                // Linker.dll - http://nsis.sourceforge.net/Linker_plug-in
+                { "trigger": "Linker::link", "contents": "Linker::link /NOUNLOAD \\$${1:hwnd} \"${2:url}\"" },
+                { "trigger": "Linker::lvlink", "contents": "Linker::lvlink /NOUNLOAD \\$${1:hwnd} ${2:item} ${3:sub_item} \"${4:url}\"" },
+
+                // LiteFirewall.dll - http://nsis.sourceforge.net/LiteFirewall_Plugin
+                { "trigger": "liteFirewall::AddRule", "contents": "liteFirewall::AddRule \"${1:application_path}\" \"${2:rule_name}\"" },
+                { "trigger": "liteFirewall::RemoveRule", "contents": "liteFirewall::RemoveRule \"${1:application_path}\" \"${2:rule_name}\"" },
+
+                // LogEx.dll - http://nsis.sourceforge.net/LogEx_plug-in
+                { "trigger": "LogEx::AddFile [/options]", "contents": "LogEx::AddFile ${1:options} \"${2:prefix}\" \"${3:file}.log\"" },
+                { "trigger": "LogEx::AddFile", "contents": "LogEx::AddFile \"${1:prefix}\" \"${2:file}.log\"" },
+                { "trigger": "LogEx::Close", "contents": "LogEx::Close" },
+                { "trigger": "LogEx::Init bTruncateFile", "contents": "LogEx::Init true \"${2:file}.log\"" },
+                { "trigger": "LogEx::Init", "contents": "LogEx::Init \"${1:file}.txt\"" },
+                { "trigger": "LogEx::Write [/options]", "contents": "LogEx::Write ${1:options} \"${2:log_string}\"" },
+                { "trigger": "LogEx::Write", "contents": "LogEx::Write \"${1:log_string}\"" },
+
+                // MoreInfo.dll - http://nsis.sourceforge.net/MoreInfo_plug-in
+                { "trigger": "MoreInfo::GetComments", "contents": "MoreInfo::GetComments \"${1:file}\"" },
+                { "trigger": "MoreInfo::GetCompanyName", "contents": "MoreInfo::GetCompanyName \"${1:file}\"" },
+                { "trigger": "MoreInfo::GetFileDescription", "contents": "MoreInfo::GetFileDescription \"${1:file}\"" },
+                { "trigger": "MoreInfo::GetFileVersion", "contents": "MoreInfo::GetFileVersion \"${1:file}\"" },
+                { "trigger": "MoreInfo::GetLegalCopyright", "contents": "MoreInfo::GetLegalCopyright \"${1:file}\"" },
+                { "trigger": "MoreInfo::GetLegalTrademarks", "contents": "MoreInfo::GetLegalTrademarks \"${1:file}\"" },
+                { "trigger": "MoreInfo::GetOriginalFileName", "contents": "MoreInfo::GetOriginalFileName \"${1:file}\"" },
+                { "trigger": "MoreInfo::GetOSUserinterfaceLanguage", "contents": "MoreInfo::GetOSUserinterfaceLanguage" },
+                { "trigger": "MoreInfo::GetPrivateBuild", "contents": "MoreInfo::GetPrivateBuild \"${1:file}\"" },
+                { "trigger": "MoreInfo::GetProductName", "contents": "MoreInfo::GetProductName \"${1:file}\"" },
+                { "trigger": "MoreInfo::GetProductVersion", "contents": "MoreInfo::GetProductVersion \"${1:file}\"" },
+                { "trigger": "MoreInfo::GetSpecialBuild", "contents": "MoreInfo::GetSpecialBuild \"${1:file}\"" },
+                { "trigger": "MoreInfo::GetUserDefined", "contents": "MoreInfo::GetUserDefined \"${1:file}\" \"${2:property}\"" },
+
+                // MSIBanner.dll - http://nsis.sourceforge.net/MSIBanner_plug-in
+                { "trigger": "MSIBanner::Destroy /NOUNLOAD", "contents": "MSIBanner::Destroy" },
+                { "trigger": "MSIBanner::Move /NOUNLOAD", "contents": "MSIBanner::Move /NOUNLOAD ${1:progress_in_percent} \"${2:title}\"" },
+                { "trigger": "MSIBanner::Move", "contents": "MSIBanner::Move ${1:progress_in_percent} \"${2:title}\"" },
+                { "trigger": "MSIBanner::Pos /NOUNLOAD", "contents": "MSIBanner::Pos /NOUNLOAD ${1:progress_in_percent} \"${2:title}\"" },
+                { "trigger": "MSIBanner::Pos", "contents": "MSIBanner::Pos ${1:progress_in_percent} \"${2:title}\"" },
+                { "trigger": "MSIBanner::Reset /NOUNLOAD", "contents": "MSIBanner::Reset /NOUNLOAD \"${1:title}\"" },
+                { "trigger": "MSIBanner::Reset", "contents": "MSIBanner::Reset \"${1:title}\"" },
+                { "trigger": "MSIBanner::Show /NOUNLOAD", "contents": "MSIBanner::Show /NOUNLOAD \"${1:title}\"" },
+                { "trigger": "MSIBanner::Show", "contents": "MSIBanner::Show \"${1:title}\"" },
+                { "trigger": "MSIBanner::Update /NOUNLOAD", "contents": "MSIBanner::Update /NOUNLOAD \"${1:title}\"" },
+                { "trigger": "MSIBanner::Update", "contents": "MSIBanner::Update \"${1:title}\"" },
 
                 // nsArray.dll - http://nsis.sourceforge.net/Arrays_in_NSIS
                 { "trigger": "nsArray::Clear", "contents": "nsArray::Clear ${1:array}" },
@@ -369,65 +494,6 @@
                 { "trigger": "NsisIIS::IterateLine", "contents": "NsisIIS::IterateLine /NOUNLOAD \"${1:url}\"" },
                 { "trigger": "NsisUrlLib::UrlOpen", "contents": "NsisUrlLib::UrlOpen /NOUNLOAD \"${1:url}\"" },
 
-                // nxs.dll - http://nsis.sourceforge.net/Nxs_plug-in
-                { "trigger": "nxs::Destroy", "contents": "nxs::Destroy" },
-                { "trigger": "nxs::getWindow /NOUNLOAD", "contents": "nxs::getWindow /NOUNLOAD" },
-                { "trigger": "nxs::getWindow", "contents": "nxs::getWindow" },
-                { "trigger": "nxs::HasUserAborted /NOUNLOAD", "contents": "nxs::HasUserAborted /NOUNLOAD" },
-                { "trigger": "nxs::HasUserAborted", "contents": "nxs::HasUserAborted" },
-                { "trigger": "nxs::Show /NOUNLOAD", "contents": "nxs::Show /NOUNLOAD \"${1:caption}\" ${1:options}" },
-                { "trigger": "nxs::Show", "contents": "nxs::Show \"${1:caption}\" ${1:options}" },
-                { "trigger": "nxs::Update /NOUNLOAD", "contents": "nxs::Update /NOUNLOAD \"${1:caption}\" ${1:options}" },
-                { "trigger": "nxs::Update", "contents": "nxs::Update \"${1:caption}\" ${1:options}" },
-
-                // LockedList.dll - http://nsis.sourceforge.net/LockedList_plug-in
-                { "trigger": "LockedList::AddApplications", "contents": "LockedList::AddApplications" },
-                { "trigger": "LockedList::AddCaption", "contents": "LockedList::AddCaption \"${1:caption}\"" },
-                { "trigger": "LockedList::AddClass", "contents": "LockedList::AddClass \"${1:class_with_wildcards}\"" },
-                { "trigger": "LockedList::AddCustom /icon", "contents": "LockedList::AddCustom /icon \"${1:icon}\" \"${2:application_name}\" \"${3:process_name}\" \\$${4:var}" },
-                { "trigger": "LockedList::AddCustom", "contents": "LockedList::AddCustom \"${1:application_name}\" \"${2:process_name}\" \\$${3:var}" },
-                { "trigger": "LockedList::AddFile", "contents": "LockedList::AddFile \"${1:file}\"" },
-                { "trigger": "LockedList::AddFolder", "contents": "LockedList::AddFolder \"${1:folder}\"" },
-                { "trigger": "LockedList::AddModule", "contents": "LockedList::AddModule \"${1:file}\"" },
-                { "trigger": "LockedList::Dialog", "contents": "LockedList::Dialog ${1:parameters}" },
-                { "trigger": "LockedList::EnumProcesses", "contents": "LockedList::EnumProcesses \\$${1:var}" },
-                { "trigger": "LockedList::FindProcess /yesno", "contents": "LockedList::FindProcess /yesno \"${1:file}\"" },
-                { "trigger": "LockedList::FindProcess", "contents": "LockedList::FindProcess \"${1:file}\"" },
-                { "trigger": "LockedList::InitDialog", "contents": "LockedList::InitDialog ${1:parameters}" },
-                { "trigger": "LockedList::IsFileLocked", "contents": "LockedList::IsFileLocked \"${1:file}\"" },
-                { "trigger": "LockedList::Show", "contents": "LockedList::Show" },
-                { "trigger": "LockedList::SilentPercentComplete", "contents": "LockedList::SilentPercentComplete" },
-                { "trigger": "LockedList::SilentWait /time", "contents": "LockedList::SilentWait /time ${1:time_in_ms}" },
-                { "trigger": "LockedList::SilentWait", "contents": "LockedList::SilentWait" },
-
-                // MoreInfo.dll - http://nsis.sourceforge.net/MoreInfo_plug-in
-                { "trigger": "MoreInfo::GetComments", "contents": "MoreInfo::GetComments \"${1:file}\"" },
-                { "trigger": "MoreInfo::GetCompanyName", "contents": "MoreInfo::GetCompanyName \"${1:file}\"" },
-                { "trigger": "MoreInfo::GetFileDescription", "contents": "MoreInfo::GetFileDescription \"${1:file}\"" },
-                { "trigger": "MoreInfo::GetFileVersion", "contents": "MoreInfo::GetFileVersion \"${1:file}\"" },
-                { "trigger": "MoreInfo::GetLegalCopyright", "contents": "MoreInfo::GetLegalCopyright \"${1:file}\"" },
-                { "trigger": "MoreInfo::GetLegalTrademarks", "contents": "MoreInfo::GetLegalTrademarks \"${1:file}\"" },
-                { "trigger": "MoreInfo::GetOriginalFileName", "contents": "MoreInfo::GetOriginalFileName \"${1:file}\"" },
-                { "trigger": "MoreInfo::GetOSUserinterfaceLanguage", "contents": "MoreInfo::GetOSUserinterfaceLanguage" },
-                { "trigger": "MoreInfo::GetPrivateBuild", "contents": "MoreInfo::GetPrivateBuild \"${1:file}\"" },
-                { "trigger": "MoreInfo::GetProductName", "contents": "MoreInfo::GetProductName \"${1:file}\"" },
-                { "trigger": "MoreInfo::GetProductVersion", "contents": "MoreInfo::GetProductVersion \"${1:file}\"" },
-                { "trigger": "MoreInfo::GetSpecialBuild", "contents": "MoreInfo::GetSpecialBuild \"${1:file}\"" },
-                { "trigger": "MoreInfo::GetUserDefined", "contents": "MoreInfo::GetUserDefined \"${1:file}\" \"${2:property}\"" },
-
-                // MSIBanner.dll - http://nsis.sourceforge.net/MSIBanner_plug-in
-                { "trigger": "MSIBanner::Destroy /NOUNLOAD", "contents": "MSIBanner::Destroy" },
-                { "trigger": "MSIBanner::Move /NOUNLOAD", "contents": "MSIBanner::Move /NOUNLOAD ${1:progress_in_percent} \"${2:title}\"" },
-                { "trigger": "MSIBanner::Move", "contents": "MSIBanner::Move ${1:progress_in_percent} \"${2:title}\"" },
-                { "trigger": "MSIBanner::Pos /NOUNLOAD", "contents": "MSIBanner::Pos /NOUNLOAD ${1:progress_in_percent} \"${2:title}\"" },
-                { "trigger": "MSIBanner::Pos", "contents": "MSIBanner::Pos ${1:progress_in_percent} \"${2:title}\"" },
-                { "trigger": "MSIBanner::Reset /NOUNLOAD", "contents": "MSIBanner::Reset /NOUNLOAD \"${1:title}\"" },
-                { "trigger": "MSIBanner::Reset", "contents": "MSIBanner::Reset \"${1:title}\"" },
-                { "trigger": "MSIBanner::Show /NOUNLOAD", "contents": "MSIBanner::Show /NOUNLOAD \"${1:title}\"" },
-                { "trigger": "MSIBanner::Show", "contents": "MSIBanner::Show \"${1:title}\"" },
-                { "trigger": "MSIBanner::Update /NOUNLOAD", "contents": "MSIBanner::Update /NOUNLOAD \"${1:title}\"" },
-                { "trigger": "MSIBanner::Update", "contents": "MSIBanner::Update \"${1:title}\"" },
-
                 // Nsis7z.dll - http://nsis.sourceforge.net/Nsis7z_plug-in
                 { "trigger": "Nsis7z::Extract", "contents": "Nsis7z::Extract \"${1:file}.7z\"" },
                 { "trigger": "Nsis7z::ExtractWithCallback", "contents": "Nsis7z::ExtractWithCallback \"${1:file}.7z\" \\$${2:var}" },
@@ -454,6 +520,17 @@
                 { "trigger": "nsSCM::Start", "contents": "nsSCM::Start \"${1:name_of_service}\"" },
                 { "trigger": "nsSCM::Stop /NOUNLOAD", "contents": "nsSCM::Stop /NOUNLOAD \"${1:name_of_service}\"" },
                 { "trigger": "nsSCM::Stop", "contents": "nsSCM::Stop \"${1:name_of_service}\"" },
+
+                // nxs.dll - http://nsis.sourceforge.net/Nxs_plug-in
+                { "trigger": "nxs::Destroy", "contents": "nxs::Destroy" },
+                { "trigger": "nxs::getWindow /NOUNLOAD", "contents": "nxs::getWindow /NOUNLOAD" },
+                { "trigger": "nxs::getWindow", "contents": "nxs::getWindow" },
+                { "trigger": "nxs::HasUserAborted /NOUNLOAD", "contents": "nxs::HasUserAborted /NOUNLOAD" },
+                { "trigger": "nxs::HasUserAborted", "contents": "nxs::HasUserAborted" },
+                { "trigger": "nxs::Show /NOUNLOAD", "contents": "nxs::Show /NOUNLOAD \"${1:caption}\" ${1:options}" },
+                { "trigger": "nxs::Show", "contents": "nxs::Show \"${1:caption}\" ${1:options}" },
+                { "trigger": "nxs::Update /NOUNLOAD", "contents": "nxs::Update /NOUNLOAD \"${1:caption}\" ${1:options}" },
+                { "trigger": "nxs::Update", "contents": "nxs::Update \"${1:caption}\" ${1:options}" },
 
                 // Registry.dll - http://nsis.sourceforge.net/Registry_plug-in
                 { "trigger": "Registry::Close", "contents": "\\${Registry::Close} \"${1:handle}\"" },
