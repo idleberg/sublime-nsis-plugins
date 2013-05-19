@@ -140,22 +140,151 @@
                 { "trigger": "CustomLicense::LoadFile txt", "contents": "CustomLicense::LoadFile \"${1:file}.txt\" \\${2:hwnd}" },
                 { "trigger": "CustomLicense::LoadFile", "contents": "CustomLicense::LoadFile \"${1:file}\" \\${2:hwnd}" },
 
+                // DcryptDll.dll - http://nsis.sourceforge.net/DcryptDll_plug-in
+                { "trigger": "DcryptDll::Decrypt", "contents": "DcryptDll::Decrypt \"${1:function}\" \"${2:HexKeyFileName}\" \"${3:InputFileName}\" \"${4:OutputFileName}\"" },
+                { "trigger": "DcryptDll::Decrypt", "contents": "DcryptDll::Decrypt \"${1:function}\" \"${2:HexKeyFileName}\" \"${3:InputFileName}\" \"${4:OutputFileName}\"" },
+                { "trigger": "DcryptDll::HexDecoder", "contents": "DcryptDll::HexDecoder \"${1:function}\" \"${2:InputFileName}\" \"${3:OutputFileName}\"" },
+                { "trigger": "DcryptDll::HexEncoder", "contents": "DcryptDll::HexEncoder \"${1:function}\" \"${2:InputFileName}\" \"${3:OutputFileName}\"" },
+                { "trigger": "DcryptDll::LoadStr", "contents": "DcryptDll::LoadStr \"${1:InputFileName}\"" },
+                { "trigger": "DcryptDll::MD5Hash", "contents": "DcryptDll::MD5Hash \"${1:function}\" \"${2:InputFileName}\" \"${3:OutputFileName}\"" },
+
+                // Dialogs.dll - http://nsis.sourceforge.net/Dialogs_plug-in
+                { "trigger": "Dialogs::Author", "contents": "Dialogs::Author \\$${1:return_var}" },
+                { "trigger": "Dialogs::Folder", "contents": "Dialogs::Folder \"${1:caption}\" \"${2:text}\" \"${3:directory}\" \\$${4:return_var}" },
+                { "trigger": "Dialogs::InputBox", "contents": "Dialogs::InputBox \"${1:caption}\" \"${2:text}\" \"${3:OK}\" \"${4:cancel}\" \"${5:0|1}\" \\$${6:return_var}" },
+                { "trigger": "Dialogs::InputRegCode", "contents": "Dialogs::InputRegCode \"${1:caption}\" \"${2:text}\" \"${3:Username:}\" \"${4:Serial:}\" \"${5:key}\" \\$${6:return_var}" },
+                { "trigger": "Dialogs::Open", "contents": "Dialogs::Open \"${1:All Files|*.*}\" \"${2:default_mask}\" \"${3:caption}\" \"${4:directory}\" \\$${5:return_var}" },
+                { "trigger": "Dialogs::Ver", "contents": "Dialogs::Ver \\$${1:return_var}" },
+
                 // DlgHost.dll - http://nsis.sourceforge.net/DlgHost_plug-in
                 { "trigger": "DlgHost::Close", "contents": "DlgHost::Close" },
                 { "trigger": "DlgHost::DlgBox", "contents": "DlgHost::DlgBox \"${1:options}\"" },
                 { "trigger": "DlgHost::SetClient", "contents": "DlgHost::SetClient \\$${1:handle}" },
 
+                // DotNetChecker.dll - https://github.com/ProjectHuman/NsisDotNetChecker
+                { "trigger": "!insertmacro CheckNetFramework", "contents": "!insertmacro CheckNetFramework \"${1:version}\"" },
+
+                // DumpLog.dll - http://nsis.sourceforge.net/DumpLog_plug-in
+                { "trigger": "DumpLog::DumpLog", "contents": "DumpLog::DumpLog \"${1:log_file}.txt\" .${2:r0}" },
+
                 // Dumpstate.dll - http://nsis.sourceforge.net/DumpState_plug-in
                 { "trigger": "Dumpstate::debug", "contents": "Dumpstate::debug" },
+
+                // EBanner.dll - http://nsis.sourceforge.net/EBanner_plug-in
+                { "trigger": "EBanner::play /LOOP", "contents": "EBanner::play /NOUNLOAD  /LOOP \"${1:image}\"" },
+                { "trigger": "EBanner::play", "contents": "EBanner::play /NOUNLOAD \"${1:image}\"" },
+                { "trigger": "EBanner::show [/options]", "contents": "EBanner::show /NOUNLOAD ${1:options} \"${2:image}\"" },
+                { "trigger": "EBanner::show", "contents": "EBanner::show /NOUNLOAD \"${1:image}\"" },
+                { "trigger": "EBanner::stop", "contents": "EBanner::stop" },
+
+                // Email.dll - http://nsis.sourceforge.net/Email_validation_plug-in
+                { "trigger": "Email::EmailValidation", "contents": "Email::EmailValidation ${1:email}" },
+
+                // EmbeddedLists.dll - http://nsis.sourceforge.net/EmbeddedLists_plug-in
+                { "trigger": "EmbeddedLists::Dialog", "contents": "EmbeddedLists::Dialog \"${1:file}.ini\"" },
+                { "trigger": "EmbeddedLists::InitDialog", "contents": "EmbeddedLists::InitDialog \"${1:file}.ini\"" },
+                { "trigger": "EmbeddedLists::Show", "contents": "EmbeddedLists::Show" },
+
+                // EnumCDs.dll - http://nsis.sourceforge.net/EnumCDs_plug-in
+                { "trigger": "EnumCDs::next /NOUNLOAD", "contents": "EnumCDs::next /NOUNLOAD" },
+                { "trigger": "EnumCDs::next", "contents": "EnumCDs::next" },
+
+                // EnumINI.dll - http://nsis.sourceforge.net/EnumINI_plug-in
+                { "trigger": "EnumINI::KeyExist", "contents": "EnumINI::KeyExist \"${1:file}.ini\" \"${2:section}\" \"${2:key}\"" },
+                { "trigger": "EnumINI::Section", "contents": "EnumINI::Section \"${1:file}.ini\" \"${2:section}\"" },
+                { "trigger": "EnumINI::SectionExist", "contents": "EnumINI::SectionExist \"${1:file}.ini\" \"${2:section}\"" },
+                { "trigger": "EnumINI::SectionNames", "contents": "EnumINI::SectionNames \"${1:file}.ini\"" },
+                
+                // EventLog.dll - http://nsis.sourceforge.net/EventLog_plug-in
+                { "trigger": "EventLog::WriteEventLog", "contents": "EventLog::WriteEventLog \"${1:server}\" \"${2:log}\" \"${3:type}\" \"${4:type}\" \"${5:category}\" \"${6:message}\" \"${7:text}\"" },
+
+                // ExecCmd.dll - http://nsis.sourceforge.net/ExecCmd_plug-in
+                { "trigger": "ExecCmd::exec [/options]", "contents": "ExecCmd::exec ${1:options} \"${2:application_to_run}.exe\" \"${3:stdin_string}\"" },
+                { "trigger": "ExecCmd::exec", "contents": "ExecCmd::exec \"${1:application_to_run}.exe\" \"${2:stdin_string}\"" },
+                { "trigger": "ExecCmd::wait", "contents": "ExecCmd::wait \\${1:handle}" },
 
                 // ExecDos.dll - http://nsis.sourceforge.net/ExecDos_plug-in
                 { "trigger": "ExecDos::exec [/options]", "contents": "ExecDos::exec ${1:options} \"${2:application_to_run}.exe\" \"${3:stdin_string}\" \"${4:log_file_name}.log\"" },
                 { "trigger": "ExecDos::exec", "contents": "ExecDos::exec \"${1:application_to_run}.exe\" \"${2:stdin_string}\" \"${3:log_file_name}.log\"" },
                 { "trigger": "ExecDos::isdone", "contents": "ExecDos::isdone /NOUNLOAD ${1:handle}" },
-                { "trigger": "ExecDos::wait", "contents": "ExecDos::wait ${1:handle}" },
+                { "trigger": "ExecDos::wait", "contents": "ExecDos::wait \\${1:handle}" },
 
-                // ExtractDllEx.dll
+                // ExecPri.dll - http://nsis.sourceforge.net/ExecPri_plug-in
+                { "trigger": "ExecPri::ExecWait", "contents": "ExecPri::ExecWait \"${1:application_to_run}.exe\" \"${2:priority_class}\"" },
+
+                // ExecTimeout - http://nsis.sourceforge.net/ExecTimeout_plug-in
+                { "trigger": "${ExecTimeout}", "contents": "\\${ExecTimeout} \"${1:application_to_run}.exe\" ${2:timeout} ${3:terminate} \\${1:exit_code}" },
+                { "trigger": "Timeout::ExecTimeout", "contents": "Timeout::ExecTimeout \"${1:application_to_run}.exe\" ${2:timeout} ${3:terminate} \\${1:exit_code}" },
+
+                // ExDlg.dll - http://nsis.sourceforge.net/ExtractDLLEx_plug-in
+                { "trigger": "ExDlg::create_dlg", "contents": "ExDlg::create_dlg \"${1:dialog_id}\" \"${2:file}.res\"" },
+                { "trigger": "ExDlg::dealloc", "contents": "ExDlg::dealloc \\$${2:handle}" },
+                { "trigger": "ExDlg::push_windowtext", "contents": "ExDlg::push_windowtext \"${1:control_id}\" \\$\"${2:handle}\"" },
+
+                // ExLicensePage.dll http://nsis.sourceforge.net/ExLicensePage_plug-in
+                { "trigger": "ExLicensePage::showPage rtf", "contents": "ExLicensePage::showPage \"${1:file}.rtf\"" },
+                { "trigger": "ExLicensePage::showPage txt", "contents": "ExLicensePage::showPage \"${1:file}.txt\"" },
+                { "trigger": "ExLicensePage::showPage", "contents": "ExLicensePage::showPage \"${1:file}\"" },
+
+                // ExtractDllEx.dll - http://nsis.sourceforge.net/ExtractDLLEx_plug-in
                 { "trigger": "ExtractDllEx::extract", "contents": "ExtractDllEx::extract" },
+
+                // FindProcDLL.dll - http://nsis.sourceforge.net/FindProcDLL_plug-in
+                { "trigger": "FindProcDLL::FindProc", "contents": "EFindProcDLL::FindProc\"${1:file}.exe\"" },
+
+                // Firewall-Disabler.dll - http://nsis.sourceforge.net/Firewall-Disabler_plug-in
+                { "trigger": "Firewall-Disabler::DisableFirewall", "contents": "Firewall-Disabler::DisableFirewall" },
+                { "trigger": "Firewall-Disabler::EnableFirewall", "contents": "Firewall-Disabler::EnableFirewall" },
+                { "trigger": "Firewall-Disabler::QueryFirewall", "contents": "Firewall-Disabler::QueryFirewall" },
+
+                // FloatOP.dll - http://nsis.sourceforge.net/FloatOP_plug-in
+                { "trigger": "FloatOp::Autor", "contents": "FloatOp::Autor \\${1:result_var}" },
+                { "trigger": "FloatOp::D divide", "contents": "FloatOp::D \"${1:value1}\" \"${2:value2}\" \\$${3:result_var}" },
+                { "trigger": "FloatOp::M multiply", "contents": "FloatOp::M \"${1:value1}\" \"${2:value2}\" \\$${3:result_var}" },
+                { "trigger": "FloatOp::R subtract", "contents": "FloatOp::R \"${1:value1}\" \"${2:value2}\" \\$${3:result_var}" },
+                { "trigger": "FloatOp::S add", "contents": "FloatOp::S \"${1:value1}\" \"${2:value2}\" \\$${3:result_var}" },
+                { "trigger": "FloatOp::Ver", "contents": "FloatOp::Ver \\$${1:result_var}" },
+
+                // FontName - http://nsis.sourceforge.net/FontName_plug-in
+                { "trigger": "!insertmacro FontName", "contents": "!insertmacro FontName \"${1:file}.ttf\"" },
+
+                // FreeArc.dll - http://nsis.sourceforge.net/FreeArc_plug-in
+                { "trigger": "FreeArc::ExtractFreeArcArchive", "contents": "FreeArc::ExtractFreeArcArchive /NOUNLOAD \"${1:file}.arc\" ${2:0|1} \"${3:Extracting %s...}\"" },
+
+                // Games.dll - http://nsis.sourceforge.net/Games_plug-in
+                { "trigger": "Games::registerGame", "contents": "Games::registerGame \"/mcicon:${1:file}.png\" \"/mcrun:${2:shortcut}.lnk\" \"${3:file}.exe\"" },
+                { "trigger": "Games::unregisterGame", "contents": "Games::unregisterGame \"${1:file}.exe\"" },
+
+                // GetFirstRemovableDrive.dll - http://nsis.sourceforge.net/GetFirstRemovableDrive_plug-in
+                { "trigger": "GetFirstRemovable::GetFirst", "contents": "GetFirstRemovable::GetFirst" },
+                { "trigger": "GetFirstRemovable::GetAll", "contents": "GetFirstRemovable::GetAll" },
+
+                // GetVersion.dll - http://nsis.sourceforge.net/GetVersion_(Windows)_plug-in
+                { "trigger": "GetVersion::WindowsName", "contents": "GetVersion::WindowsName" },
+                { "trigger": "GetVersion::WindowsPlatformArchitecture", "contents": "GetVersion::WindowsPlatformArchitecture" },
+                { "trigger": "GetVersion::WindowsPlatformId", "contents": "GetVersion::WindowsPlatformId" },
+                { "trigger": "GetVersion::WindowsServerName", "contents": "GetVersion::WindowsServerName" },
+                { "trigger": "GetVersion::WindowsServicePack", "contents": "GetVersion::WindowsServicePack" },
+                { "trigger": "GetVersion::WindowsServicePackBuild", "contents": "GetVersion::WindowsServicePackBuild" },
+                { "trigger": "GetVersion::WindowsServicePackMajor", "contents": "GetVersion::WindowsServicePackMajor" },
+                { "trigger": "GetVersion::WindowsServicePackMinor", "contents": "GetVersion::WindowsServicePackMinor" },
+                { "trigger": "GetVersion::WindowsType", "contents": "GetVersion::WindowsType" },
+                { "trigger": "GetVersion::WindowsVersion", "contents": "GetVersion::WindowsVersion" },
+
+                // HandleFileDragDrop.dll - http://nsis.sourceforge.net/HandleFileDragDrop_plug-in
+                { "trigger": "HandleFileDragDrop::MakeDropWindow", "contents": "HandleFileDragDrop::MakeDropWindow \\$${1:handle} \\$${2:result_var}" },
+                { "trigger": "HandleFileDragDrop::NOP", "contents": "HandleFileDragDrop::NOP" },
+
+                // HelpButton.dll - http://nsis.sourceforge.net/HelpButton_plug-in
+                { "trigger": "HelpButton::show", "contents": "HelpButton::show /NOUNLOAD \"${1:x},${2:y}\" \"${3:button_text}\" \"${4:window_title}\" \"${5:window_text}\" ${6:options}" },
+                { "trigger": "HelpButton::end", "contents": "HelpButton::end" },
+
+                // HwInfo.dll - http://nsis.sourceforge.net/HwInfo_plug-in
+                { "trigger": "HwInfo::GetCpuNameAndSpeed", "contents": "HwInfo::GetCpuNameAndSpeed" },
+                { "trigger": "HwInfo::GetCpuSpeed", "contents": "HwInfo::GetCpuSpeed" },
+                { "trigger": "HwInfo::GetSystemMemory", "contents": "HwInfo::GetSystemMemory" },
+                { "trigger": "HwInfo::GetVideoCardMemory", "contents": "HwInfo::GetVideoCardMemory" },
+                { "trigger": "HwInfo::GetVideoCardName", "contents": "HwInfo::GetVideoCardName" },
 
                 // Inetc.dll - http://nsis.sourceforge.net/Inetc_plug-in
                 { "trigger": "Inetc::get [/options]", "contents": "Inetc::get ${1:options} \"${2:url}\" \"${3:target_file}\"" },
@@ -495,6 +624,7 @@
                 // Includes
                 { "trigger": "!include CPUFeatures", "contents": "!include CPUFeatures.nsh" },
                 { "trigger": "!include DlgHost", "contents": "!include DlgHost.nsh" },
+                { "trigger": "!include DotNetChecker", "contents": "!include DotNetChecker.nsh" },
                 { "trigger": "!include Locate", "contents": "!include Locate.nsh" },
                 { "trigger": "!include MUIEx", "contents": "!include MUIEx.nsh" },
                 { "trigger": "!include nsArray", "contents": "!include nsArray.nsh" },
