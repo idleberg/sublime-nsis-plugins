@@ -91,9 +91,20 @@
 * [Pwgen](http://nsis.sourceforge.net/Pwgen_plug-in)
 * [RegBin](http://nsis.sourceforge.net/RegBin_plug-in)
 * [Registry](http://nsis.sourceforge.net/Registry_plug-in)
+* [SAFER](http://nsis.sourceforge.net/SAFER_plug-in)
+* [ScrollLicense](http://nsis.sourceforge.net/ScrollLicense_plug-in)
+* [SelfDel](http://nsis.sourceforge.net/SelfDel_plug-in)
+* [Services](http://nsis.sourceforge.net/Services_plug-in)
+* [SFhelper](http://nsis.sourceforge.net/SFhelper_Plugin)
 * [ShellExecAsUser](http://nsis.sourceforge.net/ShellExecAsUser_plug-in)
 * [ShellLink](http://nsis.sourceforge.net/ShellLink_plug-in)
+* [ShutDown](http://nsis.sourceforge.net/ShutDown_plug-in)
+* [ShutdownAllow](http://nsis.sourceforge.net/ShutdownAllow_plug-in)
+* [SimpleBg](http://nsis.sourceforge.net/SimpleBg_plug-in)
 * [SkinnedButton](http://nsis.sourceforge.net/SkinnedButton_plug-in)
+* [SkinnedControls](http://nsis.sourceforge.net/SkinnedControls_plug-in)
+* [SpiderBanner](http://nsis.sourceforge.net/SpiderBanner_plug-in)
+* [Stack](http://nsis.sourceforge.net/Stack_plug-in)
 * [StdUtils](http://nsis.sourceforge.net/StdUtils_plug-in)
 * [SysRestore](http://nsis.sourceforge.net/SysRestore_plug-in)
 * [TAPIhelp](http://nsis.sourceforge.net/TAPIhelp_plug-in)
@@ -113,11 +124,14 @@
 * [w7tbp](http://nsis.sourceforge.net/TaskbarProgress_plug-in)
 * [WinShell](http://nsis.sourceforge.net/WinShell_plug-in)
 * [WmiInspector](http://nsis.sourceforge.net/WmiInspector_plug-in)
+* [XiMoL](http://nsis.sourceforge.net/XiMoL_plug-in)
+* [XML](http://nsis.sourceforge.net/XML_plug-in)
+* [xtInfoPlugin](http://nsis.sourceforge.net/XtInfoPlugin_plug-in)
 * [ZipDLL](http://nsis.sourceforge.net/ZipDLL_plug-in)
 
 ## Installation
 
-The easiest way to install the package is to use [Package Control](http://wbond.net/sublime_packages/package_control).
+The easiest way to install the package is to use [Package Control](http://wbond.net/sublime_packages/package_control), but the package is still pending.
 
 ### Download Manually
 
