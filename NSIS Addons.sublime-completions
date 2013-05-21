@@ -474,13 +474,28 @@
                 { "trigger": "MSIBanner::Update /NOUNLOAD", "contents": "MSIBanner::Update /NOUNLOAD \"${1:title}\"" },
                 { "trigger": "MSIBanner::Update", "contents": "MSIBanner::Update \"${1:title}\"" },
 
-                // MSSQL OLEDB - http://nsis.sourceforge.net/MSSQL_OLEDB_plug-in
-                { "trigger": "${OLEDB}::SQL_Execute", "contents": "\\${OLEDB}::SQL_Execute \"${1:query}\"" },
-                { "trigger": "${OLEDB}::SQL_ExecuteScript", "contents": "\\${OLEDB}::SQL_ExecuteScript \"${1:script}\"" },
-                { "trigger": "${OLEDB}::SQL_GetError", "contents": "\\${OLEDB}::SQL_GetError" },
-                { "trigger": "${OLEDB}::SQL_GetRow", "contents": "\\${OLEDB}::SQL_GetRow" },
-                { "trigger": "${OLEDB}::SQL_Logon", "contents": "\\${OLEDB}::SQL_Logon \"${1:server}\" \"${2:user}\" \"${3:password}\"" },
-                { "trigger": "${OLEDB}::SQL_Logout", "contents": "\\${OLEDB}::SQL_Logout" },
+                // MSSQL_OLEDB.dll - http://nsis.sourceforge.net/MSSQL_OLEDB_plug-in
+                { "trigger": "MSSQL_OLEDB::SQL_Execute", "contents": "MSSQL_OLEDB::SQL_Execute \"${1:query}\"" },
+                { "trigger": "MSSQL_OLEDB::SQL_ExecuteScript", "contents": "MSSQL_OLEDB::SQL_ExecuteScript \"${1:script}\"" },
+                { "trigger": "MSSQL_OLEDB::SQL_GetError", "contents": "MSSQL_OLEDB::SQL_GetError" },
+                { "trigger": "MSSQL_OLEDB::SQL_GetRow", "contents": "MSSQL_OLEDB::SQL_GetRow" },
+                { "trigger": "MSSQL_OLEDB::SQL_Logon", "contents": "MSSQL_OLEDB::SQL_Logon \"${1:server}\" \"${2:user}\" \"${3:password}\"" },
+                { "trigger": "MSSQL_OLEDB::SQL_Logout", "contents": "MSSQL_OLEDB::SQL_Logout" },
+
+                // name2ip.dll - http://nsis.sourceforge.net/Name2ip_plugin
+                { "trigger": "${name2ip::FindCloseIP}", "contents": "\\${name2ip::FindCloseIP}" },
+                { "trigger": "${name2ip::FindFirstIP}", "contents": "\\${name2ip::FindFirstIP} \"${1:host_name}\" \\$${2:result}" },
+                { "trigger": "${name2ip::FindNextIP}", "contents": "\\${name2ip::FindNextIP} \\$${1:result}" },
+
+                // NewAdvSplash.dll - http://nsis.sourceforge.net/NewAdvSplash_plug-in
+                { "trigger": "NewAdvSplash::hwnd", "contents": "NewAdvSplash::hwnd" },
+                { "trigger": "NewAdvSplash::play", "contents": "NewAdvSplash::play /NOUNLOAD ${1:options} \"${2:file}\"" },
+                { "trigger": "NewAdvSplash::show /NOUNLOAD", "contents": "NewAdvSplash::show /NOUNLOAD ${1:delay} ${2:fade_in} ${3:fade_out} ${4:0xRRGGBB} ${5:options} \"${6:file}\"" },
+                { "trigger": "NewAdvSplash::show", "contents": "NewAdvSplash::show ${1:delay} ${2:fade_in} ${3:fade_out} ${4:0xRRGGBB} ${5:options} \"${6:file}\"" },
+                { "trigger": "NewAdvSplash::stop", "contents": "NewAdvSplash::stop ${1:options}" },
+
+                // NotifyIcon.dll - http://nsis.sourceforge.net/NotifyIcon_plug-in
+                { "trigger": "NotifyIcon::Icon", "contents": "NotifyIcon::Icon ${1:flags} ${2:arguments}" },
 
                 // nsArray.dll - http://nsis.sourceforge.net/Arrays_in_NSIS
                 { "trigger": "nsArray::Clear", "contents": "nsArray::Clear ${1:array}" },
@@ -510,25 +525,281 @@
                 { "trigger": "${nsArray_CopyKeys}", "contents": "\\${nsArray_CopyKeys} ${1:source_array} ${1:destination_array}" },
                 { "trigger": "${nsArray_ToString}", "contents": "\\${nsArray_ToString} ${1:array}" },
 
-                // NsisUrlLib.dll - http://nsis.sourceforge.net/NsisUrlLib_plug-in
-                { "trigger": "NsisIIS::IterateChunk", "contents": "NsisIIS::IterateChunk /NOUNLOAD \"${1:url}\"" },
-                { "trigger": "NsisIIS::IterateLine", "contents": "NsisIIS::IterateLine /NOUNLOAD \"${1:url}\"" },
-                { "trigger": "NsisUrlLib::UrlOpen", "contents": "NsisUrlLib::UrlOpen /NOUNLOAD \"${1:url}\"" },
-
+                // NsExpr.nsh - http://nsis.sourceforge.net/NsExpr_plug-in
+                { "trigger": "${Expr}", "contents": "\\${Expr} ${1:expression}" },
+                { "trigger": "${ExprEval}", "contents": "\\${ExprEval} ${1:expression}" },
+                
                 // Nsis7z.dll - http://nsis.sourceforge.net/Nsis7z_plug-in
                 { "trigger": "Nsis7z::Extract", "contents": "Nsis7z::Extract \"${1:file}.7z\"" },
                 { "trigger": "Nsis7z::ExtractWithCallback", "contents": "Nsis7z::ExtractWithCallback \"${1:file}.7z\" \\$${2:var}" },
                 { "trigger": "Nsis7z::ExtractWithDetails", "contents": "Nsis7z::ExtractWithDetails \"${1:file}.7z\" \"${2:%s}\"" },
+
+                // nsisdt.dll - http://nsis.sourceforge.net/NSIS-Date_plug-in
+                { "trigger": "nsisdt::currentdate", "contents": "nsisdt::currentdate" },
+
+                // nsisos.dll - http://nsis.sourceforge.net/NSIS-OS_plug-in
+                { "trigger": "nsisos::osversion", "contents": "nsisos::osversion" },
+
+                // NsisCrypt.dll - http://nsis.sourceforge.net/NsisCrypt_plug-in
+                { "trigger": "NsisCrypt::Base64Decode", "contents": "NsisCrypt::Base64Decode \"${1:string}\"" },
+                { "trigger": "NsisCrypt::DecryptSymmetric", "contents": "NsisCrypt::DecryptSymmetric \"${1:encoded_cipher}\" \"${2:algorithm}\" \"${3:encoded_key}\" \"${4:encoded_iv}\"" },
+                { "trigger": "NsisCrypt::EncryptSymmetric", "contents": "NsisCrypt::EncryptSymmetric \"${1:string}\" \"${2:algorithm}\" \"${3:encoded_key}\" \"${4:encoded_iv}\"" },
+                { "trigger": "NsisCrypt::Hash", "contents": "NsisCrypt::Hash \"${1:string}\" \"${2:algorithm}\"" },
+
+                // nsisDDE.dll - http://nsis.sourceforge.net/NsisDDE_plug-in
+                { "trigger": "nsisDDE::Execute", "contents": "nsisDDE::Execute ${1:options} \"${2:appname}\" \"${3:commands}\"" },
+
+                // NSISDirEx.dll - http://nsis.sourceforge.net/NSISDirEx_plug-in
+                { "trigger": "NSISDirEx::AddInstFile", "contents": "NSISDirEx::AddInstFile /NOUNLOAD \"${1:file}\" \"${2:text}\"" },
+                { "trigger": "NSISDirEx::GetUncompressedSize", "contents": "NSISDirEx::GetUncompressedSize /NOUNLOAD" },
+                { "trigger": "NSISDirEx::Init", "contents": "NSISDirEx::Init /NOUNLOAD \"${1:caption}\" \"${2:text}\" \"${3:directory}\" \"${2:required_space}\"" },
+                { "trigger": "NSISDirEx::Install", "contents": "NSISDirEx::Install \"${1:directory}\"" },
+                
+                // nsisFile.dll - http://nsis.sourceforge.net/NsisFile_plug-in
+                { "trigger": "nsisFile::BinToHex", "contents": "nsisFile::BinToHex \"${1:string}\"" },
+                { "trigger": "nsisFile::FileFindBytes", "contents": "nsisFile::FileFindBytes \"${1:file_handle}\" \"${2:string}\" \"${3:length}\"" },
+                { "trigger": "nsisFile::FileReadBytes", "contents": "nsisFile::FileReadBytes \"${1:file_handle}\" \"${2:string}\"" },
+                { "trigger": "nsisFile::FileTruncate", "contents": "nsisFile::FileTruncate \"${1:file_handle}\"" },
+                { "trigger": "nsisFile::HexToBin", "contents": "nsisFile::HexToBin \"${1:hex_string}\"" },
+
+                // nsisFirewall.dll - http://nsis.sourceforge.net/NsisFirewall_plug-in
+                { "trigger": "nsisFirewall::AddAuthorizedApplication", "contents": "nsisFirewall::AddAuthorizedApplication \"${1:application_path}\" \"${2:rule_name}\"" },
+                { "trigger": "nsisFirewall::RemoveAuthorizedApplication", "contents": "nsisFirewall::RemoveAuthorizedApplication \"${1:application_path}\"" },
+
+                // NsisIIS.dll - http://nsis.sourceforge.net/NsisIIS_plug-in
+                { "trigger": "NsisIIS::CreateAppPool", "contents": "NsisIIS::CreateAppPool \"${1:app_pool}\"" },
+                { "trigger": "NsisIIS::CreateVDir", "contents": "NsisIIS::CreateVDir \"${1:vdir_name}\" \"${2:physical_path}\"" },
+                { "trigger": "NsisIIS::CreateWebSite", "contents": "NsisIIS::CreateWebSite \"${1:name}\" \"${2:physical_path}\" \"${3:host}:${4:port}\"" },
+                { "trigger": "NsisIIS::DeleteAppPool", "contents": "NsisIIS::DeleteAppPool \"${1:app_pool}\"" },
+                { "trigger": "NsisIIS::DeleteVDir", "contents": "NsisIIS::DeleteVDir \"${1:vdir_name}\"" },
+                { "trigger": "NsisIIS::DeleteWebSite", "contents": "NsisIIS::DeleteWebSite \"${1:index}\"" },
+                { "trigger": "NsisIIS::GetAppPool", "contents": "NsisIIS::GetAppPool \"${1:app_pool}\"" },
+                { "trigger": "NsisIIS::GetIIsInfo", "contents": "NsisIIS::GetIIsInfo" },
+                { "trigger": "NsisIIS::GetVDir", "contents": "NsisIIS::GetVDir \"${1:vdir_name}\"" },
+                { "trigger": "NsisIIS::GetWebSite", "contents": "NsisIIS::GetWebSite \"${1:index}\"" },
+                { "trigger": "NsisIIS::ListAppPools", "contents": "NsisIIS::ListAppPools" },
+                { "trigger": "NsisIIS::ListVDirs", "contents": "NsisIIS::ListVDirs" },
+                { "trigger": "NsisIIS::ListWebSites", "contents": "NsisIIS::ListWebSites" },
+                { "trigger": "NsisIIS::Pause", "contents": "NsisIIS::Pause" },
+                { "trigger": "NsisIIS::Resume", "contents": "NsisIIS::Resume" },
+                { "trigger": "NsisIIS::Start", "contents": "NsisIIS::Start" },
+                { "trigger": "NsisIIS::Stop", "contents": "NsisIIS::Stop" },
+
+                // NSISList.dll - http://nsis.sourceforge.net/NSISList_plug-in
+                { "trigger": "${List.Add}", "contents": "\\${List.Add} \"${1:name}\" \"${2:item}\"" },
+                { "trigger": "${List.AllRev}", "contents": "\\${List.AllRev} \"${1:name}\"" },
+                { "trigger": "${List.All}", "contents": "\\${List.All} \"${1:name}\"" },
+                { "trigger": "${List.Append}", "contents": "\\${List.Append} \"${1:name}\" \"${2:items}\"" },
+                { "trigger": "${List.Clear}", "contents": "\\${List.Clear} \"${1:name}\"" },
+                { "trigger": "${List.Concat}", "contents": "\\${List.Concat} \"${1:key_to}\" \"${2:key_from}\"" },
+                { "trigger": "${List.Copy}", "contents": "\\${List.Copy} \"${1:name}\" \"${2:index}\" ${3:count}" },
+                { "trigger": "${List.Count}", "contents": "\\${List.Count} \\$${1:var_out} \"${2:name}\"" },
+                { "trigger": "${List.Create}", "contents": "\\${List.Create} \"${1:name}\"" },
+                { "trigger": "${List.Debug}", "contents": "\\${List.Debug}" },
+                { "trigger": "${List.Delete}", "contents": "\\${List.Delete} \"${1:name}\" \"${2:index}\"" },
+                { "trigger": "${List.Destroy}", "contents": "\\${List.Destroy} \"${1:name}\"" },
+                { "trigger": "${List.Dim}", "contents": "\\${List.Dim} \"${1:name}\" ${2:size}" },
+                { "trigger": "${List.Exch}", "contents": "\\${List.Exch} \"${1:name}\" \"${2:index1}\" \"${3:index2}\"" },
+                { "trigger": "${List.First}", "contents": "\\${List.First} \\$${1:var_out} \"${2:name}\"" },
+                { "trigger": "${List.Get}", "contents": "\\${List.Get} \\$${1:var_out} \"${2:name}\" \"${3:index}\"" },
+                { "trigger": "${List.Index}", "contents": "\\${List.Index} \\$${1:var_out} \"${2:name}\" \"${3:index}\"" },
+                { "trigger": "${List.Insert}", "contents": "\\${List.Insert} \"${1:name}\" \"${2:index}\" \"${3:item}\"" },
+                { "trigger": "${List.Last}", "contents": "\\${List.Last} \\$${1:var_out} \"${2:name}\"" },
+                { "trigger": "${List.Load}", "contents": "\\${List.Load} \\$${1:var_out} \"${2:name}\" \"${3:filename}\"" },
+                { "trigger": "${List.Move}", "contents": "\\${List.Move} \"${1:name}\" \"${2:index_from}\" \"${3:index_to}\"" },
+                { "trigger": "${List.Pop}", "contents": "\\${List.Pop} \\$${1:var_out} \"${2:name}\"" },
+                { "trigger": "${List.Reverse}", "contents": "\\${List.Reverse} \"${1:name}\"" },
+                { "trigger": "${List.Save}", "contents": "\\${List.Save} \\$${1:var_out} \"${2:name}\" \"${3:filename}\"" },
+                { "trigger": "${List.Set}", "contents": "\\${List.Set} \"${1:name}\" \"${2:index}\" \"${3:value}\"" },
+                { "trigger": "${List.Sort}", "contents": "\\${List.Sort} \"${1:name}\"" },
+                { "trigger": "${List.Unload}", "contents": "\\${List.Unload}" },
+                { "trigger": "${Map.Clear}", "contents": "\\${Map.Clear} \"${1:name}\"" },
+                { "trigger": "${Map.Create}", "contents": "\\${Map.Create} \"${1:name}\"" },
+                { "trigger": "${Map.Destroy}", "contents": "\\${Map.Destroy} \"${1:name}\"" },
+                { "trigger": "${Map.Get}", "contents": "\\${Map.Get} \\$${1:var_out} \"${2:name}\" \"${3:key}\"" },
+                { "trigger": "${Map.Get}", "contents": "\\${Map.Set} \"${1:name}\" \"${2:key}\" \"${3:value}\"" },
+                { "trigger": "${Map.Unset}", "contents": "\\${Map.Unset} \"${1:name}\" \"${2:key}\"" },
+
+                // NSISLog.dll - http://nsis.sourceforge.net/NSISLog_plug-in
+                { "trigger": "nsislog::log", "contents": "nsislog::log \"${1:file}.log\" \"${2:text}\"" },
+
+                // nsisMultiMon.dll - http://nsis.sourceforge.net/NSISMultiMon_plug-in
+                { "trigger": "nsisMultiMon::CenterInstallerOnMonitor", "contents": "nsisMultiMon::CenterInstallerOnMonitor ${1:id} ${2:work_area}" },
+                { "trigger": "nsisMultiMon::GetActiveMonitorCount", "contents": "nsisMultiMon::GetActiveMonitorCount" },
+                { "trigger": "nsisMultiMon::GetAllMonitorCount", "contents": "nsisMultiMon::GetAllMonitorCount" },
+                { "trigger": "nsisMultiMon::GetMonitorName", "contents": "nsisMultiMon::GetMonitorName ${1:id}" },
+                { "trigger": "nsisMultiMon::GetMonitorRect", "contents": "nsisMultiMon::GetMonitorRect ${1:id}" },
+                { "trigger": "nsisMultiMon::GetVirtualDesktopRect", "contents": "nsisMultiMon::GetVirtualDesktopRect" },
+                { "trigger": "nsisMultiMon::GetWorkArea", "contents": "nsisMultiMon::GetWorkArea ${1:id}" },
+                { "trigger": "nsisMultiMon::IsPointOnMonitor", "contents": "nsisMultiMon::IsPointOnMonitor ${1:id} ${2:x} ${3:y}" },
+
+                // NSISpcre.dll - http://nsis.sourceforge.net/NSISpcre_plug-in
+                { "trigger": "${RECaptureMatches}", "contents": "\\${RECaptureMatches} \\$${1:result} \"${2:pattern}\" \"${3:subject}\" \"${4:partial}\"" },
+                { "trigger": "${RECheckPattern}", "contents": "\\${RECheckPattern} \\$${1:result} \"${2:pattern}\"" },
+                { "trigger": "${REClearAllOptions}", "contents": "\\${REClearAllOptions}" },
+                { "trigger": "${REClearOption}", "contents": "\\${REClearOption} \"${1:option}\"" },
+                { "trigger": "${REFindClose}", "contents": "\\${REFindClose}" },
+                { "trigger": "${REFindNext}", "contents": "\\${REFindNext} \\$${1:result} \"${2:pattern}\" \"${3:subject}\"" },
+                { "trigger": "${REFind}", "contents": "\\${REFind} \\$${1:result} \"${2:pattern}\" \"${3:subject}\"" },
+                { "trigger": "${REGetOption}", "contents": "\\${REGetOption} \\$${1:result} \"${2:option}\"" },
+                { "trigger": "${REMatches}", "contents": "\\${REMatches} \\$${1:result} \"${2:pattern}\" \"${3:subject}\" \"${4:partial}\"" },
+                { "trigger": "${REQuoteMeta}", "contents": "\\${REQuoteMeta} \\$${1:result} \"${2:subject}\"" },
+                { "trigger": "${REReplace}", "contents": "\\${REReplace} \\$${1:result} \"${2:pattern}\" \"${3:subject}\" \"${4:replacement}\" ${5:replace_all}" },
+                { "trigger": "${RESetOption}", "contents": "\\${RESetOption} \"${1:option}\"" },
+
+                // NsisSlideshow.dll - http://nsis.sourceforge.net/NsisSlideshow_plug-in
+                { "trigger": "nsisSlideshow::show [/options]", "contents": "nsisSlideshow::show /NOUNLOAD ${1:options} \"${2:picture}\"" },
+                { "trigger": "nsisSlideshow::show", "contents": "nsisSlideshow::show /NOUNLOAD \"${1:picture}\"" },
+                { "trigger": "nsisSlideshow::stop", "contents": "nsisSlideshow::stop" },
+
+                // nsisStartMenu.dll - http://nsis.sourceforge.net/NsisStartMenu_plug-in
+                { "trigger": "nsisStartMenu::RegenerateFolder", "contents": "nsisStartMenu::RegenerateFolder \"${1:path}\"" },
 
                 // nsisunz.dll - http://nsis.sourceforge.net/Nsisunz_plug-in
                 { "trigger": "nsisunz::Unzip", "contents": "nsisunz::Unzip \"${1:zip_file}\" \"${2:target}\"" },
                 { "trigger": "nsisunz::UnzipToLog", "contents": "nsisunz::UnzipToLog \"${1:zip_file}\" \"${2:target}\"" },
                 { "trigger": "nsisunz::UnzipToStack", "contents": "nsisunz::UnzipToStack \"${1:zip_file}\" \"${2:target}\"" },
 
+                // NsisUrlLib.dll - http://nsis.sourceforge.net/NsisUrlLib_plug-in
+                { "trigger": "NsisIIS::IterateChunk", "contents": "NsisIIS::IterateChunk /NOUNLOAD \"${1:url}\"" },
+                { "trigger": "NsisIIS::IterateLine", "contents": "NsisIIS::IterateLine /NOUNLOAD \"${1:url}\"" },
+                { "trigger": "NsisUrlLib::UrlOpen", "contents": "NsisUrlLib::UrlOpen /NOUNLOAD \"${1:url}\"" },
+
+                // nsisXML.dll - http://nsis.sourceforge.net/NsisXML_plug-in_(by_Joel)
+                { "trigger": "${nsisXML->Build}", "contents": "\\${nsisXML->Build} \\$${1:var_ret}" },
+                { "trigger": "${nsisXML->CloseXML}", "contents": "\\${nsisXML->CloseXML}" },
+                { "trigger": "${nsisXML->CreateComment}", "contents": "\\${nsisXML->CreateComment} \"${1:xpath_instruction}\" \"${2:string_element}\"" },
+                { "trigger": "${nsisXML->CreateElement}", "contents": "\\${nsisXML->CreateElement} \"${1:xpath_instruction}\" \"${2:string_element}\" \"${3:do_tab}\"" },
+                { "trigger": "${nsisXML->Create}", "contents": "\\${nsisXML->Create}" },
+                { "trigger": "${nsisXML->Display}", "contents": "\\${nsisXML->Display}" },
+                { "trigger": "${nsisXML->LoadXML}", "contents": "\\${nsisXML->LoadXML} \"${1:path_of_the_future_xml_file}\" \"${2:xml_string_tree}\"" },
+                { "trigger": "${nsisXML->OpenXML}", "contents": "\\${nsisXML->OpenXML} \"${1:path_of_xml_file}\"" },
+                { "trigger": "${nsisXML->Release}", "contents": "\\${nsisXML->Release} \"${1:path_of_xml_file}\"" },
+                { "trigger": "${nsisXML->removeAttr}", "contents": "\\${nsisXML->removeAttr} \"${1:xpath_instruction}\" \"${2:name_of_the_attribute_to_remove}\"" },
+                { "trigger": "${nsisXML->removeChild}", "contents": "\\${nsisXML->removeChild} \"${1:xpath_instruction}\" \"${2:index_of_the_child_to_remove}\"" },
+                { "trigger": "${nsisXML->SetElementAttr}", "contents": "\\${nsisXML->SetElementAttr} \"${1:xpath_instruction}\" \"${2:Attribute}\" \"${3:Value}\"" },
+                { "trigger": "${nsisXML->SetElementText}", "contents": "\\${nsisXML->SetElementText} \"${1:xpath_instruction}\" \"${2:string_text}\"" },
+                { "trigger": "${nsisXML->TestBegin}", "contents": "\\${nsisXML->TestBegin}" },
+                { "trigger": "${nsisXML->TestEnd}", "contents": "\\${nsisXML->TestEnd}" },
+                { "trigger": "${nsisXML->TestFile}", "contents": "\\${nsisXML->TestFile}" },
+                { "trigger": "${nsisXML->TestShow}", "contents": "\\${nsisXML->TestShow}" },
+                { "trigger": "${nsisXML->TestXML}", "contents": "\\${nsisXML->TestXML}" },
+                { "trigger": "${nsisXML->TidyFile}", "contents": "\\${nsisXML->TidyFile}" },
+                { "trigger": "${nsisXML->xml}", "contents": "\\${nsisXML->xml} \"${1:var_ret}\"" },
+                { "trigger": "${nsisXML->xPath}", "contents": "\\${nsisXML->xPath} \"${1:path_of_xml_file}\" \"${2:xpath_instruction}\" \\$${3:var_ret}" },
+
+                // nsisXML.dll - http://nsis.sourceforge.net/NsisXML_plug-in_(by_Wizou)
+                { "trigger": "nsisXML::appendChild", "contents": "nsisXML::appendChild" },
+                { "trigger": "nsisXML::create", "contents": "nsisXML::create" },
+                { "trigger": "nsisXML::createElement", "contents": "nsisXML::createElement \"${1:tag}\"" },
+                { "trigger": "nsisXML::createProcessingInstruction", "contents": "nsisXML::createProcessingInstruction \"${1:target}\" \"${2:data}\"" },
+                { "trigger": "nsisXML::getAttribute", "contents": "nsisXML::getAttribute \"${1:attributes}\"" },
+                { "trigger": "nsisXML::getText", "contents": "nsisXML::getText" },
+                { "trigger": "nsisXML::insertBefore", "contents": "nsisXML::insertBefore" },
+                { "trigger": "nsisXML::load", "contents": "nsisXML::load \"${1:file}.xml\"" },
+                { "trigger": "nsisXML::loadAndValidate", "contents": "nsisXML::loadAndValidate \"${1:file}.xml\"" },
+                { "trigger": "nsisXML::parentNode", "contents": "nsisXML::parentNode" },
+                { "trigger": "nsisXML::release", "contents": "nsisXML::release \"${1:node_reference}\"" },
+                { "trigger": "nsisXML::removeChild", "contents": "nsisXML::removeChild" },
+                { "trigger": "nsisXML::save", "contents": "nsisXML::save \"${1:file}.xml\"" },
+                { "trigger": "nsisXML::select", "contents": "nsisXML::select \"${1:xpath_expression}\"" },
+                { "trigger": "nsisXML::setAttribute", "contents": "nsisXML::setAttribute \"${1:attributes}\" \"${2:value}\"" },
+                { "trigger": "nsisXML::setText", "contents": "nsisXML::setText \"${1:text}\"" },
+                
+                // nsJSON.dll - http://nsis.sourceforge.net/NsJSON_plug-in
+                { "trigger": "nsJSON::Delete", "contents": "nsJSON::Delete \"${1:NodePath}\" /end" },
+                { "trigger": "nsJSON::Get /count", "contents": "nsJSON::Get /count \"${1:NodePath}\" /end" },
+                { "trigger": "nsJSON::Get /exists", "contents": "nsJSON::Get /exists \"${1:NodePath}\" /end" },
+                { "trigger": "nsJSON::Get /isempty", "contents": "nsJSON::Get /isempty \"${1:NodePath}\" /end" },
+                { "trigger": "nsJSON::Get /key", "contents": "nsJSON::Get /key \"${1:NodePath}\" /end" },
+                { "trigger": "nsJSON::Get /noexpand", "contents": "nsJSON::Get /noexpand \"${1:NodePath}\" /end" },
+                { "trigger": "nsJSON::Get /type", "contents": "nsJSON::Get /type \"${1:NodePath}\" /end" },
+                { "trigger": "nsJSON::Get", "contents": "nsJSON::Get \"${1:NodePath}\" /end" },
+                { "trigger": "nsJSON::Serialize /file /unicode", "contents": "nsJSON::Serialize /file /unicode \"${1:file}.json\"" },
+                { "trigger": "nsJSON::Serialize /file", "contents": "nsJSON::Serialize /file \"${1:file}.json\"" },
+                { "trigger": "nsJSON::Serialize /format /file /unicode", "contents": "nsJSON::Serialize /file /unicode \"${1:file}.json\"" },
+                { "trigger": "nsJSON::Serialize /format /file", "contents": "nsJSON::Serialize /file \"${1:file}.json\"" },
+                { "trigger": "nsJSON::Serialize format", "contents": "nsJSON::Serialize /format" },
+                { "trigger": "nsJSON::Serialize", "contents": "nsJSON::Serialize" },
+                { "trigger": "nsJSON::Set /file", "contents": "nsJSON::Set \"${1:NodePath}\" /file \"${2:file}.json\"" },
+                { "trigger": "nsJSON::Set /unicode", "contents": "nsJSON::Set \"${1:NodePath}\" /file /unicode \"${2:file}.json\"" },
+                { "trigger": "nsJSON::Set /value", "contents": "nsJSON::Set \"${1:NodePath}\" /value \"${2:value}\"" },
+
+                // nsKeyHook.dll - http://nsis.sourceforge.net/NsKeyHook_plug-in
+                { "trigger": "${ANY_ALT}", "contents": "\\${ANY_ALT}" },
+                { "trigger": "${ANY_CTRL}", "contents": "\\${ANY_CTRL}" },
+                { "trigger": "${ANY_SHIFT}", "contents": "\\${ANY_SHIFT}" },
+                { "trigger": "${LEFT_ALT}", "contents": "\\${LEFT_ALT}" },
+                { "trigger": "${LEFT_CTRL}", "contents": "\\${LEFT_CTRL}" },
+                { "trigger": "${LEFT_SHIFT}", "contents": "\\${LEFT_SHIFT}" },
+                { "trigger": "${NSKH_OnChar}", "contents": "\\${NSKH_OnChar} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\"" },
+                { "trigger": "${NSKH_OnKeyDown}", "contents": "\\${NSKH_OnKeyDown} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\"" },
+                { "trigger": "${NSKH_OnKeyUp}", "contents": "\\${NSKH_OnKeyUp} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\"" },
+                { "trigger": "${NSKH_OnPaste}", "contents": "\\${NSKH_OnPaste} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\"" },
+                { "trigger": "${NSKH_OnPostChar}", "contents": "\\${NSKH_OnPostChar} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\"" },
+                { "trigger": "${NSKH_OnPostKeyDown}", "contents": "\\${NSKH_OnPostKeyDown} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\"" },
+                { "trigger": "${NSKH_OnPostKeyUp}", "contents": "\\${NSKH_OnPostKeyUp} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\"" },
+                { "trigger": "${NSKH_OnPostPaste}", "contents": "\\${NSKH_OnPostPaste} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\"" },
+                { "trigger": "${RIGHT_ALT}", "contents": "\\${RIGHT_ALT}" },
+                { "trigger": "${RIGHT_CTRL}", "contents": "\\${RIGHT_CTRL}" },
+                { "trigger": "${RIGHT_SHIFT}", "contents": "\\${RIGHT_SHIFT}" },
+
+                // NsMCI.dll - http://nsis.sourceforge.net/NsMCI_plug-in
+                { "trigger": "nsmci::GetFirstCDROMDrive", "contents": "nsmci::GetFirstCDROMDrive" },
+                { "trigger": "nsmci::SendString", "contents": "nsmci::SendString \"${1:command}\"" },
+                { "trigger": "nsmci::GetErrorString", "contents": "nsmci::GetErrorString \"${1:error_code}\"" },
+
+                // NsODBC.dll - http://nsis.sourceforge.net/NsODBC_plug-in
+                { "trigger": "NsODBC::AddDSN", "contents": "NsODBC::AddDSN \"${1:driver}\" \"${2:parameters}\"" },
+                { "trigger": "NsODBC::AddSysDSN", "contents": "NsODBC::AddSysDSN \"${1:driver}\" \"${2:parameters}\"" },
+                { "trigger": "NsODBC::ConfDSN", "contents": "NsODBC::ConfDSN \"${1:driver}\" \"${2:parameters}\"" },
+                { "trigger": "NsODBC::ConfSysDSN", "contents": "NsODBC::ConfSysDSN \"${1:driver}\" \"${2:parameters}\"" },
+                { "trigger": "NsODBC::RemoveDefDSN", "contents": "NsODBC::RemoveDefDSN \"${1:driver}\" \"${2:parameters}\"" },
+                { "trigger": "NsODBC::RemoveDSN", "contents": "NsODBC::RemoveDSN \"${1:driver}\" \"${2:parameters}\"" },
+                { "trigger": "NsODBC::RemoveSysDSN", "contents": "NsODBC::RemoveSysDSN \"${1:driver}\" \"${2:parameters}\"" },
+
                 // nsProcess.dll - http://nsis.sourceforge.net/NsProcess_plugin
                 { "trigger": "${nsProcess::FindProcess}", "contents": "\\${nsProcess::FindProcess} \"${1:file}.exe\" \\$${2:var}" },
                 { "trigger": "${nsProcess::KillProcess}", "contents": "\\${nsProcess::KillProcess} \"${1:file}.exe\" \\$${2:var}" },
                 { "trigger": "${nsProcess::Unload}", "contents": "\\${nsProcess::Unload}" },
+
+                // nsPython.dll - http://nsis.sourceforge.net/NsPython_plug-in
+                { "trigger": "nsPython::eval", "contents": "nsPython::eval \"${1:expr}\"" },
+                { "trigger": "nsPython::evalFin", "contents": "nsPython::evalFin \"${1:expr}\"" },
+                { "trigger": "nsPython::exec", "contents": "nsPython::exec \"${1:statements}\"" },
+                { "trigger": "nsPython::execFile", "contents": "nsPython::execFile \"${1:file}.py\"" },
+                { "trigger": "nsPython::execFileFin", "contents": "nsPython::execFileFin \"${1:file}.py\"" },
+                { "trigger": "nsPython::execFin", "contents": "nsPython::execFin \"${1:statements}\"" },
+                { "trigger": "nsPython::Finalize", "contents": "nsPython::Finalize" },
+                { "trigger": "nsPython::Init", "contents": "nsPython::Init" },
+
+                // NsRandom.dll - http://nsis.sourceforge.net/NsRandom_plug-in
+                { "trigger": "nsRandom::GetRandom", "contents": "nsRandom::GetRandom" },
+
+                // NsResize.dll - http://nsis.sourceforge.net/NsSCM_plug-in
+                { "trigger": "nsResize::SetRTL", "contents": "nsResize::SetRTL \\$(^RTL)" },
+                { "trigger": "nsResize::Set", "contents": "nsResize::Set \\$${1:hwnd} ${2:x} ${3:y} ${4:width} ${5:height}" },
+                { "trigger": "nsResize::Add", "contents": "nsResize::Add \\$${1:hwnd} ${2:x} ${3:y} ${4:width} ${5:height}" },
+                { "trigger": "nsResize::Top", "contents": "nsResize::Top \\$${1:hwnd}" },
+                { "trigger": "nsResize::GetPos", "contents": "nsResize::GetPos \\$${1:hwnd}" },
+                { "trigger": "nsResize::GetPosPx", "contents": "nsResize::GetPosPx \\$${1:hwnd}" },
+                { "trigger": "nsResize::GetSize", "contents": "nsResize::GetSize \\$${1:hwnd}" },
+                { "trigger": "nsResize::GetSizePx", "contents": "nsResize::GetSizePx \\$${1:hwnd}" },
+
+                // NsRestartExplorer.dll - http://nsis.sourceforge.net/NsRestartExplorer_plug-in
+                { "trigger": "nsRestartExplorer::nsRestartExplorer quit", "contents": "nsRestartExplorer::nsRestartExplorer quit ${1:timeout}" },
+                { "trigger": "nsRestartExplorer::nsRestartExplorer restart", "contents": "nsRestartExplorer::nsRestartExplorer restart ${1:timeout}" },
+                { "trigger": "nsRestartExplorer::nsRestartExplorer start", "contents": "nsRestartExplorer::nsRestartExplorer start ${1:timeout}" },
+                { "trigger": "nsRestartExplorer::nsRestartExplorer", "contents": "nsRestartExplorer::nsRestartExplorer ${1:command} ${2:timeout}" },
+
+                // NsRichEdit.dll - http://nsis.sourceforge.net/NsRichEdit_plug-in
+                { "trigger": "nsRichEdit::AddPrintButton", "contents": "nsRichEdit::AddPrintButton \"${1:button_text}\" \"${2:document_name}\"" },
+                { "trigger": "nsRichEdit::Load", "contents": "nsRichEdit::Load \\$${1:hwnd} \"${2:file_path}\"" },
+                { "trigger": "nsRichEdit::Print", "contents": "nsRichEdit::Print \\$${1:hwnd} \"${2:document_name}\"" },
+
+                // nsScreenshot.dll - http://nsis.sourceforge.net/NsScreenshot_plug-in
+                { "trigger": "nsScreenshot::Grab", "contents": "nsScreenshot::Grab" },
+                { "trigger": "nsScreenshot::Grab_FullScreen", "contents": "nsScreenshot::Grab_FullScreen" },
 
                 // nsSCM.dll - http://nsis.sourceforge.net/NsSCM_plug-in
                 { "trigger": "nsSCM::Install /NOUNLOAD", "contents": "nsSCM::Install /NOUNLOAD \"${1:name_of_service}\" \"${2:display_name}\" \"${3:service_type}\" \"${4:start_type}\" \"${5:service_commandline}\" \"${6:load_order_group}\" \"${7:dependencies}\" \"${8:account}\" \"${9:password}\"" },
@@ -541,6 +812,45 @@
                 { "trigger": "nsSCM::Start", "contents": "nsSCM::Start \"${1:name_of_service}\"" },
                 { "trigger": "nsSCM::Stop /NOUNLOAD", "contents": "nsSCM::Stop /NOUNLOAD \"${1:name_of_service}\"" },
                 { "trigger": "nsSCM::Stop", "contents": "nsSCM::Stop \"${1:name_of_service}\"" },
+
+                // nsThread.dll - http://nsis.sourceforge.net/NsThread_plug-in
+                { "trigger": "${Thread_Create}", "contents": "\\${Thread_Create} \"${1:thread_proc}\" \\$${2:thread_id}" },
+                { "trigger": "${Thread_Join}", "contents": "\\${Thread_Join} \\$${1:thread_id}" },
+                { "trigger": "${Thread_JoinFor}", "contents": "\\${Thread_JoinFor} \\$${1:thread_id} ${2:time_in_ms} \\$${3:result}" },
+
+                // nsUnzip.dll - http://nsis.sourceforge.net/NsUnzip_plugin
+                { "trigger": "nsUnzip::Extract [/options]", "contents": "nsUnzip::Extract ${1:options} \"${2:file}.zip\" ${3:files} /END" },
+                { "trigger": "nsUnzip::Extract", "contents": "nsUnzip::Extract \"${1:file}.zip\" ${2:files} /END" },
+                { "trigger": "nsUnzip::GetPassword", "contents": "nsUnzip::GetPassword /NOUNLOAD \"${1:title}\" \"${2:group}\" \"${3:label}\" \"${4:ok_button}\" \"${5:cancel_button}\"" },
+
+                // nsVersionInfo.dll - http://nsis.sourceforge.net/NsVersionInfo_plugin
+                { "trigger": "nsVersionInfo::getFixedFileVersion", "contents": "nsVersionInfo::getFixedFileVersion \"${1:file}.exe\"" },
+                { "trigger": "nsVersionInfo::getFixedProductVersion", "contents": "nsVersionInfo::getFixedProductVersion \"${1:file}.exe\"" },
+                { "trigger": "nsVersionInfo::getLibVersion", "contents": "nsVersionInfo::getLibVersion" },
+                { "trigger": "nsVersionInfo::getStringFileInfo", "contents": "nsVersionInfo::getStringFileInfo \"${1:file}.exe\" \"${2:field}\"" },
+                { "trigger": "nsVersionInfo::setFixedFileVersion", "contents": "nsVersionInfo::setFixedFileVersion \"${1:file}.exe\" ${2:1} ${3:2} ${4:3} ${5:4}" },
+                { "trigger": "nsVersionInfo::setFixedProductVersion", "contents": "nsVersionInfo::setFixedProductVersion \"${1:file}.exe\" ${2:1} ${3:2} ${4:3} ${5:4}" },
+                { "trigger": "nsVersionInfo::setStringFileInfo", "contents": "nsVersionInfo::setStringFileInfo \"${1:file}.exe\" \"${2:field}\" \"${3:value}\"" },
+
+                // nsWeb.dll - http://nsis.sourceforge.net/NsWeb_plug-in
+                { "trigger": "nsWeb::IsInet", "contents": "nsWeb::IsInet ${1:var}" },
+                { "trigger": "nsWeb::ShowHTMLInPage", "contents": "nsWeb::ShowHTMLInPage \"${1:html_string}\"" },
+                { "trigger": "nsWeb::ShowWebInPage", "contents": "nsWeb::ShowWebInPage \"${1:url_or_html}\"" },
+                { "trigger": "nsWeb::ShowWebInPopUp", "contents": "nsWeb::ShowWebInPopUp \"${1:url_or_html}\"" },
+
+                // Nwiz - http://nsis.sourceforge.net/Nwiz_plug-in
+                { "trigger": "Nmwdll::nmwMakensis", "contents": "Nmwdll::nmwMakensis \"${1:\\${NSISDIR\\}\\makensis.exe}\" ${2:parameters} \"${3:file}.nsi\"" },
+                { "trigger": "Nzipdll::nzip", "contents": "Nzipdll::nzip ${1:dialog} \"${2:file}.zip\" \"${3:target}\"" },
+                { "trigger": "Nzwdll::nzwUnzip", "contents": "Nzwdll::nzwUnzip \"${1:file}.zip\" \"${2:target}\"" },
+
+                // nsXML.dll - http://nsis.sourceforge.net/NsXML_plug-in_(by_rsegal)
+                { "trigger": "nsXML::endDocument", "contents": "nsXML::endDocument" },
+                { "trigger": "nsXML::init", "contents": "nsXML::init" },
+                { "trigger": "nsXML::initCOM", "contents": "nsXML::initCOM" },
+                { "trigger": "nsXML::insertElemVal", "contents": "nsXML::insertElemVal \"${1:node}\" \"${2:value}\"" },
+                { "trigger": "nsXML::startDocument", "contents": "nsXML::startDocument" },
+                { "trigger": "nsXML::uninitCOM", "contents": "nsXML::uninitCOM" },
+                { "trigger": "nsXML::write", "contents": "nsXML::write \"${1:file}.xml\"" },
 
                 // nxs.dll - http://nsis.sourceforge.net/Nxs_plug-in
                 { "trigger": "nxs::Destroy", "contents": "nxs::Destroy" },
@@ -670,6 +980,73 @@
                 // SimpleBg.dll - http://nsis.sourceforge.net/SimpleBg_plug-in
                 { "trigger": "SimpleBg::SetBg", "contents": "SimpleBg::SetBg /NOUNLOAD {1:R_top} {2:G_top} {3:B_top} {4:R_bottom} {5:G_bottom} {6:B_bottom} \"{7:text}\"" },
 
+                // SimpleFC.dll - http://nsis.sourceforge.net/NSIS_Simple_Firewall_Plugin
+                { "trigger": "SimpleFC::AddApplication", "contents": "SimpleFC::AddApplication \"${1:name}\" \"${2:path}\" ${3:scope} ${4:ip_version} ${5:remote_addresses} ${6:status}" },
+                { "trigger": "SimpleFC::AddPort", "contents": "SimpleFC::AddPort ${1:port} \"${2:name}\" ${3:protocol} ${4:scope} ${5:ip_version} ${6:remote_addresses} ${7:status}" },
+                { "trigger": "SimpleFC::AdvExistsRule", "contents": "SimpleFC::AdvAddRule \"${1:name}\" \"${2:description}\" ${3:protocol} ${4:direction} ${5:status} ${6:profile} ${7:action} ${8:application} ${9:icmp_types_and_codes} ${10:group} ${11:local_ports} ${12:remote_ports} ${13:local_address} ${14:remote_address}" },
+                { "trigger": "SimpleFC::AdvRemoveRule", "contents": "SimpleFC::AdvRemoveRule \"${1:name}\"" },
+                { "trigger": "SimpleFC::AllowDisallowExceptionsNotAllowed", "contents": "SimpleFC::AllowDisallowExceptionsNotAllowed ${1:status}" },
+                { "trigger": "SimpleFC::AllowDisallowIcmpInboundEchoRequest", "contents": "SimpleFC::AllowDisallowIcmpInboundEchoRequest ${1:status}" },
+                { "trigger": "SimpleFC::AllowDisallowIcmpInboundMaskRequest", "contents": "SimpleFC::AllowDisallowIcmpInboundMaskRequest ${1:status}" },
+                { "trigger": "SimpleFC::AllowDisallowIcmpInboundRouterRequest", "contents": "SimpleFC::AllowDisallowIcmpInboundRouterRequest ${1:status}" },
+                { "trigger": "SimpleFC::AllowDisallowIcmpInboundTimestampRequest", "contents": "SimpleFC::AllowDisallowIcmpInboundTimestampRequest ${1:status}" },
+                { "trigger": "SimpleFC::AllowDisallowIcmpOutboundDestinationUnreachable", "contents": "SimpleFC::AllowDisallowIcmpOutboundDestinationUnreachable ${1:status}" },
+                { "trigger": "SimpleFC::AllowDisallowIcmpOutboundPacketTooBig", "contents": "SimpleFC::AllowDisallowIcmpOutboundPacketTooBig ${1:status}" },
+                { "trigger": "SimpleFC::AllowDisallowIcmpOutboundParameterProblem", "contents": "SimpleFC::AllowDisallowIcmpOutboundParameterProblem ${1:status}" },
+                { "trigger": "SimpleFC::AllowDisallowIcmpOutboundSourceQuench", "contents": "SimpleFC::AllowDisallowIcmpOutboundSourceQuench ${1:status}" },
+                { "trigger": "SimpleFC::AllowDisallowIcmpOutboundTimeExceeded", "contents": "SimpleFC::AllowDisallowIcmpOutboundTimeExceeded ${1:status}" },
+                { "trigger": "SimpleFC::AllowDisallowIcmpRedirect", "contents": "SimpleFC::AllowDisallowIcmpRedirect ${1:status}" },
+                { "trigger": "SimpleFC::AreExceptionsNotAllowed", "contents": "SimpleFC::AreExceptionsNotAllowed" },
+                { "trigger": "SimpleFC::AreNotificationsEnabled", "contents": "SimpleFC::AreNotificationsEnabled" },
+                { "trigger": "SimpleFC::EnableDisableApplication", "contents": "SimpleFC::EnableDisableApplication \"${1:path}\"" },
+                { "trigger": "SimpleFC::EnableDisableFirewall", "contents": "SimpleFC::EnableDisableFirewall ${1:status}" },
+                { "trigger": "SimpleFC::EnableDisableNotifications", "contents": "SimpleFC::EnableDisableNotifications ${1:status}" },
+                { "trigger": "SimpleFC::EnableDisablePort", "contents": "SimpleFC::EnableDisablePort ${1:port} ${2:protocol}" },
+                { "trigger": "SimpleFC::IsApplicationAdded", "contents": "SimpleFC::IsApplicationAdded \"${1:path}\"" },
+                { "trigger": "SimpleFC::IsFirewallEnabled", "contents": "SimpleFC::IsFirewallEnabled" },
+                { "trigger": "SimpleFC::IsFirewallServiceRunning", "contents": "SimpleFC::IsFirewallServiceRunning" },
+                { "trigger": "SimpleFC::IsPortAdded", "contents": "SimpleFC::IsPortAdded ${1:port} ${2:protocol}" },
+                { "trigger": "SimpleFC::IsPortEnabled", "contents": "SimpleFC::IsPortEnabled ${1:port} ${2:protocol}" },
+                { "trigger": "SimpleFC::RemoveApplication", "contents": "SimpleFC::RemoveApplication \"${1:path}\"" },
+                { "trigger": "SimpleFC::RemovePort", "contents": "SimpleFC::RemovePort ${1:port} ${2:protocol}" },
+                { "trigger": "SimpleFC::RestoreDefaults", "contents": "SimpleFC::RestoreDefaults" },
+                { "trigger": "SimpleFC::StartStopFirewallService", "contents": "SimpleFC::StartStopFirewallService ${1:status}" },
+
+                // SimpleSC.dll - http://nsis.sourceforge.net/NSIS_Simple_Service_Plugin
+                { "trigger": "SimpleSC::ContinueService", "contents": "SimpleSC::ContinueService ${1:name_of_service} ${1:timeout}" },
+                { "trigger": "SimpleSC::ExistsService", "contents": "SimpleSC::ExistsService ${1:name_of_service}" },
+                { "trigger": "SimpleSC::GetErrorMessage", "contents": "SimpleSC::GetErrorMessage ${1:error_code}" },
+                { "trigger": "SimpleSC::GetServiceBinaryPath", "contents": "SimpleSC::GetServiceBinaryPath ${1:name_of_service}" },
+                { "trigger": "SimpleSC::GetServiceDescription", "contents": "SimpleSC::GetServiceDescription ${1:name_of_service}" },
+                { "trigger": "SimpleSC::GetServiceDisplayName", "contents": "SimpleSC::GetServiceDisplayName ${1:name_of_service}" },
+                { "trigger": "SimpleSC::GetServiceFailure", "contents": "SimpleSC::GetServiceFailure ${1:name_of_service}" },
+                { "trigger": "SimpleSC::GetServiceFailureFlag", "contents": "SimpleSC::GetServiceFailureFlag ${1:name_of_service}" },
+                { "trigger": "SimpleSC::GetServiceLogon", "contents": "SimpleSC::GetServiceLogon ${1:name_of_service}" },
+                { "trigger": "SimpleSC::GetServiceName", "contents": "SimpleSC::GetServiceName ${1:display_name}" },
+                { "trigger": "SimpleSC::GetServiceStartType", "contents": "SimpleSC::GetServiceStartType ${1:name_of_service}" },
+                { "trigger": "SimpleSC::GetServiceStatus", "contents": "SimpleSC::GetServiceStatus ${1:name_of_service}" },
+                { "trigger": "SimpleSC::GrantServiceLogonPrivilege", "contents": "SimpleSC::GrantServiceLogonPrivilege ${1:account}" },
+                { "trigger": "SimpleSC::InstallService", "contents": "SimpleSC::InstallService ${1:name_of_service} ${2:display_name} ${3:service_type} ${4:start_type} ${5:binary_path} ${6:dependencies} ${7:account} ${8:password}" },
+                { "trigger": "SimpleSC::PauseService", "contents": "SimpleSC::PauseService ${1:name_of_service} ${1:timeout}" },
+                { "trigger": "SimpleSC::RemoveService", "contents": "SimpleSC::SimpleSC::RemoveService ${1:name_of_service}" },
+                { "trigger": "SimpleSC::RemoveServiceLogonPrivilege", "contents": "SimpleSC::RemoveServiceLogonPrivilege ${1:account}" },
+                { "trigger": "SimpleSC::RestartService", "contents": "SimpleSC::RestartService ${1:name_of_service} ${1:arguments} ${2:timeout}" },
+                { "trigger": "SimpleSC::ServiceIsPaused", "contents": "SimpleSC::ServiceIsPaused ${1:name_of_service}" },
+                { "trigger": "SimpleSC::ServiceIsRunning", "contents": "SimpleSC::ServiceIsRunning ${1:name_of_service}" },
+                { "trigger": "SimpleSC::ServiceIsStopped", "contents": "SimpleSC::ServiceIsStopped ${1:name_of_service}" },
+                { "trigger": "SimpleSC::SetServiceBinaryPath", "contents": "SimpleSC::SetServiceBinaryPath ${1:name_of_service} ${2:binary_path}" },
+                { "trigger": "SimpleSC::SetServiceDelayedAutoStartInfo", "contents": "SimpleSC::SetServiceDelayedAutoStartInfo ${1:name_of_service} ${2:delayed_autostart}" },
+                { "trigger": "SimpleSC::SetServiceDescription", "contents": "SimpleSC::SetServiceDescription ${1:name_of_service} ${2:service_description}" },
+                { "trigger": "SimpleSC::SetServiceFailure", "contents": "SimpleSC::SetServiceFailure ${1:name_of_service} ${2:reset_period} ${3:reboot_message} ${4:command} ${5:action_type_1} ${6:action_delay_1} ${7:action_type_2} ${8:action_delay_2} ${9:action_type_3} ${10:action_delay_3}" },
+                { "trigger": "SimpleSC::SetServiceFailureFlag", "contents": "SimpleSC::SetServiceFailureFlag ${1:name_of_service} ${2:failure_actions_on_non_crash_failures}" },
+                { "trigger": "SimpleSC::SetServiceStartType", "contents": "SimpleSC::SetServiceStartType ${1:name_of_service} ${2:start_type}" },
+                { "trigger": "SimpleSC::StopService", "contents": "SimpleSC::StopService ${1:name_of_service} ${1:wait_for_file_release} ${2:timeout}" },
+
+                // SkinnedButton.dll - http://nsis.sourceforge.net/SkinnedButton_plug-in
+                { "trigger": "NSIS_SkinCrafter_Plugin::destroy", "contents": "NSIS_SkinCrafter_Plugin::destroy" },
+                { "trigger": "NSIS_SkinCrafter_Plugin::skin [file]", "contents": "NSIS_SkinCrafter_Plugin::skin /NOUNLOAD \"${1:file}.skf\"" },
+                { "trigger": "NSIS_SkinCrafter_Plugin::skin", "contents": "NSIS_SkinCrafter_Plugin::skin /NOUNLOAD" },
+
                 // SkinnedButton.dll - http://nsis.sourceforge.net/SkinnedButton_plug-in
                 { "trigger": "SkinnedButton::skinit 0xRRGGBB", "contents": "SkinnedButton::skinit \"{1:BitmapImage}\" 0x\"${2:RRGGBB}\"" },
                 { "trigger": "SkinnedButton::skinit", "contents": "SkinnedButton::skinit \"{1:BitmapImage}\"" },
@@ -785,6 +1162,19 @@
                 // ToolTips - http://nsis.sourceforge.net/ToolTips_plug-in
                 { "trigger": "ToolTips::Classic", "contents": "ToolTips::Classic \\$${1:hwnd} \"${2:text}\"" },
                 { "trigger": "ToolTips::Modern", "contents": "ToolTips::Modern \\$${1:hwnd} ${2:icon} \"${3:text}\"" },
+
+                // UMUI.nsh - http://nsis.sourceforge.net/UltraModernUI
+                { "trigger": "!insertmacro UAC_AsUser_Call", "contents": "!insertmacro UAC_AsUser_Call ${1:Function|Label} ${2:NSISAddressName} ${3:UACFlags}" },
+                { "trigger": "!insertmacro UAC_AsUser_ExecShell", "contents": "!insertmacro UAC_AsUser_ExecShell ${1:Verb} ${2:ApplicationOrFile} ${3:Parameters} ${4:Working Directory} ${5:SW_*}" },
+                { "trigger": "!insertmacro UAC_AsUser_GetGlobal", "contents": "!insertmacro UAC_AsUser_GetGlobal \\$${1:Output} \\$${2:Source}" },
+                { "trigger": "!insertmacro UAC_AsUser_GetGlobalVar", "contents": "!insertmacro UAC_AsUser_GetGlobalVar \\$${1:Output}" },
+                { "trigger": "!insertmacro UAC_AsUser_GetSection", "contents": "!insertmacro UAC_AsUser_GetSection ${1:Flags|InstTypes|Size|Text} ${2:SectionIndex} \\$${3:Output}" },
+                { "trigger": "!insertmacro UAC_GetIntegrityLevel", "contents": "!insertmacro UAC_GetIntegrityLevel \\$${1:Output}" },
+                { "trigger": "!insertmacro UAC_PageElevation_OnGuiInit", "contents": "!insertmacro UAC_PageElevation_OnGuiInit" },
+                { "trigger": "!insertmacro UAC_PageElevation_OnInit", "contents": "!insertmacro UAC_PageElevation_OnInit" },
+                { "trigger": "!insertmacro UAC_RunElevated", "contents": "!insertmacro UAC_RunElevated" },
+                { "trigger": "$(UAC_IsAdmin}", "contents": "\\${UAC_IsAdmin}" },
+                { "trigger": "$(UAC_IsInnerInstance}", "contents": "\\${UAC_IsInnerInstance}" },
 
                 // UMUI.nsh - http://nsis.sourceforge.net/UltraModernUI
                 { "trigger": "!define UMUI_ALTERNATEUNWELCOMEFINISHABORTPAGE_INI", "contents": "!define UMUI_ALTERNATEUNWELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\"" },
@@ -1025,23 +1415,48 @@
                 { "trigger": "ZipDLL::extractfile", "contents": "ZipDLL::extractfile \"${1:SOURCE}\" \"${2:DESTINATION}\" \"${3:FILE}\"" },
 
                 // Includes
-                { "trigger": "!include CPUFeatures", "contents": "!include CPUFeatures.nsh" },
-                { "trigger": "!include DlgHost", "contents": "!include DlgHost.nsh" },
-                { "trigger": "!include DotNetChecker", "contents": "!include DotNetChecker.nsh" },
-                { "trigger": "!include Locate", "contents": "!include Locate.nsh" },
-                { "trigger": "!include MUIEx", "contents": "!include MUIEx.nsh" },
-                { "trigger": "!include nsArray", "contents": "!include nsArray.nsh" },
-                { "trigger": "!include nsProcess", "contents": "!include nsProcess.nsh" },
-                { "trigger": "!include OLEDB", "contents": "!include OLEDB.nsh" },
-                { "trigger": "!include Registry", "contents": "!include Registry.nsh" },
-                { "trigger": "!include Stack", "contents": "!include Stack.nsh" },
-                { "trigger": "!include StdUtils", "contents": "!include StdUtils.nsh" },
-                { "trigger": "!include TextReplace", "contents": "!include TextReplace.nsh" },
-                { "trigger": "!include Time", "contents": "!include Time.nsh" },
-                { "trigger": "!include UMUI", "contents": "!include UMUI.nsh" },
-                { "trigger": "!include XiMoL", "contents": "!include XiMoL.nsh" },
-                { "trigger": "!include XML", "contents": "!include XML.nsh" },
-                { "trigger": "!include ZipDLL", "contents": "!include ZipDLL.nsh" },
+                { "trigger": "!include CPUFeatures.nsh", "contents": "!include CPUFeatures.nsh" },
+                { "trigger": "!include DlgHost.nsh", "contents": "!include DlgHost.nsh" },
+                { "trigger": "!include DotNetChecker.nsh", "contents": "!include DotNetChecker.nsh" },
+                { "trigger": "!include Locate.nsh", "contents": "!include Locate.nsh" },
+                { "trigger": "!include MUIEx.nsh", "contents": "!include MUIEx.nsh" },
+                { "trigger": "!include name2ip.nsh", "contents": "!include name2ip.nsh" },
+                { "trigger": "!include nsArray.nsh", "contents": "!include nsArray.nsh" },
+                { "trigger": "!include NsExpr.nsh", "contents": "!include NsExpr.nsh" },
+                { "trigger": "!include NSISList.nsh", "contents": "!include NSISList.nsh" },
+                { "trigger": "!include NSISpcre.nsh", "contents": "!include NSISpcre.nsh" },
+                { "trigger": "!include nsisXML.nsh", "contents": "!include nsisXML.nsh" },
+                { "trigger": "!include nsKeyHook.nsh", "contents": "!include nsKeyHook.nsh" },
+                { "trigger": "!include nsProcess.nsh", "contents": "!include nsProcess.nsh" },
+                { "trigger": "!include nsResize.nsh", "contents": "!include nsResize.nsh" },
+                { "trigger": "!include nsThread.nsh", "contents": "!include nsThread.nsh" },
+                { "trigger": "!include OLEDB.nsh", "contents": "!include OLEDB.nsh" },
+                { "trigger": "!include Registry.nsh", "contents": "!include Registry.nsh" },
+                { "trigger": "!include Stack.nsh", "contents": "!include Stack.nsh" },
+                { "trigger": "!include StdUtils.nsh", "contents": "!include StdUtils.nsh" },
+                { "trigger": "!include TextReplace.nsh", "contents": "!include TextReplace.nsh" },
+                { "trigger": "!include Time.nsh", "contents": "!include Time.nsh" },
+                { "trigger": "!include UAC.nsh", "contents": "!include UAC.nsh" },
+                { "trigger": "!include UMUI.nsh", "contents": "!include UMUI.nsh" },
+                { "trigger": "!include XiMoL.nsh", "contents": "!include XiMoL.nsh" },
+                { "trigger": "!include XML.nsh", "contents": "!include XML.nsh" },
+                { "trigger": "!include ZipDLL.nsh", "contents": "!include ZipDLL.nsh" },
+
+                // Macros
+                { "trigger": "!insertmacro RECaptureMatches", "contents": "!insertmacro RECaptureMatches" },
+                { "trigger": "!insertmacro REClearAllOptions", "contents": "!insertmacro REClearAllOptions" },
+                { "trigger": "!insertmacro REClearOption", "contents": "!insertmacro REClearOption" },
+                { "trigger": "!insertmacro REGetOption", "contents": "!insertmacro REGetOption" },
+                { "trigger": "!insertmacro REMatches", "contents": "!insertmacro REMatches" },
+                { "trigger": "!insertmacro REReplace", "contents": "!insertmacro REReplace" },
+                { "trigger": "!insertmacro RESetOption", "contents": "!insertmacro RESetOption" },
+                { "trigger": "!insertmacro un.RECaptureMatches", "contents": "!insertmacro un.RECaptureMatches" },
+                { "trigger": "!insertmacro un.REClearAllOptions", "contents": "!insertmacro un.REClearAllOptions" },
+                { "trigger": "!insertmacro un.REClearOption", "contents": "!insertmacro un.REClearOption" },
+                { "trigger": "!insertmacro un.REGetOption", "contents": "!insertmacro un.REGetOption" },
+                { "trigger": "!insertmacro un.REMatches", "contents": "!insertmacro un.REMatches" },
+                { "trigger": "!insertmacro un.REReplace", "contents": "!insertmacro un.REReplace" },
+                { "trigger": "!insertmacro un.RESetOption", "contents": "!insertmacro un.RESetOption" },
 
                 // Plug-in options
                 { "trigger": "/ATIME", "contents": "/ATIME=${1:time_in_ms}" },
@@ -1053,6 +1468,7 @@
                 { "trigger": "/BOXTOP", "contents": "/BOXTOP ${1:top_position}" },
                 { "trigger": "/CANCELTEXT", "contents": "/CANCELTEXT=\"${1:text}\"" },
                 { "trigger": "/CAPTION", "contents": "/CAPTION=\"${1:text}\"" },
+                { "trigger": "/CCOLOR", "contents": "/CCOLOR=0x${1:0xBBGGRR}" },
                 { "trigger": "/CENTER", "contents": "/CENTER" },
                 { "trigger": "/CHARSET", "contents": "/CHARSET=${1:charset}" },
                 { "trigger": "/CHECK", "contents": "/CHECK" },
@@ -1061,8 +1477,11 @@
                 { "trigger": "/CONNECTTIMEOUT", "contents": "/CONNECTTIMEOUT=${1:time_in_s}" },
                 { "trigger": "/DETAILED", "contents": "/DETAILED" },
                 { "trigger": "/DISABLEFSR", "contents": "/DISABLEFSR" },
+                { "trigger": "/DURATION", "contents": "/DURATION=${1:time_in_ms}" },
                 { "trigger": "/ENDFUNC", "contents": "/ENDFUNC=${1:function_name}" },
                 { "trigger": "/FACE", "contents": "/FACE=\"${1:font_name}\"" },
+                { "trigger": "/FADEOUT", "contents": "/FADEOUT" },
+                { "trigger": "/FIT", "contents": "/FIT=${1:HEIGHT|WIDTH|BOTH|STRETCH}" },
                 { "trigger": "/FLAGS", "contents": "/FLAGS=${1:flags}" },
                 { "trigger": "/FORCE", "contents": "/FORCE" },
                 { "trigger": "/GROUPTEXT", "contents": "/GROUPTEXT \"${1:text}\"" },
@@ -1079,9 +1498,11 @@
                 { "trigger": "/MAXTRIES", "contents": "/MAXTRIES=${1:number}" },
                 { "trigger": "/MD5", "contents": "/MD5" },
                 { "trigger": "/MIRRORS", "contents": "/MIRRORS=${1:number} ${2:urls}" },
+                { "trigger": "/NOCANCEL", "contents": "/NOCANCEL" },
                 { "trigger": "/NOCOOKIES", "contents": "/NOCOOKIES" },
                 { "trigger": "/NOPROXY", "contents": "/NOPROXY" },
                 { "trigger": "/NOSAFE", "contents": "/NOSAFE" },
+                { "trigger": "/PASSIVE", "contents": "/PASSIVE" },
                 { "trigger": "/PASSTEXT", "contents": "/PASSTEXT \"${1:label_text}\" \"${2:box_text}\"" },
                 { "trigger": "/PASSWORD", "contents": "/PASSWORD=${1:password}" },
                 { "trigger": "/POPUP", "contents": "/POPUP=${1:host_alias}" },
@@ -1103,6 +1524,7 @@
                 { "trigger": "/STEP", "contents": "/STEP=${1:step}" },
                 { "trigger": "/SWING", "contents": "/SWING" },
                 { "trigger": "/TOP", "contents": "/TOP=${1:percentage}" },
+                { "trigger": "/TOPIC", "contents": "/TOPIC=${1:topic}" },
                 { "trigger": "/TOSTACK", "contents": "/TOSTACK" },
                 { "trigger": "/TRANSLATE", "contents": "/TRANSLATE=\"${1:language_parameters}\"" },
                 { "trigger": "/USER_AGENT", "contents": "/USER_AGENT=\"${1:user_agent}\"" },
@@ -1111,6 +1533,9 @@
                 { "trigger": "/VALIGN", "contents": "/VALIGN=${y_position}" },
                 { "trigger": "/WEIGHT", "contents": "/WEIGHT=${1:weight}" },
                 { "trigger": "/WIDTH", "contents": "/WIDTH=${1:height}" },
+                { "trigger": "CASELESS", "contents": "CASELESS" },
+                { "trigger": "DOLLAR_ENDONLY", "contents": "DOLLAR_ENDONLY" },
+                { "trigger": "DOTALL", "contents": "DOTALL" },
                 { "trigger": "ERR_NO_CONN_AVAILABLE", "contents": "ERR_NO_CONN_AVAILABLE" },
                 { "trigger": "ERR_PROXY_NOT_SET", "contents": "ERR_PROXY_NOT_SET" },
                 { "trigger": "ERR_PROXY_WRONG_PROTOCOL", "contents": "ERR_PROXY_WRONG_PROTOCOL" },
@@ -1118,6 +1543,10 @@
                 { "trigger": "ERR_UNKNOWN", "contents": "ERR_UNKNOWN" },
                 { "trigger": "ERR_WRONG_CONN_INDEX", "contents": "ERR_WRONG_CONN_INDEX" },
                 { "trigger": "ERR_WRONG_CONN_NAME", "contents": "ERR_WRONG_CONN_NAME" },
+                { "trigger": "EXTENDED", "contents": "EXTENDED" },
+                { "trigger": "EXTRA", "contents": "EXTRA" },
+                { "trigger": "MULTILINE", "contents": "MULTILINE" },
+                { "trigger": "NO_AUTO_CAPTURE", "contents": "NO_AUTO_CAPTURE" },
                 { "trigger": "SAFER_LEVELID_CONSTRAINED", "contents": "SAFER_LEVELID_CONSTRAINED" },
                 { "trigger": "SAFER_LEVELID_NORMALUSER", "contents": "SAFER_LEVELID_NORMALUSER" },
                 { "trigger": "SAFER_LEVELID_UNTRUSTED", "contents": "SAFER_LEVELID_UNTRUSTED" },
@@ -1129,12 +1558,14 @@
                 { "trigger": "UF_DONT_EXPIRE_PASSWD", "contents": "UF_DONT_EXPIRE_PASSWD" },
                 { "trigger": "UF_PASSWD_CANT_CHANGE", "contents": "UF_PASSWD_CANT_CHANGE" },
                 { "trigger": "UF_PASSWD_NOTREQD", "contents": "UF_PASSWD_NOTREQD" },
+                { "trigger": "UNGREEDY", "contents": "UNGREEDY" },
                 { "trigger": "UTF-16BE", "contents": "UTF-16BE" },
                 { "trigger": "UTF-16LE", "contents": "UTF-16LE" },
                 { "trigger": "UTF-16LE", "contents": "UTF-16LE" },
                 { "trigger": "UTF-32BE", "contents": "UTF-32BE" },
                 { "trigger": "UTF-32LE", "contents": "UTF-32LE" },
                 { "trigger": "UTF-8", "contents": "UTF-8" },
+                { "trigger": "UTF8", "contents": "UTF8" },
 
                 { /* It ain't over 'til the fat lady sings */ }
         ]
