@@ -1,5 +1,5 @@
 # NSIS Autocomplete (Add-ons)
-by Jan T. Sott
+*by Jan T. Sott*
 
 [NSIS](http://nsis.sourceforge.net) syntax completions for [Sublime Text](http://www.sublimetext.com/), extending the [basic package](https://github.com/idleberg/NSIS-Sublime-Text) with commands for third-party plug-ins.
 
