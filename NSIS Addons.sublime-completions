@@ -43,11 +43,11 @@
                 { "trigger": "Aero::Apply", "contents": "Aero::Apply \"${1:options}\"" },
                 { "trigger": "Aero::Apply /NOBRANDING", "contents": "Aero::Apply /NOBRANDING \"${1:options}\"" },
 
-                // animate.nsh - http://nsis.sourceforge.net/Animate_plug-in
-                { "trigger": "animate::hwnd", "contents": "animate::hwnd" },
-                { "trigger": "animate::show /NOUNLOAD", "contents": "animate::show /NOUNLOAD ${1:options} \"${2:file}\""  },
-                { "trigger": "animate::show", "contents": "animate::show ${1:options} \"${2:file}\"" },
-                { "trigger": "animate::wait", "contents": "animate::wait ${1:options} ${2:time_in_ms}" },
+                // Animate.dll - http://nsis.sourceforge.net/Animate_plug-in
+                { "trigger": "Animate::hwnd", "contents": "Animate::hwnd" },
+                { "trigger": "Animate::show /NOUNLOAD", "contents": "Animate::show /NOUNLOAD ${1:options} \"${2:file}\""  },
+                { "trigger": "Animate::show", "contents": "Animate::show ${1:options} \"${2:file}\"" },
+                { "trigger": "Animate::wait", "contents": "Animate::wait ${1:options} ${2:time_in_ms}" },
 
                 // AnimGif.nsh - http://nsis.sourceforge.net/AnimGif_plug-in
                 { "trigger": "AnimGif::play /NOUNLOAD", "contents": "AnimGif::play /NOUNLOAD ${1:options} \"${2:file}.gif\""  },
@@ -77,8 +77,8 @@
                 { "trigger": "${BlowFish_Encrypt}", "contents": "blowfish::encrypt \\$${1:return_variable} \"${2:text_to_encrypt}\" \"${3:password_key}\"" },
 
                 // Blowfish++ - http://nsis.sourceforge.net/Blowfish%2B%2B_plug-in
-                { "trigger": "blowfish::decrypt", "contents": "blowfish::decrypt \"${1:text_to_decrypt}\" \"${2:password_key}\"" },
-                { "trigger": "blowfish::encrypt", "contents": "blowfish::encrypt \"${1:text_to_encrypt}\" \"${2:password_key}\"" },
+                { "trigger": "Blowfish::decrypt", "contents": "Blowfish::decrypt \"${1:text_to_decrypt}\" \"${2:password_key}\"" },
+                { "trigger": "Blowfish::encrypt", "contents": "Blowfish::encrypt \"${1:text_to_encrypt}\" \"${2:password_key}\"" },
 
                 // BrandingURL.dll - http://nsis.sourceforge.net/BrandingURL_plug-in
                 { "trigger": "BrandingURL::Set", "contents": "BrandingURL::Set /NOUNLOAD \"${1:red}\" \"${2:green}\" \"${3:blue}\" \"${4:url}\"" },
@@ -115,7 +115,7 @@
                 { "trigger": "CLR::Destroy", "contents": "CLR::Destroy" },
 
                 // CPUDesc.dll - http://nsis.sourceforge.net/CPUDesc_plug-in
-                { "trigger": "cpudesc::tell", "contents": "cpudesc::tell" },
+                { "trigger": "CPUDesc::tell", "contents": "CPUDesc::tell" },
 
                 // CPUFeatures.dll - http://nsis.sourceforge.net/CPUFeatures_plug-in
                 { "trigger": "${CPUFeatures.CheckFeature}", "contents": "\\${CPUFeatures.CheckFeature} \"${1:feature(s)}\" \\$${2:out_var}" },
@@ -230,7 +230,7 @@
                 { "trigger": "ExtractDllEx::extract", "contents": "ExtractDllEx::extract" },
 
                 // FindProcDLL.dll - http://nsis.sourceforge.net/FindProcDLL_plug-in
-                { "trigger": "FindProcDLL::FindProc", "contents": "EFindProcDLL::FindProc\"${1:file}.exe\"" },
+                { "trigger": "FindProcDLL::FindProc", "contents": "FindProcDLL::FindProc\"${1:file}.exe\"" },
 
                 // Firewall-Disabler.dll - http://nsis.sourceforge.net/Firewall-Disabler_plug-in
                 { "trigger": "Firewall-Disabler::DisableFirewall", "contents": "Firewall-Disabler::DisableFirewall" },
@@ -443,8 +443,8 @@
                 { "trigger": "md5dll::GetMD5String", "contents": "md5dll::GetMD5String \"${1:string}\"" },
 
                 // Metadl.dll - http://nsis.sourceforge.net/Metadl
-                { "trigger": "Marquee::start [/options]", "contents": "metadl:download ${1:options} \"${2:url}\" \"${3:local_file}\"" },
-                { "trigger": "Marquee::start", "contents": "metadl:download \"${1:url}\" \"${2:local_file}\"" },
+                { "trigger": "metadl:download  [/options]", "contents": "metadl:download ${1:options} \"${2:url}\" \"${3:local_file}\"" },
+                { "trigger": "metadl:download ", "contents": "metadl:download \"${1:url}\" \"${2:local_file}\"" },
 
                 // MoreInfo.dll - http://nsis.sourceforge.net/MoreInfo_plug-in
                 { "trigger": "MoreInfo::GetComments", "contents": "MoreInfo::GetComments \"${1:file}\"" },
@@ -1042,7 +1042,7 @@
                 { "trigger": "SimpleSC::SetServiceStartType", "contents": "SimpleSC::SetServiceStartType ${1:name_of_service} ${2:start_type}" },
                 { "trigger": "SimpleSC::StopService", "contents": "SimpleSC::StopService ${1:name_of_service} ${1:wait_for_file_release} ${2:timeout}" },
 
-                // SkinnedButton.dll - http://nsis.sourceforge.net/SkinnedButton_plug-in
+                // NSIS_SkinCrafter_Plugin.dll - http://nsis.sourceforge.net/NSIS_SkinCrafter_Plugin_plug-in
                 { "trigger": "NSIS_SkinCrafter_Plugin::destroy", "contents": "NSIS_SkinCrafter_Plugin::destroy" },
                 { "trigger": "NSIS_SkinCrafter_Plugin::skin [file]", "contents": "NSIS_SkinCrafter_Plugin::skin /NOUNLOAD \"${1:file}.skf\"" },
                 { "trigger": "NSIS_SkinCrafter_Plugin::skin", "contents": "NSIS_SkinCrafter_Plugin::skin /NOUNLOAD" },
@@ -1163,7 +1163,7 @@
                 { "trigger": "ToolTips::Classic", "contents": "ToolTips::Classic \\$${1:hwnd} \"${2:text}\"" },
                 { "trigger": "ToolTips::Modern", "contents": "ToolTips::Modern \\$${1:hwnd} ${2:icon} \"${3:text}\"" },
 
-                // UMUI.nsh - http://nsis.sourceforge.net/UltraModernUI
+                // UAC.dll - http://nsis.sourceforge.net/UAC_plug-in
                 { "trigger": "!insertmacro UAC_AsUser_Call", "contents": "!insertmacro UAC_AsUser_Call ${1:Function|Label} ${2:NSISAddressName} ${3:UACFlags}" },
                 { "trigger": "!insertmacro UAC_AsUser_ExecShell", "contents": "!insertmacro UAC_AsUser_ExecShell ${1:Verb} ${2:ApplicationOrFile} ${3:Parameters} ${4:Working Directory} ${5:SW_*}" },
                 { "trigger": "!insertmacro UAC_AsUser_GetGlobal", "contents": "!insertmacro UAC_AsUser_GetGlobal \\$${1:Output} \\$${2:Source}" },
