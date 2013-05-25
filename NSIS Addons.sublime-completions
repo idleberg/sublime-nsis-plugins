@@ -69,6 +69,13 @@
                 { "trigger": "${Base64_Decode}", "contents": "\\${Base64_Decode} \"${1:text}\"" },
                 { "trigger": "${Base64_Encode}", "contents": "\\${Base64_Encode} \"${1:text}\"" },
 
+                // BaseConvert.dll - http://nsis.sourceforge.net/BaseConvert_plug-in
+                { "trigger": "BaseConvert::Convert", "contents": "BaseConvert::Convert ${1:base_in} ${2:base_out} \"${3:string}\"" },
+
+                // BDEAlias.dll - http://nsis.sourceforge.net/BDEAlias_plug-in
+                { "trigger": "BDEAlias::AddAliasDebug", "contents": "BDEAlias::AddAliasDebug ${1:arguments}" },
+                { "trigger": "BDEAlias::DeleteAlias", "contents": "BDEAlias::DeleteAlias" },
+
                 // BgWorker.dll - http://nsis.sourceforge.net/BgWorker_plug-in
                 { "trigger": "BgWorker::CallAndWait", "contents": "BgWorker::CallAndWait" },
 
@@ -83,6 +90,12 @@
                 // BrandingURL.dll - http://nsis.sourceforge.net/BrandingURL_plug-in
                 { "trigger": "BrandingURL::Set", "contents": "BrandingURL::Set /NOUNLOAD \"${1:red}\" \"${2:green}\" \"${3:blue}\" \"${4:url}\"" },
                 { "trigger": "BrandingURL::Unload", "contents": "BrandingURL::Unload" },
+
+                // ButtonEvent.dll - http://nsis.sourceforge.net/ButtonEvent_plug-in
+                { "trigger": "ButtonEvent::AddEventHandler /NOTIFY", "contents": "ButtonEvent::AddEventHandler ${1:control_id} /NOTIFY" },
+                { "trigger": "ButtonEvent::AddEventHandler", "contents": "ButtonEvent::AddEventHandler ${1:control_id} ${2:function_address}" },
+                { "trigger": "ButtonEvent::UnsetEventHandler", "contents": "ButtonEvent::UnsetEventHandler ${1:control_id}" },
+                { "trigger": "ButtonEvent::WhichButtonId", "contents": "ButtonEvent::WhichButtonId /NOUNLOAD" },
 
                 // CabDLL.dll - http://nsis.sourceforge.net/CabDLL_plug-in
                 { "trigger": "CabDLL::CabInfo", "contents": "CabDLL::CabInfo \"${1:file}.cab\"" },
@@ -114,6 +127,17 @@
                 { "trigger": "CLR::Call /NOUNLOAD", "contents": "CLR::Call /NOUNLOAD \"${1:file}.dll\" \"${2:class}\" ${options}" },
                 { "trigger": "CLR::Destroy", "contents": "CLR::Destroy" },
 
+                // ComPlusAdmin.dll - http://nsis.sourceforge.net/ComPlusAdmin_plug-in
+                { "trigger": "ComPlusAdmin::CreateApplication", "contents": "ComPlusAdmin::CreateApplication \"${1:application_name}\" ${2:timeout}" },
+                { "trigger": "ComPlusAdmin::DeleteApplication", "contents": "ComPlusAdmin::DeleteApplication \"${1:application_name}\"" },
+                { "trigger": "ComPlusAdmin::GetApplicationProperty", "contents": "ComPlusAdmin::GetApplicationProperty \"${1:application_name}\" \"${2:property}\"" },
+                { "trigger": "ComPlusAdmin::InstallComponent", "contents": "ComPlusAdmin::InstallComponent \"${1:application_name}\" \"${2:application_path}.dll\"" },
+                { "trigger": "ComPlusAdmin::IsApplicationPresent", "contents": "ComPlusAdmin::IsApplicationPresent \"${1:application_name}\"" },
+                { "trigger": "ComPlusAdmin::IsComponentPresent", "contents": "ComPlusAdmin::IsComponentPresent \"${1:application_name}\" \"${2:file}.dll\"" },
+                { "trigger": "ComPlusAdmin::RemoveComponent", "contents": "ComPlusAdmin::RemoveComponent \"${1:application_name}\" \"${2:file}.dll\"" },
+                { "trigger": "ComPlusAdmin::SetApplicationProperty", "contents": "ComPlusAdmin::SetApplicationProperty \"${1:application_name}\" \"${2:property}\"" },
+                { "trigger": "ComPlusAdmin::SetUserNameAndPassword", "contents": "ComPlusAdmin::SetUserNameAndPassword \"${1:application_name}\" \"${2:password}\" \"${3:user_name}\"" },
+
                 // CPUDesc.dll - http://nsis.sourceforge.net/CPUDesc_plug-in
                 { "trigger": "CPUDesc::tell", "contents": "CPUDesc::tell" },
 
@@ -130,6 +154,9 @@
 
                 // CRCCheck.dll - http://nsis.sourceforge.net/CRCCheck_plug-in
                 { "trigger": "CRCCheck::GenCRC", "contents": "CRCCheck::GenCRC \"${1:file}\"" },
+
+                // CreateMutex.dll - http://nsis.sourceforge.net/CreateMutex_plug-in
+                { "trigger": "CreateMutex::nsCreateMutex", "contents": "CreateMutex::nsCreateMutex \"${1:mutex_name}\" ${2:parameter}" },
 
                 // Crypto.dll - http://nsis.sourceforge.net/Crypto_plug-in
                 { "trigger": "Crypto::HashData", "contents": "Crypto::HashData \"${1:algorithm}\" \"${2:string}\"" },
