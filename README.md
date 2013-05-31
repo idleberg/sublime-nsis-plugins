@@ -3,6 +3,8 @@
 
 [NSIS](http://nsis.sourceforge.net) syntax completions for [Sublime Text](http://www.sublimetext.com/), extending the [basic package](https://github.com/idleberg/NSIS-Sublime-Text) with commands for third-party plug-ins.
 
+This package has been tested and approved for Sublime Text versions 2 and 3 (beta).
+
 ### Supported plugins
 * [AccessControl](http://nsis.sourceforge.net/AccessControl_plug-in)
 * [Aero](http://nsis.sourceforge.net/Aero_plug-in)
@@ -185,7 +187,7 @@ The easiest way to install the package is to use [Package Control](http://wbond.
 2. Choose *Install Package* from the Command Palette (`Ctrl+Shift+P` on Windows and Linux, `⇧⌘P` on OS X)
 3. Select *NSIS Autocomplete (Add-ons)* and press `Enter`
 
-Package Control will keep all installed packages up-to-date!
+With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings) enabled, Package Control will keep all installed packages up-to-date!
 
 ### Windows Installer
 Assuming that you're already familiar with NSIS, you can build yourself a setup executable to install this package. Download `installer.nsi` from the [main package](https://github.com/idleberg/NSIS-Sublime-Text)'s scripts folder, compile the source and execute the generated file. You can choose which packages you want to install.
