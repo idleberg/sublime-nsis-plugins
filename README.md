@@ -181,8 +181,6 @@ This package has been tested and approved for Sublime Text versions 2 and 3 (bet
 
 ### Package Control
 
-The easiest way to install the package is to use [Package Control](http://wbond.net/sublime_packages/package_control):
-
 1. Make sure you already have [Package Control](http://wbond.net/sublime_packages/package_control) installed
 2. Choose *Install Package* from the Command Palette (`Ctrl+Shift+P` on Windows and Linux, `⇧⌘P` on OS X)
 3. Select *NSIS Autocomplete (Add-ons)* and press `Enter`
