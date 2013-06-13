@@ -219,3 +219,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+## Donate
+
+[<img src="https://raw.github.com/balupton/flattr-buttons/master/badge-89x18.gif" />](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/NSIS-Sublime-Text-Addons/&title=NSIS-Sublime-Text-Addons&description=Additional%20pack%20of%20third-party%20NSIS%20plug-in%20completions%20Sublime%20Text&language=en_GB&tags=nsis,sublimetext,plugins,completions,auto-complete&hidden=0&category=software)
