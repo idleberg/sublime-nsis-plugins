@@ -194,7 +194,7 @@ Assuming that you're already familiar with NSIS, you can build yourself a setup 
 ### Download Manually
 
 * Download the files using the GitHub .zip download option
-* Unzip the files to your Sublime Text 2 `Packages/User` directory
+* Unzip the files to your Sublime Text `Packages/User` directory
 
 ## License
 
