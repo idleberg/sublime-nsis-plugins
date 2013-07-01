@@ -1,7 +1,7 @@
 # NSIS Autocomplete (Add-ons)
 *by Jan T. Sott*
 
-[NSIS](http://nsis.sourceforge.net) syntax completions for [Sublime Text](http://www.sublimetext.com/), extending the [basic package](https://github.com/idleberg/NSIS-Sublime-Text) with commands for third-party plug-ins.
+[NSIS][1] syntax completions for [Sublime Text][2], extending the [basic package][3] with commands for third-party plug-ins.
 
 This package has been tested and approved for Sublime Text versions 2 and 3 (beta).
 
@@ -181,15 +181,17 @@ This package has been tested and approved for Sublime Text versions 2 and 3 (bet
 
 ### Package Control
 
-1. Make sure you already have [Package Control](http://wbond.net/sublime_packages/package_control) installed
+1. Make sure you already have [Package Control][4] installed
 2. Choose *Install Package* from the Command Palette (`Ctrl+Shift+P` on Windows and Linux, `⇧⌘P` on OS X)
 3. Select *NSIS Autocomplete (Add-ons)* and press `Enter`
 
-With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings) enabled, Package Control will keep all installed packages up-to-date!
+With [auto_upgrade][5] enabled, Package Control will keep all installed packages up-to-date!
 
 ### Windows Installer
+
 Assuming that you're already familiar with NSIS, you can build yourself a setup executable to install this package. Download `installer.nsi` from the [main package](https://github.com/idleberg/NSIS-Sublime-Text)'s scripts folder, compile the source and execute the generated file. You can choose which packages you want to install.
 
+There's also a collection of [Sublime Text Packages][6] available as a Windows installer.
 
 ### Download Manually
 
@@ -223,3 +225,10 @@ THE SOFTWARE.
 ## Donate
 
 [<img src="https://raw.github.com/balupton/flattr-buttons/master/badge-89x18.gif" />](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/NSIS-Sublime-Text-Addons/&title=NSIS-Sublime-Text-Addons&description=Additional%20pack%20of%20third-party%20NSIS%20plug-in%20completions%20Sublime%20Text&language=en_GB&tags=nsis,sublimetext,plugins,completions,auto-complete&hidden=0&category=software)
+
+[1]: http://nsis.sourceforge.net/
+[2]: http://www.sublimetext.com/
+[3]: https://github.com/idleberg/NSIS-Sublime-Text/
+[4]: http://wbond.net/sublime_packages/package_control/
+[5]: http://wbond.net/sublime_packages/package_control/settings/
+[6]: https://github.com/NSIS-Handbook/Tools/tree/master/Sublime%20Text%20Packages/
