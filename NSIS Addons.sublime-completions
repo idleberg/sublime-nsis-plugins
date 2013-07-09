@@ -1269,7 +1269,7 @@
                 { "trigger": "UnTGZ::extractFile", "contents": "UnTGZ::extractFile ${1:options} \"${2:archive}.tgz\" \"${3:file}\"" },
                 { "trigger": "UnTGZ::extractV", "contents": "UnTGZ::extractV ${1:options} \"${2:archive}.tgz\"" },
 
-                // UserMgr.dll - http://nsis.sourceforge.net/UltraModernUI
+                // UserMgr.dll - http://nsis.sourceforge.net/UserMgr_plug-in
                 { "trigger": "UserMgr::CreateAccount", "contents": "UserMgr::CreateAccount \"${1:USERID}\" \"${2:PASSWORD}\" \"${3:COMMENT}\"" },
                 { "trigger": "UserMgr::CreateAccountEx", "contents": "UserMgr::CreateAccountEx \"${1:USERID}\" \"${2:PASSWORD}\" \"${3:COMMENT}\" \"${4:FULLNAME}\" \"${5:USERCOMMENT}\"\" \"${6:FLAGS}\"" },
                 { "trigger": "UserMgr::GetCurrentUserName", "contents": "UserMgr::GetCurrentUserName" },
