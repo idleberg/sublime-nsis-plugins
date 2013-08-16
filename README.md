@@ -1,5 +1,4 @@
 # NSIS Autocomplete (Add-ons)
-*by Jan T. Sott*
 
 [NSIS][1] syntax completions for [Sublime Text][2], extending the [basic package][3] with commands for third-party plug-ins.
 
@@ -192,6 +191,11 @@ With [auto_upgrade][5] enabled, Package Control will keep all installed packages
 Assuming that you're already familiar with NSIS, you can build yourself a setup executable to install this package. Download `installer.nsi` from the [main package](https://github.com/idleberg/NSIS-Sublime-Text)'s scripts folder, compile the source and execute the generated file. You can choose which packages you want to install.
 
 There's also a collection of [Sublime Text Packages][6] available as a Windows installer.
+
+### GitHub
+
+1. Change to your Sublime Text `Packages/User` directory
+2. Clone repository `git clone https://github.com/idleberg/NSIS-Sublime-Text-Addons.git`
 
 ### Download Manually
 
