@@ -339,7 +339,8 @@
                 { "trigger": "InetLoad::load", "contents": "InetLoad::load \"${1:url}\" \"${2:target_file}\"" },
 
                 // IniGetSectionNames.nsh - http://nsis.sourceforge.net/IniGetSectionNames
-                { "trigger": "IniGetSectionNames", "contents": "\\${IniGetSectionNames} \"${1:file}.ini\" ${3:function}" },
+                { "trigger": "IniGetSectionNames", "contents": "\\${IniGetSectionNames} \"${1:file}.ini\" ${2:function}" },
+                { "trigger": "IniGetSectionNames_StopEnum", "contents": "\\${IniGetSectionNames_StopEnum}" },
 
                 // InstallOptionsEx.dll - http://nsis.sourceforge.net/InstallOptionsEx_plug-inn
                 { "trigger": "InstallOptionsEx::initDialog /NOUNLOAD", "contents": "InstallOptionsEx::initDialog /NOUNLOAD \"${1:file}.ini\"" },
