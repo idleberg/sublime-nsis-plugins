@@ -559,6 +559,14 @@
                 // NsExpr.nsh - http://nsis.sourceforge.net/NsExpr_plug-in
                 { "trigger": "${Expr}", "contents": "\\${Expr} ${1:expression}" },
                 { "trigger": "${ExprEval}", "contents": "\\${ExprEval} ${1:expression}" },
+
+                // NsFlash.dll - http://nsis.sourceforge.net/File:NsFlash.zip
+                { "trigger": "nsFlash::Destroy", "contents": "nsFlash::Destroy" },
+                { "trigger": "nsFlash::IsInstalled", "contents": "nsFlash::IsInstalled\nPop ${1:var}" },
+                { "trigger": "nsFlash::Load /replace", "contents": "nsFlash::Load /replace ${1:hwnd} \"${2:swf_path}\"" },
+                { "trigger": "nsFlash::Load", "contents": "nsFlash::Load ${1:hwnd} \"${2:swf_path}\"" },
+                { "trigger": "nsFlash::Window /size", "contents": "nsFlash::Window /size ${1:WxH} \"${2:swf_path}\" \"${3:caption}\"" },
+                { "trigger": "nsFlash::Window", "contents": "nsFlash::Window \"${1:swf_path}\" \"${2:caption}\"" },
                 
                 // Nsis7z.dll - http://nsis.sourceforge.net/Nsis7z_plug-in
                 { "trigger": "Nsis7z::Extract", "contents": "Nsis7z::Extract \"${1:file}.7z\"" },
@@ -903,6 +911,9 @@
 
                 // PixelShader.dll - http://nsis.sourceforge.net/PixelShaderCheck
                 { "trigger": "PixelShader::GetPixelShaderVersion", "contents": "PixelShader::GetPixelShaderVersion" },
+
+                // PowerShellExec.nsh - http://nsis.sourceforge.net/Execute_PowerShell_script_or_command
+                { "trigger": "${PowerShellExec}", "contents": "\\${PowerShellExec} \"${1:command}\"" },
 
                 // Processes.dll - http://nsis.sourceforge.net/Processes_plug-in
                 { "trigger": "Processes::FindDevice", "contents": "Processes::FindDevice \"${1:device_base_name}\"" },
