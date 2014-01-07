@@ -2,7 +2,9 @@
 
 [NSIS][1] syntax completions for [Sublime Text][2], extending the [basic package][3] with commands for third-party plug-ins.
 
-This package has been tested and approved for Sublime Text versions 2 and 3 (beta).
+![Screenshot](https://raw.github.com/idleberg/NSIS-Sublime-Text-Addons/master/screenshot.gif)
+
+*Screenshot of NSIS file in Sublime Text with [Paraíso theme](https://github.com/idleberg/Paraiso.tmTheme)*
 
 ### Supported plugins
 * [AccessControl](http://nsis.sourceforge.net/AccessControl_plug-in)
