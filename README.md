@@ -1,4 +1,4 @@
-# NSIS Autocomplete (Add-ons)
+# NSIS Plug-in Completions
 
 [NSIS][1] syntax completions for [Sublime Text][2], extending the [basic package][3] with commands for third-party plug-ins.
 
@@ -184,7 +184,7 @@ This package has been tested and approved for Sublime Text versions 2 and 3 (bet
 
 1. Make sure you already have [Package Control][4] installed
 2. Choose *Install Package* from the Command Palette (`Ctrl+Shift+P` on Windows and Linux, `⇧⌘P` on OS X)
-3. Select *NSIS Autocomplete (Add-ons)* and press `Enter`
+3. Select *NSIS Plug-in Completions* and press `Enter`
 
 With [auto_upgrade][5] enabled, Package Control will keep all installed packages up-to-date!
 
