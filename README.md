@@ -4,7 +4,7 @@
 
 ![Screenshot](https://raw.github.com/idleberg/NSIS-Sublime-Text-Addons/master/screenshot.gif)
 
-*Screenshot of NSIS file in Sublime Text with [Paraíso theme](https://github.com/idleberg/Paraiso.tmTheme)*
+*Screenshot of NSIS file in Sublime Text*
 
 ### Supported plugins
 * [AccessControl](http://nsis.sourceforge.net/AccessControl_plug-in)
