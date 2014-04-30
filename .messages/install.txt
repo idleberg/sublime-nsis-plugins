@@ -1,0 +1,15 @@
+Thanks for installing the NSIS Plug-in Completions. This package is meant as an
+add-on for the “NSIS Completions & Snippets”, which you can install via Package
+Control.
+
+    “NSIS Completions & Snippets”
+    https://github.com/idleberg/NSIS-Sublime-Text
+
+The following packages further extend Sublime Text's NSIS support and are well
+worth a look.
+
+    “NSIS”, a syntax highlighter
+    https://github.com/SublimeText/NSIS
+
+    “Drunken NSIS”, fuzzy NSIS completions
+    https://github.com/idleberg/Drunken-NSIS
