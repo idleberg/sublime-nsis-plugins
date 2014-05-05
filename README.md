@@ -1,4 +1,4 @@
-# NSIS Plug-in Completions
+# NSIS Plug-in Completions [![Build Status](https://secure.travis-ci.org/idleberg/NSIS-Sublime-Text-Addons.png)](http://travis-ci.org/idleberg/NSIS-Sublime-Text-Addons)
 
 [NSIS](http://nsis.sourceforge.net/) syntax completions for [Sublime Text](http://www.sublimetext.com/), extending the [basic package](https://github.com/idleberg/NSIS-Sublime-Text/) with commands for third-party plug-ins.
 
