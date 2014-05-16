@@ -174,6 +174,7 @@
 * [Version](http://nsis.sourceforge.net/Version_plug-in)
 * [w7tbp](http://nsis.sourceforge.net/TaskbarProgress_plug-in)
 * [WinShell](http://nsis.sourceforge.net/WinShell_plug-in)
+* [WimImage](http://forums.winamp.com/showthread.php?t=377498)
 * [WmiInspector](http://nsis.sourceforge.net/WmiInspector_plug-in)
 * [XiMoL](http://nsis.sourceforge.net/XiMoL_plug-in)
 * [XML](http://nsis.sourceforge.net/XML_plug-in)
