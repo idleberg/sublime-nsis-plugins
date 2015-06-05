@@ -1,4 +1,7 @@
-# NSIS Plug-in Completions [![Build Status](https://secure.travis-ci.org/idleberg/NSIS-Sublime-Text-Addons.png)](http://travis-ci.org/idleberg/NSIS-Sublime-Text-Addons)
+# NSIS Plug-in Completions
+
+[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![Travis](https://img.shields.io/travis/idle/NSIS-Sublime-Text-Addons.svg?style=flat-square)](https://travis-ci.org/idle/NSIS-Sublime-Text-Addons)
 
 [NSIS](http://nsis.sourceforge.net/) syntax completions for [Sublime Text](http://www.sublimetext.com/), extending the [basic package](https://github.com/idleberg/NSIS-Sublime-Text/) with commands for third-party plug-ins.
 
