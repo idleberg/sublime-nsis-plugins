@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "CPUDesc.dll": "http://nsis.sourceforge.net/CPUDesc_plug-in"
+    },
+    {
+      "trigger": "CPUDesc::tell",
+      "contents": "CPUDesc::tell"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

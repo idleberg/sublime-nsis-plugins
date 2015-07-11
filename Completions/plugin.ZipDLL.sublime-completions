@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "ZipDLL.dll": "http://nsis.sourceforge.net/ZipDLL"
+    },
+    {
+      "trigger": "ZipDLL::extractall",
+      "contents": "ZipDLL::extractall \"${1:SOURCE}\" \"${2:DESTINATION}\""
+    },
+    {
+      "trigger": "ZipDLL::extractfile",
+      "contents": "ZipDLL::extractfile \"${1:SOURCE}\" \"${2:DESTINATION}\" \"${3:FILE}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

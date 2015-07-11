@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "TitlebarProgress": "http://nsis.sourceforge.net/TitlebarProgress_plug-in"
+    },
+    {
+      "trigger": "titprog::Start",
+      "contents": "titprog::Start"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "EmbeddedLists.dll": "http://nsis.sourceforge.net/EmbeddedLists_plug-in"
+    },
+    {
+      "trigger": "EmbeddedLists::Dialog",
+      "contents": "EmbeddedLists::Dialog \"${1:file}.ini\""
+    },
+    {
+      "trigger": "EmbeddedLists::InitDialog",
+      "contents": "EmbeddedLists::InitDialog \"${1:file}.ini\""
+    },
+    {
+      "trigger": "EmbeddedLists::Show",
+      "contents": "EmbeddedLists::Show"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

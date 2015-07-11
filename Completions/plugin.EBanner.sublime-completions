@@ -1,0 +1,31 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "EBanner.dll": "http://nsis.sourceforge.net/EBanner_plug-in"
+    },
+    {
+      "trigger": "EBanner::play /LOOP",
+      "contents": "EBanner::play /NOUNLOAD  /LOOP \"${1:image}\""
+    },
+    {
+      "trigger": "EBanner::play",
+      "contents": "EBanner::play /NOUNLOAD \"${1:image}\""
+    },
+    {
+      "trigger": "EBanner::show [/options]",
+      "contents": "EBanner::show /NOUNLOAD ${1:options} \"${2:image}\""
+    },
+    {
+      "trigger": "EBanner::show",
+      "contents": "EBanner::show /NOUNLOAD \"${1:image}\""
+    },
+    {
+      "trigger": "EBanner::stop",
+      "contents": "EBanner::stop"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

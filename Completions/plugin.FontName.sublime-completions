@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "FontName": "http://nsis.sourceforge.net/FontName_plug-in"
+    },
+    {
+      "trigger": "!insertmacro:FontName",
+      "contents": "!insertmacro FontName \"${1:file}.ttf\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

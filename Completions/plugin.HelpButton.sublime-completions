@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "HelpButton.dll": "http://nsis.sourceforge.net/HelpButton_plug-in"
+    },
+    {
+      "trigger": "HelpButton::show",
+      "contents": "HelpButton::show /NOUNLOAD \"${1:x},${2:y}\" \"${3:button_text}\" \"${4:window_title}\" \"${5:window_text}\" ${6:options}"
+    },
+    {
+      "trigger": "HelpButton::end",
+      "contents": "HelpButton::end"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

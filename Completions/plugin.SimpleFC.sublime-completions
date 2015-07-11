@@ -1,0 +1,131 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "SimpleFC.dll": "http://nsis.sourceforge.net/NSIS_Simple_Firewall_Plugin"
+    },
+    {
+      "trigger": "SimpleFC::AddApplication",
+      "contents": "SimpleFC::AddApplication \"${1:name}\" \"${2:path}\" ${3:scope} ${4:ip_version} ${5:remote_addresses} ${6:status}"
+    },
+    {
+      "trigger": "SimpleFC::AddPort",
+      "contents": "SimpleFC::AddPort ${1:port} \"${2:name}\" ${3:protocol} ${4:scope} ${5:ip_version} ${6:remote_addresses} ${7:status}"
+    },
+    {
+      "trigger": "SimpleFC::AdvExistsRule",
+      "contents": "SimpleFC::AdvAddRule \"${1:name}\" \"${2:description}\" ${3:protocol} ${4:direction} ${5:status} ${6:profile} ${7:action} ${8:application} ${9:icmp_types_and_codes} ${10:group} ${11:local_ports} ${12:remote_ports} ${13:local_address} ${14:remote_address}"
+    },
+    {
+      "trigger": "SimpleFC::AdvRemoveRule",
+      "contents": "SimpleFC::AdvRemoveRule \"${1:name}\""
+    },
+    {
+      "trigger": "SimpleFC::AllowDisallowExceptionsNotAllowed",
+      "contents": "SimpleFC::AllowDisallowExceptionsNotAllowed ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::AllowDisallowIcmpInboundEchoRequest",
+      "contents": "SimpleFC::AllowDisallowIcmpInboundEchoRequest ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::AllowDisallowIcmpInboundMaskRequest",
+      "contents": "SimpleFC::AllowDisallowIcmpInboundMaskRequest ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::AllowDisallowIcmpInboundRouterRequest",
+      "contents": "SimpleFC::AllowDisallowIcmpInboundRouterRequest ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::AllowDisallowIcmpInboundTimestampRequest",
+      "contents": "SimpleFC::AllowDisallowIcmpInboundTimestampRequest ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::AllowDisallowIcmpOutboundDestinationUnreachable",
+      "contents": "SimpleFC::AllowDisallowIcmpOutboundDestinationUnreachable ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::AllowDisallowIcmpOutboundPacketTooBig",
+      "contents": "SimpleFC::AllowDisallowIcmpOutboundPacketTooBig ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::AllowDisallowIcmpOutboundParameterProblem",
+      "contents": "SimpleFC::AllowDisallowIcmpOutboundParameterProblem ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::AllowDisallowIcmpOutboundSourceQuench",
+      "contents": "SimpleFC::AllowDisallowIcmpOutboundSourceQuench ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::AllowDisallowIcmpOutboundTimeExceeded",
+      "contents": "SimpleFC::AllowDisallowIcmpOutboundTimeExceeded ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::AllowDisallowIcmpRedirect",
+      "contents": "SimpleFC::AllowDisallowIcmpRedirect ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::AreExceptionsNotAllowed",
+      "contents": "SimpleFC::AreExceptionsNotAllowed"
+    },
+    {
+      "trigger": "SimpleFC::AreNotificationsEnabled",
+      "contents": "SimpleFC::AreNotificationsEnabled"
+    },
+    {
+      "trigger": "SimpleFC::EnableDisableApplication",
+      "contents": "SimpleFC::EnableDisableApplication \"${1:path}\""
+    },
+    {
+      "trigger": "SimpleFC::EnableDisableFirewall",
+      "contents": "SimpleFC::EnableDisableFirewall ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::EnableDisableNotifications",
+      "contents": "SimpleFC::EnableDisableNotifications ${1:status}"
+    },
+    {
+      "trigger": "SimpleFC::EnableDisablePort",
+      "contents": "SimpleFC::EnableDisablePort ${1:port} ${2:protocol}"
+    },
+    {
+      "trigger": "SimpleFC::IsApplicationAdded",
+      "contents": "SimpleFC::IsApplicationAdded \"${1:path}\""
+    },
+    {
+      "trigger": "SimpleFC::IsFirewallEnabled",
+      "contents": "SimpleFC::IsFirewallEnabled"
+    },
+    {
+      "trigger": "SimpleFC::IsFirewallServiceRunning",
+      "contents": "SimpleFC::IsFirewallServiceRunning"
+    },
+    {
+      "trigger": "SimpleFC::IsPortAdded",
+      "contents": "SimpleFC::IsPortAdded ${1:port} ${2:protocol}"
+    },
+    {
+      "trigger": "SimpleFC::IsPortEnabled",
+      "contents": "SimpleFC::IsPortEnabled ${1:port} ${2:protocol}"
+    },
+    {
+      "trigger": "SimpleFC::RemoveApplication",
+      "contents": "SimpleFC::RemoveApplication \"${1:path}\""
+    },
+    {
+      "trigger": "SimpleFC::RemovePort",
+      "contents": "SimpleFC::RemovePort ${1:port} ${2:protocol}"
+    },
+    {
+      "trigger": "SimpleFC::RestoreDefaults",
+      "contents": "SimpleFC::RestoreDefaults"
+    },
+    {
+      "trigger": "SimpleFC::StartStopFirewallService",
+      "contents": "SimpleFC::StartStopFirewallService ${1:status}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

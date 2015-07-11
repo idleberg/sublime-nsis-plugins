@@ -1,0 +1,91 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "nsArray.dll": "http://nsis.sourceforge.net/Arrays_in_NSIS"
+    },
+    {
+      "trigger": "nsArray::Clear",
+      "contents": "nsArray::Clear ${1:array}"
+    },
+    {
+      "trigger": "nsArray::Get /at",
+      "contents": "nsArray::SetList ${1:array} /at=${2:position}"
+    },
+    {
+      "trigger": "nsArray::Get /next",
+      "contents": "nsArray::SetList ${1:array} /next"
+    },
+    {
+      "trigger": "nsArray::Get /prev",
+      "contents": "nsArray::SetList ${1:array} /prev"
+    },
+    {
+      "trigger": "nsArray::Get /reset",
+      "contents": "nsArray::SetList ${1:array} /reset"
+    },
+    {
+      "trigger": "nsArray::Get",
+      "contents": "nsArray::SetList ${1:array} ${2:key}"
+    },
+    {
+      "trigger": "nsArray::Join /noempty",
+      "contents": "nsArray::Join ${1:array} ${2:join_string} /noempty"
+    },
+    {
+      "trigger": "nsArray::Join",
+      "contents": "nsArray::Join ${1:array} ${2:join_string}"
+    },
+    {
+      "trigger": "nsArray::Length",
+      "contents": "nsArray::Length ${1:array}"
+    },
+    {
+      "trigger": "nsArray::Remove",
+      "contents": "nsArray::Remove ${1:array} ${2:element}"
+    },
+    {
+      "trigger": "nsArray::RemoveList",
+      "contents": "nsArray::RemoveList ${1:array} ${2:elements} /end"
+    },
+    {
+      "trigger": "nsArray::Set /at",
+      "contents": "nsArray::Set ${1:array} /at=${2:position} ${3:value}"
+    },
+    {
+      "trigger": "nsArray::Set /key",
+      "contents": "nsArray::Set ${1:array} /key=${2:key} ${3:value}"
+    },
+    {
+      "trigger": "nsArray::Set",
+      "contents": "nsArray::Set ${1:array} ${2:value}"
+    },
+    {
+      "trigger": "nsArray::SetList",
+      "contents": "nsArray::SetList ${1:array} ${2:elements} /end"
+    },
+    {
+      "trigger": "nsArray::Sort",
+      "contents": "nsArray::Sort ${1:array} ${2:flags}"
+    },
+    {
+      "trigger": "nsArray::Split /ignorecase",
+      "contents": "nsArray::Join ${1:array} ${2:split_string} ${3:delimiter} /ignorecase"
+    },
+    {
+      "trigger": "nsArray::Split /noempty /ignorecase",
+      "contents": "nsArray::Join ${1:array} ${2:split_string} ${3:delimiter} /noempty /ignorecase"
+    },
+    {
+      "trigger": "nsArray::Split /noempty",
+      "contents": "nsArray::Join ${1:array} ${2:split_string} ${3:delimiter} /noempty"
+    },
+    {
+      "trigger": "nsArray::Split",
+      "contents": "nsArray::Join ${1:array} ${2:split_string} ${3:delimiter}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

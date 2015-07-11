@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "Marquee.dll": "http://nsis.sourceforge.net/Marquee_plug-in"
+    },
+    {
+      "trigger": "Marquee::start",
+      "contents": "Marquee::start ${1:parameters} \"${2:text}\""
+    },
+    {
+      "trigger": "Marquee::stop",
+      "contents": "Marquee::stop"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

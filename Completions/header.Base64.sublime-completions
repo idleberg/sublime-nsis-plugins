@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "Base64.nsh": "http://nsis.sourceforge.net/Base64"
+    },
+    {
+      "trigger": "${Base64_Decode}",
+      "contents": "\\${Base64_Decode} \"${1:text}\""
+    },
+    {
+      "trigger": "${Base64_Encode}",
+      "contents": "\\${Base64_Encode} \"${1:text}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

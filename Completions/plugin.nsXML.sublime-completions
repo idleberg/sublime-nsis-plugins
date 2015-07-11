@@ -1,0 +1,39 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "nsXML.dll": "http://nsis.sourceforge.net/NsXML_plug-in_(by_rsegal)"
+    },
+    {
+      "trigger": "nsXML::endDocument",
+      "contents": "nsXML::endDocument"
+    },
+    {
+      "trigger": "nsXML::init",
+      "contents": "nsXML::init"
+    },
+    {
+      "trigger": "nsXML::initCOM",
+      "contents": "nsXML::initCOM"
+    },
+    {
+      "trigger": "nsXML::insertElemVal",
+      "contents": "nsXML::insertElemVal \"${1:node}\" \"${2:value}\""
+    },
+    {
+      "trigger": "nsXML::startDocument",
+      "contents": "nsXML::startDocument"
+    },
+    {
+      "trigger": "nsXML::uninitCOM",
+      "contents": "nsXML::uninitCOM"
+    },
+    {
+      "trigger": "nsXML::write",
+      "contents": "nsXML::write \"${1:file}.xml\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

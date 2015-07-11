@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "KillProcDLL.dll": "http://nsis.sourceforge.net/KillProcDLL_plug-in"
+    },
+    {
+      "trigger": "KillProcDLL::KillProc",
+      "contents": "KillProcDLL::KillProc \"${1:file}.exe\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

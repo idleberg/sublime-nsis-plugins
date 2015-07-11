@@ -1,0 +1,27 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "SysRestore.dll": "http://nsis.sourceforge.net/SysRestore_plug-in"
+    },
+    {
+      "trigger": "SysRestore::FinishRestorePoint",
+      "contents": "SysRestore::FinishRestorePoint"
+    },
+    {
+      "trigger": "SysRestore::RemoveRestorePoint",
+      "contents": "SysRestore::RemoveRestorePoint"
+    },
+    {
+      "trigger": "SysRestore::StartInstallPoint",
+      "contents": "SysRestore::StartInstallPoint \"${1:text}\""
+    },
+    {
+      "trigger": "SysRestore::StartUninstallPoint",
+      "contents": "SysRestore::StartUninstallPoint \"${1:text}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

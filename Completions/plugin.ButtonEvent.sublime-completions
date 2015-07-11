@@ -1,0 +1,27 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "ButtonEvent.dll": "http://nsis.sourceforge.net/ButtonEvent_plug-in"
+    },
+    {
+      "trigger": "ButtonEvent::AddEventHandler /NOTIFY",
+      "contents": "ButtonEvent::AddEventHandler ${1:control_id} /NOTIFY"
+    },
+    {
+      "trigger": "ButtonEvent::AddEventHandler",
+      "contents": "ButtonEvent::AddEventHandler ${1:control_id} ${2:function_address}"
+    },
+    {
+      "trigger": "ButtonEvent::UnsetEventHandler",
+      "contents": "ButtonEvent::UnsetEventHandler ${1:control_id}"
+    },
+    {
+      "trigger": "ButtonEvent::WhichButtonId",
+      "contents": "ButtonEvent::WhichButtonId /NOUNLOAD"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "nsisFirewall.dll": "http://nsis.sourceforge.net/NsisFirewall_plug-in"
+    },
+    {
+      "trigger": "nsisFirewall::AddAuthorizedApplication",
+      "contents": "nsisFirewall::AddAuthorizedApplication \"${1:application_path}\" \"${2:rule_name}\""
+    },
+    {
+      "trigger": "nsisFirewall::RemoveAuthorizedApplication",
+      "contents": "nsisFirewall::RemoveAuthorizedApplication \"${1:application_path}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

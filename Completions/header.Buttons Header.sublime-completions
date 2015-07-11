@@ -1,0 +1,31 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "Buttons Header.nsh": "http://nsis.sourceforge.net/Buttons_Header"
+    },
+    {
+      "trigger": "${buttonEnabled}",
+      "contents": "\\${buttonEnabled} \"${1:label\" ${2:0|1}"
+    },
+    {
+      "trigger": "${buttonVisible}",
+      "contents": "\\${buttonVisible} \"${1:label\" ${2:0|1}"
+    },
+    {
+      "trigger": "${unbuttonEnabled}",
+      "contents": "\\${unbuttonEnabled} \"${1:label\" ${2:0|1}"
+    },
+    {
+      "trigger": "${unbuttonText}",
+      "contents": "\\${unbuttonText} \"${1:label_from\" ${2:label_to}"
+    },
+    {
+      "trigger": "${unbuttonVisible}",
+      "contents": "\\${unbuttonVisible} \"${1:label\" ${2:0|1}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

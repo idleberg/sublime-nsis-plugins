@@ -1,0 +1,79 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "Version.dll": "http://nsis.sourceforge.net/Version_plug-in"
+    },
+    {
+      "trigger": "Version::GetWindowsVersion",
+      "contents": "Version::GetWindowsVersion"
+    },
+    {
+      "trigger": "Version::IsWindows2000",
+      "contents": "Version::IsWindows2000"
+    },
+    {
+      "trigger": "Version::IsWindows2003",
+      "contents": "Version::IsWindows2003"
+    },
+    {
+      "trigger": "Version::IsWindows7",
+      "contents": "Version::IsWindows7"
+    },
+    {
+      "trigger": "Version::IsWindows8",
+      "contents": "Version::IsWindows8"
+    },
+    {
+      "trigger": "Version::IsWindows95",
+      "contents": "Version::IsWindows95"
+    },
+    {
+      "trigger": "Version::IsWindows98",
+      "contents": "Version::IsWindows98"
+    },
+    {
+      "trigger": "Version::IsWindowsME",
+      "contents": "Version::IsWindowsME"
+    },
+    {
+      "trigger": "Version::IsWindowsNT351",
+      "contents": "Version::IsWindowsNT351"
+    },
+    {
+      "trigger": "Version::IsWindowsNT40",
+      "contents": "Version::IsWindowsNT40"
+    },
+    {
+      "trigger": "Version::IsWindowsPlatformNT",
+      "contents": "Version::IsWindowsPlatform9x"
+    },
+    {
+      "trigger": "Version::IsWindowsServer2008",
+      "contents": "Version::IsWindowsServer2008"
+    },
+    {
+      "trigger": "Version::IsWindowsServer2008R2",
+      "contents": "Version::IsWindowsServer2008R2"
+    },
+    {
+      "trigger": "Version::IsWindowsServer2012",
+      "contents": "Version::IsWindowsServer2012"
+    },
+    {
+      "trigger": "Version::IsWindowsVista",
+      "contents": "Version::IsWindowsVista"
+    },
+    {
+      "trigger": "Version::IsWindowsXP",
+      "contents": "Version::IsWindowsXP"
+    },
+    {
+      "trigger": "Version::IsWindowsXPx64",
+      "contents": "Version::IsWindowsXPx64"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

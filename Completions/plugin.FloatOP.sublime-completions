@@ -1,0 +1,35 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "FloatOP.dll": "http://nsis.sourceforge.net/FloatOP_plug-in"
+    },
+    {
+      "trigger": "FloatOp::Autor",
+      "contents": "FloatOp::Autor \\${1:result_var}"
+    },
+    {
+      "trigger": "FloatOp::D divide",
+      "contents": "FloatOp::D \"${1:value1}\" \"${2:value2}\" \\$${3:result_var}"
+    },
+    {
+      "trigger": "FloatOp::M multiply",
+      "contents": "FloatOp::M \"${1:value1}\" \"${2:value2}\" \\$${3:result_var}"
+    },
+    {
+      "trigger": "FloatOp::R subtract",
+      "contents": "FloatOp::R \"${1:value1}\" \"${2:value2}\" \\$${3:result_var}"
+    },
+    {
+      "trigger": "FloatOp::S add",
+      "contents": "FloatOp::S \"${1:value1}\" \"${2:value2}\" \\$${3:result_var}"
+    },
+    {
+      "trigger": "FloatOp::Ver",
+      "contents": "FloatOp::Ver \\$${1:result_var}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

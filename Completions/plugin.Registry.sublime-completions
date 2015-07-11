@@ -1,0 +1,95 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "Registry.dll": "http://nsis.sourceforge.net/Registry_plug-in"
+    },
+    {
+      "trigger": "${Registry::Close}",
+      "contents": "\\${Registry::Close} \"${1:handle}\""
+    },
+    {
+      "trigger": "${Registry::CopyKey}",
+      "contents": "\\${Registry::CopyKey} \"${1:full_path_source}\" \"${2:full_path_target\\new_key_name}\" \\$${3:var}"
+    },
+    {
+      "trigger": "${Registry::CopyValue}",
+      "contents": "\\${Registry::CopyValue} \"${1:full_path_source}\" \"${2:value_source}\" \"${3:full_path_target}\" \"${4:value_source}\" \\$${5:var}"
+    },
+    {
+      "trigger": "${Registry::CreateKey}",
+      "contents": "\\${Registry::CreateKey} \"${1:full_path}\" \\$${2:var}"
+    },
+    {
+      "trigger": "${Registry::DeleteKey}",
+      "contents": "\\${Registry::DeleteKey} \"${1:full_path}\" \\$${2:var}"
+    },
+    {
+      "trigger": "${Registry::DeleteKeyEmpty}",
+      "contents": "\\${Registry::DeleteKeyEmpty} \"${1:full_path}\" \\$${2:var}"
+    },
+    {
+      "trigger": "${Registry::DeleteValue}",
+      "contents": "\\${Registry::DeleteValue} \"${1:full_path}\" \"${2:value}\" \\$${3:var}"
+    },
+    {
+      "trigger": "${Registry::Find}",
+      "contents": "\\${Registry::Find} \"${1:handle}\" \"${2:options}\" \\$${3:path} \\$${4:value_or_key} \\$${5:string} \\$${6:type}"
+    },
+    {
+      "trigger": "${Registry::HexToStr}",
+      "contents": "\\${Registry::HexToStr} \"${1:string}\" \\$${2:var}"
+    },
+    {
+      "trigger": "${Registry::KeyExists}",
+      "contents": "\\${Registry::KeyExists} \"${1:full_path}\" \\$${2:var}"
+    },
+    {
+      "trigger": "${Registry::MoveKey}",
+      "contents": "\\${Registry::MoveKey} \"${1:full_path_source}\" \"${2:full_path_target\\new_key_name}\" \\$${3:var}"
+    },
+    {
+      "trigger": "${Registry::MoveValue}",
+      "contents": "\\${Registry::MoveValue} \"${1:full_path_source}\" \"${2:value_source}\" \"${3:full_path_target}\" \"${4:value_source}\" \\$${5:var}"
+    },
+    {
+      "trigger": "${Registry::Open}",
+      "contents": "\\${Registry::Open} \"${1:full_path}\" \"${2:options}\" \\$${3:var}"
+    },
+    {
+      "trigger": "${Registry::Read}",
+      "contents": "\\${Registry::Read} \"${1:full_path}\" \"${2:value}\" \\$${3:value_read} \\$${4:type_read}"
+    },
+    {
+      "trigger": "${Registry::ReadExtra}",
+      "contents": "\\${Registry::ReadExtra} \"${1:full_path}\" \"${2:value}\" \"${3:number}\" \\$${4:value_read} \\$${5:type_read}"
+    },
+    {
+      "trigger": "${Registry::RestoreKey}",
+      "contents": "\\${Registry::RestoreKey} \"${1:file}\" \\$${2:var}"
+    },
+    {
+      "trigger": "${Registry::SaveKey}",
+      "contents": "\\${Registry::SaveKey} \"${1:full_path}\" \"${2:file}\" \"${3:options}\" \\$${4:var}"
+    },
+    {
+      "trigger": "${Registry::StrToHex}",
+      "contents": "\\${Registry::StrToHex} \"${1:string}\" \\$${2:var}"
+    },
+    {
+      "trigger": "${Registry::Unload}",
+      "contents": "\\${Registry::Unload}"
+    },
+    {
+      "trigger": "${Registry::Write}",
+      "contents": "\\${Registry::Write} \"${1:full_path}\" \"${2:value}\" \"${3:string}\" \"${4:type}\" \\$${5:var}"
+    },
+    {
+      "trigger": "${Registry::WriteExtra}",
+      "contents": "\\${Registry::WriteExtra} \"${1:full_path}\" \"${2:value}\" \"${3:string}\" \\$${4:var}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

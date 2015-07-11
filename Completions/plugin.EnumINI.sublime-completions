@@ -1,0 +1,27 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "EnumINI.dll": "http://nsis.sourceforge.net/EnumINI_plug-in"
+    },
+    {
+      "trigger": "EnumINI::KeyExist",
+      "contents": "EnumINI::KeyExist \"${1:file}.ini\" \"${2:section}\" \"${2:key}\""
+    },
+    {
+      "trigger": "EnumINI::Section",
+      "contents": "EnumINI::Section \"${1:file}.ini\" \"${2:section}\""
+    },
+    {
+      "trigger": "EnumINI::SectionExist",
+      "contents": "EnumINI::SectionExist \"${1:file}.ini\" \"${2:section}\""
+    },
+    {
+      "trigger": "EnumINI::SectionNames",
+      "contents": "EnumINI::SectionNames \"${1:file}.ini\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

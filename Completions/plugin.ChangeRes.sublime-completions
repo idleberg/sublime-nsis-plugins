@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "ChangeRes.dll": "http://nsis.sourceforge.net/ChangeRes_plug-in"
+    },
+    {
+      "trigger": "ChangeRes::ChangeResolution",
+      "contents": "ChangeRes::ChangeResolution ${1:width} ${2:height} ${3:color_depth} ${4:frequency}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

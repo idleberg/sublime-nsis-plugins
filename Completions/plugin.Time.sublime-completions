@@ -1,0 +1,51 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "Time.dll": "http://nsis.sourceforge.net/Time_plug-in"
+    },
+    {
+      "trigger": "${Time::GetFileTimeUTC}",
+      "contents": "\\${Time::GetFileTimeUTC} \"${1:file}\" \\$${2:creation_time} \\$${3:last_write_time} \\$${4:last_access_time}"
+    },
+    {
+      "trigger": "${Time::GetFileTime}",
+      "contents": "\\${Time::GetFileTime} \"${1:file}\" \\$${2:creation_time} \\$${3:last_write_time} \\$${4:last_access_time}"
+    },
+    {
+      "trigger": "${Time::GetLocalTimeUTC}",
+      "contents": "\\${Time::GetLocalTimeUTC} \\$${1:var}"
+    },
+    {
+      "trigger": "${Time::MathTime}",
+      "contents": "\\${Time::MathTime} \"${1:expression}\" \\$${2:var}"
+    },
+    {
+      "trigger": "${Time::SetFileTimeUTC}",
+      "contents": "\\${Time::SetFileTimeUTC} \"${1:file}\" \"$${2:creation_time}\" \"${3:last_write_time}\" \"${4:last_access_time}\" \\$${5:var}"
+    },
+    {
+      "trigger": "${Time::SetFileTime}",
+      "contents": "\\${Time::SetFileTime} \"${1:file}\" \"$${2:creation_time}\" \"${3:last_write_time}\" \"${4:last_access_time}\" \\$${5:var}"
+    },
+    {
+      "trigger": "${Time::SetLocalTimeUTC}",
+      "contents": "\\${Time::SetLocalTimeUTC} \"${1:local_time}\" \\$${2:var}"
+    },
+    {
+      "trigger": "${Time::SetLocalTime}",
+      "contents": "\\${Time::SetLocalTime} \"${1:local_time}\" \\$${2:var}"
+    },
+    {
+      "trigger": "${Time::TimeString}",
+      "contents": "\\${Time::TimeString} \"${1:time}\" \\$${2:day} \\$${3:month} \\$${4:year} \\$${5:hour} \\$${6:minute} \\$${7:second}"
+    },
+    {
+      "trigger": "${Time::Unload}",
+      "contents": "\\${Time::Unload}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

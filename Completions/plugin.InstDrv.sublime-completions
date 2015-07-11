@@ -1,0 +1,75 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "InstDrv.dll": "http://nsis.sourceforge.net/InstDrv_plug-in"
+    },
+    {
+      "trigger": "InstDrv::CountDevices /NOUNLOAD",
+      "contents": "InstDrv::CountDevices /NOUNLOAD"
+    },
+    {
+      "trigger": "InstDrv::CountDevices",
+      "contents": "InstDrv::CountDevices"
+    },
+    {
+      "trigger": "InstDrv::CreateDevice /NOUNLOAD",
+      "contents": "InstDrv::CreateDevice /NOUNLOAD"
+    },
+    {
+      "trigger": "InstDrv::CreateDevice",
+      "contents": "InstDrv::CreateDevice"
+    },
+    {
+      "trigger": "InstDrv::DeleteOemInfFiles /NOUNLOAD",
+      "contents": "InstDrv::DeleteOemInfFiles /NOUNLOAD"
+    },
+    {
+      "trigger": "InstDrv::DeleteOemInfFiles",
+      "contents": "InstDrv::DeleteOemInfFiles"
+    },
+    {
+      "trigger": "InstDrv::InitDriverSetup /NOUNLOAD",
+      "contents": "InstDrv::InitDriverSetup /NOUNLOAD \"${1:devClass}\" \"${2:drvHWID}\""
+    },
+    {
+      "trigger": "InstDrv::InitDriverSetup",
+      "contents": "InstDrv::InitDriverSetup \"${1:devClass}\" \"${2:drvHWID}\""
+    },
+    {
+      "trigger": "InstDrv::InstallDriver /NOUNLOAD",
+      "contents": "InstDrv::InstallDriver /NOUNLOAD \"${1:infPath}\""
+    },
+    {
+      "trigger": "InstDrv::InstallDriver",
+      "contents": "InstDrv::InstallDriver \"${1:infPath}\""
+    },
+    {
+      "trigger": "InstDrv::RemoveAllDevices /NOUNLOAD",
+      "contents": "InstDrv::RemoveAllDevices /NOUNLOAD"
+    },
+    {
+      "trigger": "InstDrv::RemoveAllDevices",
+      "contents": "InstDrv::RemoveAllDevices"
+    },
+    {
+      "trigger": "InstDrv::StartSystemService /NOUNLOAD",
+      "contents": "InstDrv::StartSystemService /NOUNLOAD \"${1:serviceName}\""
+    },
+    {
+      "trigger": "InstDrv::StartSystemService",
+      "contents": "InstDrv::StartSystemService \"${1:serviceName}\""
+    },
+    {
+      "trigger": "InstDrv::StopSystemService /NOUNLOAD",
+      "contents": "InstDrv::StopSystemService /NOUNLOAD \"${1:serviceName}\""
+    },
+    {
+      "trigger": "InstDrv::StopSystemService",
+      "contents": "InstDrv::StopSystemService \"${1:serviceName}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

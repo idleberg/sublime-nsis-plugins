@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "NsMCI.dll": "http://nsis.sourceforge.net/NsMCI_plug-in"
+    },
+    {
+      "trigger": "nsmci::GetFirstCDROMDrive",
+      "contents": "nsmci::GetFirstCDROMDrive"
+    },
+    {
+      "trigger": "nsmci::SendString",
+      "contents": "nsmci::SendString \"${1:command}\""
+    },
+    {
+      "trigger": "nsmci::GetErrorString",
+      "contents": "nsmci::GetErrorString \"${1:error_code}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

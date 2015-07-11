@@ -1,0 +1,27 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "NsisCrypt.dll": "http://nsis.sourceforge.net/NsisCrypt_plug-in"
+    },
+    {
+      "trigger": "NsisCrypt::Base64Decode",
+      "contents": "NsisCrypt::Base64Decode \"${1:string}\""
+    },
+    {
+      "trigger": "NsisCrypt::DecryptSymmetric",
+      "contents": "NsisCrypt::DecryptSymmetric \"${1:encoded_cipher}\" \"${2:algorithm}\" \"${3:encoded_key}\" \"${4:encoded_iv}\""
+    },
+    {
+      "trigger": "NsisCrypt::EncryptSymmetric",
+      "contents": "NsisCrypt::EncryptSymmetric \"${1:string}\" \"${2:algorithm}\" \"${3:encoded_key}\" \"${4:encoded_iv}\""
+    },
+    {
+      "trigger": "NsisCrypt::Hash",
+      "contents": "NsisCrypt::Hash \"${1:string}\" \"${2:algorithm}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

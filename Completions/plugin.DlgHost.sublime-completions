@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "DlgHost.dll": "http://nsis.sourceforge.net/DlgHost_plug-in"
+    },
+    {
+      "trigger": "DlgHost::Close",
+      "contents": "DlgHost::Close"
+    },
+    {
+      "trigger": "DlgHost::DlgBox",
+      "contents": "DlgHost::DlgBox \"${1:options}\""
+    },
+    {
+      "trigger": "DlgHost::SetClient",
+      "contents": "DlgHost::SetClient \\$${1:handle}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

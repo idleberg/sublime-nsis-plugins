@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "NsExpr.nsh": "http://nsis.sourceforge.net/NsExpr_plug-in"
+    },
+    {
+      "trigger": "${Expr}",
+      "contents": "\\${Expr} ${1:expression}"
+    },
+    {
+      "trigger": "${ExprEval}",
+      "contents": "\\${ExprEval} ${1:expression}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

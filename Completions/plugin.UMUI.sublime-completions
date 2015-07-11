@@ -1,0 +1,195 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "UMUI.nsh": "http://nsis.sourceforge.net/UltraModernUI"
+    },
+    {
+      "trigger": "UMUI_ALTERNATEUNWELCOMEFINISHABORTPAGE_INI",
+      "contents": "!define UMUI_ALTERNATEUNWELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\""
+    },
+    {
+      "trigger": "UMUI_ALTERNATEWELCOMEFINISHABORTPAGE_INI",
+      "contents": "!define UMUI_ALTERNATEWELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\""
+    },
+    {
+      "trigger": "UMUI_BOTTOMIMAGE_BMP",
+      "contents": "!define UMUI_BOTTOMIMAGE_BMP \"${1:bmp_file}\""
+    },
+    {
+      "trigger": "UMUI_BRANDINGTEXTBACKCOLOR",
+      "contents": "!define UMUI_BRANDINGTEXTBACKCOLOR \"${1:RRGGBB}\""
+    },
+    {
+      "trigger": "UMUI_BRANDINGTEXTFRONTCOLOR",
+      "contents": "!define UMUI_BRANDINGTEXTFRONTCOLOR \"${1:RRGGBB}\""
+    },
+    {
+      "trigger": "UMUI_CUSTOM_SKIN",
+      "contents": "!define UMUI_CUSTOM_SKIN \"${1:custom_skin_path}\""
+    },
+    {
+      "trigger": "UMUI_HEADERIMAGE_BMP",
+      "contents": "!define UMUI_HEADERIMAGE_BMP \"${1:bmp_file}\""
+    },
+    {
+      "trigger": "UMUI_LEFTIMAGE_BMP",
+      "contents": "!define UMUI_LEFTIMAGE_BMP \"${1:bmp_file}\""
+    },
+    {
+      "trigger": "UMUI_NO_BOTTOMIMAGE",
+      "contents": "!define UMUI_NO_BOTTOMIMAGE"
+    },
+    {
+      "trigger": "UMUI_SKIN",
+      "contents": "!define UMUI_SKIN \"${1:skin_name}\""
+    },
+    {
+      "trigger": "UMUI_TEXT_LIGHTCOLOR",
+      "contents": "!define UMUI_TEXT_LIGHTCOLOR \"${1:RRGGBB}\""
+    },
+    {
+      "trigger": "UMUI_UI",
+      "contents": "!define UMUI_UI \"${1:ui_file}\""
+    },
+    {
+      "trigger": "UMUI_UI_COMPONENTSPAGE_NODESC",
+      "contents": "!define UMUI_UI_COMPONENTSPAGE_NODESC \"${1:ui_file}\""
+    },
+    {
+      "trigger": "UMUI_UI_COMPONENTSPAGE_SMALLDESC",
+      "contents": "!define UMUI_UI_COMPONENTSPAGE_SMALLDESC \"${1:ui_file}\""
+    },
+    {
+      "trigger": "UMUI_UNBOTTOMIMAGE_BMP",
+      "contents": "!define UMUI_UNBOTTOMIMAGE_BMP \"${1:bmp_file}\""
+    },
+    {
+      "trigger": "UMUI_UNHEADERIMAGE_BMP",
+      "contents": "!define UMUI_UNHEADERIMAGE_BMP \"${1:bmp_file}\""
+    },
+    {
+      "trigger": "UMUI_UNLEFTIMAGE_BMP",
+      "contents": "!define UMUI_UNLEFTIMAGE_BMP \"${1:bmp_file}\""
+    },
+    {
+      "trigger": "UMUI_UNWELCOMEFINISHABORTPAGE_INI",
+      "contents": "!define UMUI_UNWELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\""
+    },
+    {
+      "trigger": "UMUI_USE_ALTERNATE_PAGE",
+      "contents": "!define UMUI_USE_ALTERNATE_PAGE"
+    },
+    {
+      "trigger": "UMUI_USE_BG",
+      "contents": "!define UMUI_USE_BG \"${1:background_skin_name}\""
+    },
+    {
+      "trigger": "UMUI_USE_BG",
+      "contents": "!define UMUI_USE_BG \"${1:bgskin_name}\""
+    },
+    {
+      "trigger": "UMUI_USE_CUSTOMBG",
+      "contents": "!define UMUI_USE_CUSTOMBG \"${1:background_skin_name}\""
+    },
+    {
+      "trigger": "UMUI_USE_CUSTOMBG",
+      "contents": "!define UMUI_USE_CUSTOMBG"
+    },
+    {
+      "trigger": "UMUI_USE_UNALTERNATE_PAGE",
+      "contents": "!define UMUI_USE_UNALTERNATE_PAGE"
+    },
+    {
+      "trigger": "UMUI_WELCOMEFINISHABORTPAGE_INI",
+      "contents": "!define UMUI_WELCOMEFINISHABORTPAGE_INI \"${1:ini_file}\""
+    },
+    {
+      "trigger": "UMUI_PAGE_ABORT",
+      "contents": "!insertmacro UMUI_PAGE_ABORT"
+    },
+    {
+      "trigger": "UMUI_PAGE_ADDITIONALTASKS",
+      "contents": "!insertmacro UMUI_PAGE_ADDITIONALTASKS \"${1:page_id}\" \"${1:function}\""
+    },
+    {
+      "trigger": "UMUI_PAGE_ALTERNATIVESTARTMENU",
+      "contents": "!insertmacro UMUI_PAGE_ALTERNATIVESTARTMENU \"${1:page_id}\" \\$${2:var}"
+    },
+    {
+      "trigger": "UMUI_PAGE_CONFIRM",
+      "contents": "!insertmacro UMUI_PAGE_CONFIRM"
+    },
+    {
+      "trigger": "UMUI_PAGE_FILEDISKREQUEST",
+      "contents": "!insertmacro UMUI_PAGE_FILEDISKREQUEST"
+    },
+    {
+      "trigger": "UMUI_PAGE_INFORMATION",
+      "contents": "!insertmacro UMUI_PAGE_INFORMATION \"${1:text_file}\""
+    },
+    {
+      "trigger": "UMUI_PAGE_MAINTENANCE",
+      "contents": "!insertmacro UMUI_PAGE_MAINTENANCE"
+    },
+    {
+      "trigger": "UMUI_PAGE_MULTILANGUAGE",
+      "contents": "!insertmacro UMUI_PAGE_MULTILANGUAGE"
+    },
+    {
+      "trigger": "UMUI_PAGE_SERIALNUMBER",
+      "contents": "!insertmacro UMUI_PAGE_SERIALNUMBER \"${1:function}\""
+    },
+    {
+      "trigger": "UMUI_PAGE_SETUPTYPE",
+      "contents": "!insertmacro UMUI_PAGE_SETUPTYPE"
+    },
+    {
+      "trigger": "UMUI_PAGE_UPDATE",
+      "contents": "!insertmacro UMUI_PAGE_UPDATE"
+    },
+    {
+      "trigger": "UMUI_UNPAGE_ABORT",
+      "contents": "!insertmacro UMUI_UNPAGE_ABORT"
+    },
+    {
+      "trigger": "UMUI_UNPAGE_ADDITIONALTASKS",
+      "contents": "!insertmacro UMUI_UNPAGE_ADDITIONALTASKS \"${1:page_id}\" \"${1:function}\""
+    },
+    {
+      "trigger": "UMUI_UNPAGE_CONFIRM",
+      "contents": "!insertmacro UMUI_UNPAGE_CONFIRM"
+    },
+    {
+      "trigger": "UMUI_UNPAGE_FILEDISKREQUEST",
+      "contents": "!insertmacro UMUI_UNPAGE_FILEDISKREQUEST"
+    },
+    {
+      "trigger": "UMUI_UNPAGE_INFORMATION",
+      "contents": "!insertmacro UMUI_UNPAGE_INFORMATION \"${1:text_file}\""
+    },
+    {
+      "trigger": "UMUI_UNPAGE_MULTILANGUAGE",
+      "contents": "!insertmacro UMUI_UNPAGE_MULTILANGUAGE"
+    },
+    {
+      "trigger": "UMUI_UNPAGE_SERIALNUMBER",
+      "contents": "!insertmacro UMUI_UNPAGE_SERIALNUMBER \"${1:function}\""
+    },
+    {
+      "trigger": "UMUI_UNPAGE_SETUPTYPE",
+      "contents": "!insertmacro UMUI_UNPAGE_SETUPTYPE"
+    },
+    {
+      "trigger": "UMUI_BG",
+      "contents": "!macro UMUI_BG\n\t${1:# your code here}\n!macroend"
+    },
+    {
+      "trigger": "UMUI_BG_Destroy",
+      "contents": "!macro UMUI_BG_Destroy\n\t${1:# your code here}\n!macroend"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

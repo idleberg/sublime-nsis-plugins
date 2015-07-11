@@ -1,0 +1,35 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "MSSQL_OLEDB.dll": "http://nsis.sourceforge.net/MSSQL_OLEDB_plug-in"
+    },
+    {
+      "trigger": "MSSQL_OLEDB::SQL_Execute",
+      "contents": "MSSQL_OLEDB::SQL_Execute \"${1:query}\""
+    },
+    {
+      "trigger": "MSSQL_OLEDB::SQL_ExecuteScript",
+      "contents": "MSSQL_OLEDB::SQL_ExecuteScript \"${1:script}\""
+    },
+    {
+      "trigger": "MSSQL_OLEDB::SQL_GetError",
+      "contents": "MSSQL_OLEDB::SQL_GetError"
+    },
+    {
+      "trigger": "MSSQL_OLEDB::SQL_GetRow",
+      "contents": "MSSQL_OLEDB::SQL_GetRow"
+    },
+    {
+      "trigger": "MSSQL_OLEDB::SQL_Logon",
+      "contents": "MSSQL_OLEDB::SQL_Logon \"${1:server}\" \"${2:user}\" \"${3:password}\""
+    },
+    {
+      "trigger": "MSSQL_OLEDB::SQL_Logout",
+      "contents": "MSSQL_OLEDB::SQL_Logout"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

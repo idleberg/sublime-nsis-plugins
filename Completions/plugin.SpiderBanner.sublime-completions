@@ -1,0 +1,27 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "SpiderBanner.dll": "http://nsis.sourceforge.net/SpiderBanner_plug-in"
+    },
+    {
+      "trigger": "SpiderBanner::Destroy",
+      "contents": "SpiderBanner::Destroy"
+    },
+    {
+      "trigger": "SpiderBanner::Show /MODERN",
+      "contents": "SpiderBanner::Show ${1:position} ${2:distance} /MODERN"
+    },
+    {
+      "trigger": "SpiderBanner::Show",
+      "contents": "SpiderBanner::Show ${1:position} ${2:distance}"
+    },
+    {
+      "trigger": "SpiderBanner::ShowPBOnly",
+      "contents": "SpiderBanner::ShowPBOnly"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

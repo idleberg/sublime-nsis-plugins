@@ -1,0 +1,27 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "nsWeb.dll": "http://nsis.sourceforge.net/NsWeb_plug-in"
+    },
+    {
+      "trigger": "nsWeb::IsInet",
+      "contents": "nsWeb::IsInet ${1:var}"
+    },
+    {
+      "trigger": "nsWeb::ShowHTMLInPage",
+      "contents": "nsWeb::ShowHTMLInPage \"${1:html_string}\""
+    },
+    {
+      "trigger": "nsWeb::ShowWebInPage",
+      "contents": "nsWeb::ShowWebInPage \"${1:url_or_html}\""
+    },
+    {
+      "trigger": "nsWeb::ShowWebInPopUp",
+      "contents": "nsWeb::ShowWebInPopUp \"${1:url_or_html}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

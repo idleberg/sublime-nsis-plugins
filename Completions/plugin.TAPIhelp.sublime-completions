@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "TAPIhelp.dll": "http://nsis.sourceforge.net/TAPIhelp_plug-in"
+    },
+    {
+      "trigger": "TAPIhelp::GetModemID",
+      "contents": "TAPIhelp::GetModemID"
+    },
+    {
+      "trigger": "TAPIhelp::GetModemName",
+      "contents": "TAPIhelp::GetModemName"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

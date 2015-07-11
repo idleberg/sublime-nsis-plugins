@@ -1,0 +1,59 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "NSISpcre.dll": "http://nsis.sourceforge.net/NSISpcre_plug-in"
+    },
+    {
+      "trigger": "${RECaptureMatches}",
+      "contents": "\\${RECaptureMatches} \\$${1:result} \"${2:pattern}\" \"${3:subject}\" \"${4:partial}\""
+    },
+    {
+      "trigger": "${RECheckPattern}",
+      "contents": "\\${RECheckPattern} \\$${1:result} \"${2:pattern}\""
+    },
+    {
+      "trigger": "${REClearAllOptions}",
+      "contents": "\\${REClearAllOptions}"
+    },
+    {
+      "trigger": "${REClearOption}",
+      "contents": "\\${REClearOption} \"${1:option}\""
+    },
+    {
+      "trigger": "${REFindClose}",
+      "contents": "\\${REFindClose}"
+    },
+    {
+      "trigger": "${REFindNext}",
+      "contents": "\\${REFindNext} \\$${1:result} \"${2:pattern}\" \"${3:subject}\""
+    },
+    {
+      "trigger": "${REFind}",
+      "contents": "\\${REFind} \\$${1:result} \"${2:pattern}\" \"${3:subject}\""
+    },
+    {
+      "trigger": "${REGetOption}",
+      "contents": "\\${REGetOption} \\$${1:result} \"${2:option}\""
+    },
+    {
+      "trigger": "${REMatches}",
+      "contents": "\\${REMatches} \\$${1:result} \"${2:pattern}\" \"${3:subject}\" \"${4:partial}\""
+    },
+    {
+      "trigger": "${REQuoteMeta}",
+      "contents": "\\${REQuoteMeta} \\$${1:result} \"${2:subject}\""
+    },
+    {
+      "trigger": "${REReplace}",
+      "contents": "\\${REReplace} \\$${1:result} \"${2:pattern}\" \"${3:subject}\" \"${4:replacement}\" ${5:replace_all}"
+    },
+    {
+      "trigger": "${RESetOption}",
+      "contents": "\\${RESetOption} \"${1:option}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

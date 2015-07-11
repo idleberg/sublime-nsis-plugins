@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "NSISLog.dll": "http://nsis.sourceforge.net/NSISLog_plug-in"
+    },
+    {
+      "trigger": "nsislog::log",
+      "contents": "nsislog::log \"${1:file}.log\" \"${2:text}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

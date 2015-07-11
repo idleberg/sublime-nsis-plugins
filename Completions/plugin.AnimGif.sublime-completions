@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "AnimGif.nsh": "http://nsis.sourceforge.net/AnimGif_plug-in"
+    },
+    {
+      "trigger": "AnimGif::play /NOUNLOAD",
+      "contents": "AnimGif::play /NOUNLOAD ${1:options} \"${2:file}.gif\""
+    },
+    {
+      "trigger": "AnimGif::play",
+      "contents": "AnimGif::play ${1:options} \"${2:file}.gif\""
+    },
+    {
+      "trigger": "AnimGif::stop",
+      "contents": "AnimGif::stop"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

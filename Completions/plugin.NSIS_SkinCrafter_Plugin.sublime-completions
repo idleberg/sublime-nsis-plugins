@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "NSIS_SkinCrafter_Plugin.dll": "http://nsis.sourceforge.net/NSIS_SkinCrafter_Plugin_plug-in"
+    },
+    {
+      "trigger": "NSIS_SkinCrafter_Plugin::destroy",
+      "contents": "NSIS_SkinCrafter_Plugin::destroy"
+    },
+    {
+      "trigger": "NSIS_SkinCrafter_Plugin::skin [file]",
+      "contents": "NSIS_SkinCrafter_Plugin::skin /NOUNLOAD \"${1:file}.skf\""
+    },
+    {
+      "trigger": "NSIS_SkinCrafter_Plugin::skin",
+      "contents": "NSIS_SkinCrafter_Plugin::skin /NOUNLOAD"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

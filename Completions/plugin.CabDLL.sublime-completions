@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "CabDLL.dll": "http://nsis.sourceforge.net/CabDLL_plug-in"
+    },
+    {
+      "trigger": "CabDLL::CabInfo",
+      "contents": "CabDLL::CabInfo \"${1:file}.cab\""
+    },
+    {
+      "trigger": "CabDLL::CabView",
+      "contents": "CabDLL::CabView \"${1:file}.cab\""
+    },
+    {
+      "trigger": "CabDLL::CabExtractAll",
+      "contents": "CabExtractAll::CabView \"${1:file}.cab\" \"${2:target}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

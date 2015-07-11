@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "DumpLog.dll": "http://nsis.sourceforge.net/DumpLog_plug-in"
+    },
+    {
+      "trigger": "DumpLog::DumpLog",
+      "contents": "DumpLog::DumpLog \"${1:log_file}.txt\" .${2:r0}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

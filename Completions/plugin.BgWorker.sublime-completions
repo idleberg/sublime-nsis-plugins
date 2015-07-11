@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "BgWorker.dll": "http://nsis.sourceforge.net/BgWorker_plug-in"
+    },
+    {
+      "trigger": "BgWorker::CallAndWait",
+      "contents": "BgWorker::CallAndWait"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

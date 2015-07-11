@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "InstallOptionsEx.dll": "http://nsis.sourceforge.net/InstallOptionsEx_plug-inn"
+    },
+    {
+      "trigger": "InstallOptionsEx::initDialog /NOUNLOAD",
+      "contents": "InstallOptionsEx::initDialog /NOUNLOAD \"${1:file}.ini\""
+    },
+    {
+      "trigger": "InstallOptionsEx::initDialog",
+      "contents": "InstallOptionsEx::initDialog \"${1:file}.ini\""
+    },
+    {
+      "trigger": "InstallOptionsEx::show",
+      "contents": "InstallOptionsEx::show"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

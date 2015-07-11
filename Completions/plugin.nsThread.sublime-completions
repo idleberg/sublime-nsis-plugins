@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "nsThread.dll": "http://nsis.sourceforge.net/NsThread_plug-in"
+    },
+    {
+      "trigger": "${Thread_Create}",
+      "contents": "\\${Thread_Create} \"${1:thread_proc}\" \\$${2:thread_id}"
+    },
+    {
+      "trigger": "${Thread_Join}",
+      "contents": "\\${Thread_Join} \\$${1:thread_id}"
+    },
+    {
+      "trigger": "${Thread_JoinFor}",
+      "contents": "\\${Thread_JoinFor} \\$${1:thread_id} ${2:time_in_ms} \\$${3:result}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

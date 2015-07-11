@@ -1,0 +1,123 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "SimpleSC.dll": "http://nsis.sourceforge.net/NSIS_Simple_Service_Plugin"
+    },
+    {
+      "trigger": "SimpleSC::ContinueService",
+      "contents": "SimpleSC::ContinueService ${1:name_of_service} ${1:timeout}"
+    },
+    {
+      "trigger": "SimpleSC::ExistsService",
+      "contents": "SimpleSC::ExistsService ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::GetErrorMessage",
+      "contents": "SimpleSC::GetErrorMessage ${1:error_code}"
+    },
+    {
+      "trigger": "SimpleSC::GetServiceBinaryPath",
+      "contents": "SimpleSC::GetServiceBinaryPath ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::GetServiceDescription",
+      "contents": "SimpleSC::GetServiceDescription ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::GetServiceDisplayName",
+      "contents": "SimpleSC::GetServiceDisplayName ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::GetServiceFailure",
+      "contents": "SimpleSC::GetServiceFailure ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::GetServiceFailureFlag",
+      "contents": "SimpleSC::GetServiceFailureFlag ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::GetServiceLogon",
+      "contents": "SimpleSC::GetServiceLogon ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::GetServiceName",
+      "contents": "SimpleSC::GetServiceName ${1:display_name}"
+    },
+    {
+      "trigger": "SimpleSC::GetServiceStartType",
+      "contents": "SimpleSC::GetServiceStartType ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::GetServiceStatus",
+      "contents": "SimpleSC::GetServiceStatus ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::GrantServiceLogonPrivilege",
+      "contents": "SimpleSC::GrantServiceLogonPrivilege ${1:account}"
+    },
+    {
+      "trigger": "SimpleSC::InstallService",
+      "contents": "SimpleSC::InstallService ${1:name_of_service} ${2:display_name} ${3:service_type} ${4:start_type} ${5:binary_path} ${6:dependencies} ${7:account} ${8:password}"
+    },
+    {
+      "trigger": "SimpleSC::PauseService",
+      "contents": "SimpleSC::PauseService ${1:name_of_service} ${1:timeout}"
+    },
+    {
+      "trigger": "SimpleSC::RemoveService",
+      "contents": "SimpleSC::SimpleSC::RemoveService ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::RemoveServiceLogonPrivilege",
+      "contents": "SimpleSC::RemoveServiceLogonPrivilege ${1:account}"
+    },
+    {
+      "trigger": "SimpleSC::RestartService",
+      "contents": "SimpleSC::RestartService ${1:name_of_service} ${1:arguments} ${2:timeout}"
+    },
+    {
+      "trigger": "SimpleSC::ServiceIsPaused",
+      "contents": "SimpleSC::ServiceIsPaused ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::ServiceIsRunning",
+      "contents": "SimpleSC::ServiceIsRunning ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::ServiceIsStopped",
+      "contents": "SimpleSC::ServiceIsStopped ${1:name_of_service}"
+    },
+    {
+      "trigger": "SimpleSC::SetServiceBinaryPath",
+      "contents": "SimpleSC::SetServiceBinaryPath ${1:name_of_service} ${2:binary_path}"
+    },
+    {
+      "trigger": "SimpleSC::SetServiceDelayedAutoStartInfo",
+      "contents": "SimpleSC::SetServiceDelayedAutoStartInfo ${1:name_of_service} ${2:delayed_autostart}"
+    },
+    {
+      "trigger": "SimpleSC::SetServiceDescription",
+      "contents": "SimpleSC::SetServiceDescription ${1:name_of_service} ${2:service_description}"
+    },
+    {
+      "trigger": "SimpleSC::SetServiceFailure",
+      "contents": "SimpleSC::SetServiceFailure ${1:name_of_service} ${2:reset_period} ${3:reboot_message} ${4:command} ${5:action_type_1} ${6:action_delay_1} ${7:action_type_2} ${8:action_delay_2} ${9:action_type_3} ${10:action_delay_3}"
+    },
+    {
+      "trigger": "SimpleSC::SetServiceFailureFlag",
+      "contents": "SimpleSC::SetServiceFailureFlag ${1:name_of_service} ${2:failure_actions_on_non_crash_failures}"
+    },
+    {
+      "trigger": "SimpleSC::SetServiceStartType",
+      "contents": "SimpleSC::SetServiceStartType ${1:name_of_service} ${2:start_type}"
+    },
+    {
+      "trigger": "SimpleSC::StopService",
+      "contents": "SimpleSC::StopService ${1:name_of_service} ${1:wait_for_file_release} ${2:timeout}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

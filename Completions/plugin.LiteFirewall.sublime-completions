@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "LiteFirewall.dll": "http://nsis.sourceforge.net/LiteFirewall_Plugin"
+    },
+    {
+      "trigger": "liteFirewall::AddRule",
+      "contents": "liteFirewall::AddRule \"${1:application_path}\" \"${2:rule_name}\""
+    },
+    {
+      "trigger": "liteFirewall::RemoveRule",
+      "contents": "liteFirewall::RemoveRule \"${1:application_path}\" \"${2:rule_name}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

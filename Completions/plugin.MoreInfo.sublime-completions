@@ -1,0 +1,63 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "MoreInfo.dll": "http://nsis.sourceforge.net/MoreInfo_plug-in"
+    },
+    {
+      "trigger": "MoreInfo::GetComments",
+      "contents": "MoreInfo::GetComments \"${1:file}\""
+    },
+    {
+      "trigger": "MoreInfo::GetCompanyName",
+      "contents": "MoreInfo::GetCompanyName \"${1:file}\""
+    },
+    {
+      "trigger": "MoreInfo::GetFileDescription",
+      "contents": "MoreInfo::GetFileDescription \"${1:file}\""
+    },
+    {
+      "trigger": "MoreInfo::GetFileVersion",
+      "contents": "MoreInfo::GetFileVersion \"${1:file}\""
+    },
+    {
+      "trigger": "MoreInfo::GetLegalCopyright",
+      "contents": "MoreInfo::GetLegalCopyright \"${1:file}\""
+    },
+    {
+      "trigger": "MoreInfo::GetLegalTrademarks",
+      "contents": "MoreInfo::GetLegalTrademarks \"${1:file}\""
+    },
+    {
+      "trigger": "MoreInfo::GetOriginalFileName",
+      "contents": "MoreInfo::GetOriginalFileName \"${1:file}\""
+    },
+    {
+      "trigger": "MoreInfo::GetOSUserinterfaceLanguage",
+      "contents": "MoreInfo::GetOSUserinterfaceLanguage"
+    },
+    {
+      "trigger": "MoreInfo::GetPrivateBuild",
+      "contents": "MoreInfo::GetPrivateBuild \"${1:file}\""
+    },
+    {
+      "trigger": "MoreInfo::GetProductName",
+      "contents": "MoreInfo::GetProductName \"${1:file}\""
+    },
+    {
+      "trigger": "MoreInfo::GetProductVersion",
+      "contents": "MoreInfo::GetProductVersion \"${1:file}\""
+    },
+    {
+      "trigger": "MoreInfo::GetSpecialBuild",
+      "contents": "MoreInfo::GetSpecialBuild \"${1:file}\""
+    },
+    {
+      "trigger": "MoreInfo::GetUserDefined",
+      "contents": "MoreInfo::GetUserDefined \"${1:file}\" \"${2:property}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

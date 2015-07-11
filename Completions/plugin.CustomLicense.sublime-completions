@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "CustomLicense.dll": "http://nsis.sourceforge.net/CustomLicense_plug-in"
+    },
+    {
+      "trigger": "CustomLicense::LoadFile rtf",
+      "contents": "CustomLicense::LoadFile \"${1:file}.rtf\" \\${2:hwnd}"
+    },
+    {
+      "trigger": "CustomLicense::LoadFile txt",
+      "contents": "CustomLicense::LoadFile \"${1:file}.txt\" \\${2:hwnd}"
+    },
+    {
+      "trigger": "CustomLicense::LoadFile",
+      "contents": "CustomLicense::LoadFile \"${1:file}\" \\${2:hwnd}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

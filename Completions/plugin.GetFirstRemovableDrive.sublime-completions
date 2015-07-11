@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "GetFirstRemovableDrive.dll": "http://nsis.sourceforge.net/GetFirstRemovableDrive_plug-in"
+    },
+    {
+      "trigger": "GetFirstRemovable::GetFirst",
+      "contents": "GetFirstRemovable::GetFirst"
+    },
+    {
+      "trigger": "GetFirstRemovable::GetAll",
+      "contents": "GetFirstRemovable::GetAll"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "Nsis7z.dll": "http://nsis.sourceforge.net/Nsis7z_plug-in"
+    },
+    {
+      "trigger": "Nsis7z::Extract",
+      "contents": "Nsis7z::Extract \"${1:file}.7z\""
+    },
+    {
+      "trigger": "Nsis7z::ExtractWithCallback",
+      "contents": "Nsis7z::ExtractWithCallback \"${1:file}.7z\" \\$${2:var}"
+    },
+    {
+      "trigger": "Nsis7z::ExtractWithDetails",
+      "contents": "Nsis7z::ExtractWithDetails \"${1:file}.7z\" \"${2:%s}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "ShutdownAllow.dll": "http://nsis.sourceforge.net/ShutdownAllow_plug-in"
+    },
+    {
+      "trigger": "ShutdownAllow::Allow",
+      "contents": "ShutdownAllow::Allow /NOUNLOAD"
+    },
+    {
+      "trigger": "ShutdownAllow::Unload",
+      "contents": "ShutdownAllow::Unload"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

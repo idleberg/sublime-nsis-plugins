@@ -1,0 +1,79 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "nsKeyHook.dll": "http://nsis.sourceforge.net/NsKeyHook_plug-in"
+    },
+    {
+      "trigger": "${ANY_ALT}",
+      "contents": "\\${ANY_ALT}"
+    },
+    {
+      "trigger": "${ANY_CTRL}",
+      "contents": "\\${ANY_CTRL}"
+    },
+    {
+      "trigger": "${ANY_SHIFT}",
+      "contents": "\\${ANY_SHIFT}"
+    },
+    {
+      "trigger": "${LEFT_ALT}",
+      "contents": "\\${LEFT_ALT}"
+    },
+    {
+      "trigger": "${LEFT_CTRL}",
+      "contents": "\\${LEFT_CTRL}"
+    },
+    {
+      "trigger": "${LEFT_SHIFT}",
+      "contents": "\\${LEFT_SHIFT}"
+    },
+    {
+      "trigger": "${NSKH_OnChar}",
+      "contents": "\\${NSKH_OnChar} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\""
+    },
+    {
+      "trigger": "${NSKH_OnKeyDown}",
+      "contents": "\\${NSKH_OnKeyDown} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\""
+    },
+    {
+      "trigger": "${NSKH_OnKeyUp}",
+      "contents": "\\${NSKH_OnKeyUp} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\""
+    },
+    {
+      "trigger": "${NSKH_OnPaste}",
+      "contents": "\\${NSKH_OnPaste} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\""
+    },
+    {
+      "trigger": "${NSKH_OnPostChar}",
+      "contents": "\\${NSKH_OnPostChar} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\""
+    },
+    {
+      "trigger": "${NSKH_OnPostKeyDown}",
+      "contents": "\\${NSKH_OnPostKeyDown} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\""
+    },
+    {
+      "trigger": "${NSKH_OnPostKeyUp}",
+      "contents": "\\${NSKH_OnPostKeyUp} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\""
+    },
+    {
+      "trigger": "${NSKH_OnPostPaste}",
+      "contents": "\\${NSKH_OnPostPaste} \\$${1:control_handle} \"${2:key}\" \"${3:modifiers}\" \"${4:function}\""
+    },
+    {
+      "trigger": "${RIGHT_ALT}",
+      "contents": "\\${RIGHT_ALT}"
+    },
+    {
+      "trigger": "${RIGHT_CTRL}",
+      "contents": "\\${RIGHT_CTRL}"
+    },
+    {
+      "trigger": "${RIGHT_SHIFT}",
+      "contents": "\\${RIGHT_SHIFT}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

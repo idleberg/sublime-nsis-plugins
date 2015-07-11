@@ -1,0 +1,79 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "nsJSON.dll": "http://nsis.sourceforge.net/NsJSON_plug-in"
+    },
+    {
+      "trigger": "nsJSON::Delete",
+      "contents": "nsJSON::Delete \"${1:NodePath}\" /end"
+    },
+    {
+      "trigger": "nsJSON::Get /count",
+      "contents": "nsJSON::Get /count \"${1:NodePath}\" /end"
+    },
+    {
+      "trigger": "nsJSON::Get /exists",
+      "contents": "nsJSON::Get /exists \"${1:NodePath}\" /end"
+    },
+    {
+      "trigger": "nsJSON::Get /isempty",
+      "contents": "nsJSON::Get /isempty \"${1:NodePath}\" /end"
+    },
+    {
+      "trigger": "nsJSON::Get /key",
+      "contents": "nsJSON::Get /key \"${1:NodePath}\" /end"
+    },
+    {
+      "trigger": "nsJSON::Get /noexpand",
+      "contents": "nsJSON::Get /noexpand \"${1:NodePath}\" /end"
+    },
+    {
+      "trigger": "nsJSON::Get /type",
+      "contents": "nsJSON::Get /type \"${1:NodePath}\" /end"
+    },
+    {
+      "trigger": "nsJSON::Get",
+      "contents": "nsJSON::Get \"${1:NodePath}\" /end"
+    },
+    {
+      "trigger": "nsJSON::Serialize /file /unicode",
+      "contents": "nsJSON::Serialize /file /unicode \"${1:file}.json\""
+    },
+    {
+      "trigger": "nsJSON::Serialize /file",
+      "contents": "nsJSON::Serialize /file \"${1:file}.json\""
+    },
+    {
+      "trigger": "nsJSON::Serialize /format /file /unicode",
+      "contents": "nsJSON::Serialize /file /unicode \"${1:file}.json\""
+    },
+    {
+      "trigger": "nsJSON::Serialize /format /file",
+      "contents": "nsJSON::Serialize /file \"${1:file}.json\""
+    },
+    {
+      "trigger": "nsJSON::Serialize format",
+      "contents": "nsJSON::Serialize /format"
+    },
+    {
+      "trigger": "nsJSON::Serialize",
+      "contents": "nsJSON::Serialize"
+    },
+    {
+      "trigger": "nsJSON::Set /file",
+      "contents": "nsJSON::Set \"${1:NodePath}\" /file \"${2:file}.json\""
+    },
+    {
+      "trigger": "nsJSON::Set /unicode",
+      "contents": "nsJSON::Set \"${1:NodePath}\" /file /unicode \"${2:file}.json\""
+    },
+    {
+      "trigger": "nsJSON::Set /value",
+      "contents": "nsJSON::Set \"${1:NodePath}\" /value \"${2:value}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

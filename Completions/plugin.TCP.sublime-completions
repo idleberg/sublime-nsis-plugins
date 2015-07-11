@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "TCP.dll": "http://nsis.sourceforge.net/TCP_plug-in"
+    },
+    {
+      "trigger": "TCP::CheckPort",
+      "contents": "TCP::CheckPort ${1:port}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

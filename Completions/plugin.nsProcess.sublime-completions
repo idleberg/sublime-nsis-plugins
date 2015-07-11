@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "nsProcess.dll": "http://nsis.sourceforge.net/NsProcess_plugin"
+    },
+    {
+      "trigger": "${nsProcess::FindProcess}",
+      "contents": "\\${nsProcess::FindProcess} \"${1:file}.exe\" \\$${2:var}"
+    },
+    {
+      "trigger": "${nsProcess::KillProcess}",
+      "contents": "\\${nsProcess::KillProcess} \"${1:file}.exe\" \\$${2:var}"
+    },
+    {
+      "trigger": "${nsProcess::Unload}",
+      "contents": "\\${nsProcess::Unload}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

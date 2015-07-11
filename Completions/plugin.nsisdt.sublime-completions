@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "nsisdt.dll": "http://nsis.sourceforge.net/NSIS-Date_plug-in"
+    },
+    {
+      "trigger": "nsisdt::currentdate",
+      "contents": "nsisdt::currentdate"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

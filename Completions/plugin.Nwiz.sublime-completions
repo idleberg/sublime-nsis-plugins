@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "Nwiz": "http://nsis.sourceforge.net/Nwiz_plug-in"
+    },
+    {
+      "trigger": "Nmwdll::nmwMakensis",
+      "contents": "Nmwdll::nmwMakensis \"${1:\\${NSISDIR\\}\\makensis.exe}\" ${2:parameters} \"${3:file}.nsi\""
+    },
+    {
+      "trigger": "Nzipdll::nzip",
+      "contents": "Nzipdll::nzip ${1:dialog} \"${2:file}.zip\" \"${3:target}\""
+    },
+    {
+      "trigger": "Nzwdll::nzwUnzip",
+      "contents": "Nzwdll::nzwUnzip \"${1:file}.zip\" \"${2:target}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

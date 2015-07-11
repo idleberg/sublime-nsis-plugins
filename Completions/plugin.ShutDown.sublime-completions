@@ -1,0 +1,27 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "ShutDown.dll": "http://nsis.sourceforge.net/ShutDown_plug-in"
+    },
+    {
+      "trigger": "ShutDown::LogOff",
+      "contents": "ShutDown::LogOff"
+    },
+    {
+      "trigger": "ShutDown::PowerOff",
+      "contents": "ShutDown::PowerOff"
+    },
+    {
+      "trigger": "ShutDown::Reboot",
+      "contents": "ShutDown::Reboot"
+    },
+    {
+      "trigger": "ShutDown::ShutDown",
+      "contents": "ShutDown::ShutDown"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

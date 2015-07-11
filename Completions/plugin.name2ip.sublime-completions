@@ -1,0 +1,23 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "name2ip.dll": "http://nsis.sourceforge.net/Name2ip_plugin"
+    },
+    {
+      "trigger": "${name2ip::FindCloseIP}",
+      "contents": "\\${name2ip::FindCloseIP}"
+    },
+    {
+      "trigger": "${name2ip::FindFirstIP}",
+      "contents": "\\${name2ip::FindFirstIP} \"${1:host_name}\" \\$${2:result}"
+    },
+    {
+      "trigger": "${name2ip::FindNextIP}",
+      "contents": "\\${name2ip::FindNextIP} \\$${1:result}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

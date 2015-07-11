@@ -1,0 +1,47 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "CPUFeatures.dll": "http://nsis.sourceforge.net/CPUFeatures_plug-in"
+    },
+    {
+      "trigger": "${CPUFeatures.CheckFeature}",
+      "contents": "\\${CPUFeatures.CheckFeature} \"${1:feature(s)}\" \\$${2:out_var}"
+    },
+    {
+      "trigger": "${CPUFeatures.CPUIsAMD}",
+      "contents": "\\${CPUFeatures.CPUIsAMD}"
+    },
+    {
+      "trigger": "${CPUFeatures.CPUIsIntel}",
+      "contents": "\\${CPUFeatures.CPUIsIntel}"
+    },
+    {
+      "trigger": "${CPUFeatures.CPUSupportsAll}",
+      "contents": "\\${CPUFeatures.CPUSupportsAll}"
+    },
+    {
+      "trigger": "${CPUFeatures.CPUSupports}",
+      "contents": "\\${CPUFeatures.CPUSupports}"
+    },
+    {
+      "trigger": "${CPUFeatures.GetCount}",
+      "contents": "\\${CPUFeatures.GetCount} \\$${1:out_var}"
+    },
+    {
+      "trigger": "${CPUFeatures.GetFeatures}",
+      "contents": "\\${CPUFeatures.GetFeatures} \\$${1:out_var}"
+    },
+    {
+      "trigger": "${CPUFeatures.GetFlags}",
+      "contents": "\\${CPUFeatures.GetFlags} \\$${1:out_var}"
+    },
+    {
+      "trigger": "${CPUFeatures.GetVendor}",
+      "contents": "\\${CPUFeatures.GetVendor} \\$${1:out_var}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

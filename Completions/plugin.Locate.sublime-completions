@@ -1,0 +1,35 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "Locate.dll": "http://nsis.sourceforge.net/Locate_plugin"
+    },
+    {
+      "trigger": "${Locate::Close}",
+      "contents": "\\${Locate::Close} \"${1:handle}\""
+    },
+    {
+      "trigger": "${Locate::Find}",
+      "contents": "\\${Locate::Find} \"${1:handle}\" \\$${2:path\\name} \\$${3:path} \\$${4:name} \\$${5:size} \\$${6:time} \\$${7:attributes}"
+    },
+    {
+      "trigger": "${Locate::GetSize}",
+      "contents": "\\${Locate::Find} \"${1:path}\" \"${2:options}\" \\$${3:size} \\$${4:sum_files} \\$${5:sum_directories}"
+    },
+    {
+      "trigger": "${Locate::Open}",
+      "contents": "\\${Locate::Open} \"${1:paths}\" \"${2:options}\""
+    },
+    {
+      "trigger": "${Locate::RMDirEmpty}",
+      "contents": "\\${Locate::Find} \"${1:path}\" \"${2:options}\" \\$${3:sum_directories}"
+    },
+    {
+      "trigger": "${Locate::Unload}",
+      "contents": "\\${Locate::Unload}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

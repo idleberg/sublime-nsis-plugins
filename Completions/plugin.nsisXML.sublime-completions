@@ -1,0 +1,75 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "nsisXML.dll": "http://nsis.sourceforge.net/NsisXML_plug-in_(by_Wizou)"
+    },
+    {
+      "trigger": "nsisXML::appendChild",
+      "contents": "nsisXML::appendChild"
+    },
+    {
+      "trigger": "nsisXML::create",
+      "contents": "nsisXML::create"
+    },
+    {
+      "trigger": "nsisXML::createElement",
+      "contents": "nsisXML::createElement \"${1:tag}\""
+    },
+    {
+      "trigger": "nsisXML::createProcessingInstruction",
+      "contents": "nsisXML::createProcessingInstruction \"${1:target}\" \"${2:data}\""
+    },
+    {
+      "trigger": "nsisXML::getAttribute",
+      "contents": "nsisXML::getAttribute \"${1:attributes}\""
+    },
+    {
+      "trigger": "nsisXML::getText",
+      "contents": "nsisXML::getText"
+    },
+    {
+      "trigger": "nsisXML::insertBefore",
+      "contents": "nsisXML::insertBefore"
+    },
+    {
+      "trigger": "nsisXML::load",
+      "contents": "nsisXML::load \"${1:file}.xml\""
+    },
+    {
+      "trigger": "nsisXML::loadAndValidate",
+      "contents": "nsisXML::loadAndValidate \"${1:file}.xml\""
+    },
+    {
+      "trigger": "nsisXML::parentNode",
+      "contents": "nsisXML::parentNode"
+    },
+    {
+      "trigger": "nsisXML::release",
+      "contents": "nsisXML::release \"${1:node_reference}\""
+    },
+    {
+      "trigger": "nsisXML::removeChild",
+      "contents": "nsisXML::removeChild"
+    },
+    {
+      "trigger": "nsisXML::save",
+      "contents": "nsisXML::save \"${1:file}.xml\""
+    },
+    {
+      "trigger": "nsisXML::select",
+      "contents": "nsisXML::select \"${1:xpath_expression}\""
+    },
+    {
+      "trigger": "nsisXML::setAttribute",
+      "contents": "nsisXML::setAttribute \"${1:attributes}\" \"${2:value}\""
+    },
+    {
+      "trigger": "nsisXML::setText",
+      "contents": "nsisXML::setText \"${1:text}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

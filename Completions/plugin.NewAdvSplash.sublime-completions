@@ -1,0 +1,31 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "NewAdvSplash.dll": "http://nsis.sourceforge.net/NewAdvSplash_plug-in"
+    },
+    {
+      "trigger": "NewAdvSplash::hwnd",
+      "contents": "NewAdvSplash::hwnd"
+    },
+    {
+      "trigger": "NewAdvSplash::play",
+      "contents": "NewAdvSplash::play /NOUNLOAD ${1:options} \"${2:file}\""
+    },
+    {
+      "trigger": "NewAdvSplash::show /NOUNLOAD",
+      "contents": "NewAdvSplash::show /NOUNLOAD ${1:delay} ${2:fade_in} ${3:fade_out} ${4:0xRRGGBB} ${5:options} \"${6:file}\""
+    },
+    {
+      "trigger": "NewAdvSplash::show",
+      "contents": "NewAdvSplash::show ${1:delay} ${2:fade_in} ${3:fade_out} ${4:0xRRGGBB} ${5:options} \"${6:file}\""
+    },
+    {
+      "trigger": "NewAdvSplash::stop",
+      "contents": "NewAdvSplash::stop ${1:options}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

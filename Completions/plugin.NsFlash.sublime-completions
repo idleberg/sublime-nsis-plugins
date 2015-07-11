@@ -1,0 +1,35 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "NsFlash.dll": "http://nsis.sourceforge.net/File:NsFlash.zip"
+    },
+    {
+      "trigger": "nsFlash::Destroy",
+      "contents": "nsFlash::Destroy"
+    },
+    {
+      "trigger": "nsFlash::IsInstalled",
+      "contents": "nsFlash::IsInstalled\nPop ${1:var}"
+    },
+    {
+      "trigger": "nsFlash::Load /replace",
+      "contents": "nsFlash::Load /replace ${1:hwnd} \"${2:swf_path}\""
+    },
+    {
+      "trigger": "nsFlash::Load",
+      "contents": "nsFlash::Load ${1:hwnd} \"${2:swf_path}\""
+    },
+    {
+      "trigger": "nsFlash::Window /size",
+      "contents": "nsFlash::Window /size ${1:WxH} \"${2:swf_path}\" \"${3:caption}\""
+    },
+    {
+      "trigger": "nsFlash::Window",
+      "contents": "nsFlash::Window \"${1:swf_path}\" \"${2:caption}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "nsScreenshot.dll": "http://nsis.sourceforge.net/NsScreenshot_plug-in"
+    },
+    {
+      "trigger": "nsScreenshot::Grab",
+      "contents": "nsScreenshot::Grab"
+    },
+    {
+      "trigger": "nsScreenshot::Grab_FullScreen",
+      "contents": "nsScreenshot::Grab_FullScreen"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

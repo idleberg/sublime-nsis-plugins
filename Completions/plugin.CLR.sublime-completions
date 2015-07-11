@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "CLR.dll": "http://nsis.sourceforge.net/Call_.NET_DLL_methods_plug-in"
+    },
+    {
+      "trigger": "CLR::Call /NOUNLOAD",
+      "contents": "CLR::Call /NOUNLOAD \"${1:file}.dll\" \"${2:class}\" ${options}"
+    },
+    {
+      "trigger": "CLR::Destroy",
+      "contents": "CLR::Destroy"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

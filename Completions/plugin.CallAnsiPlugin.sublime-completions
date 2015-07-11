@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "CallAnsiPlugin.dll": "http://nsis.sourceforge.net/CallAnsiPlugin_plug-in"
+    },
+    {
+      "trigger": "CallAnsiPlugin::Call",
+      "contents": "CallAnsiPlugin::Call \"${1:plugin_path}\" \"${2:function}\" \"${3:parameter_count}\" ${4:parameters}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "Animate.dll": "http://nsis.sourceforge.net/Animate_plug-in"
+    },
+    {
+      "trigger": "Animate::hwnd",
+      "contents": "Animate::hwnd"
+    },
+    {
+      "trigger": "Animate::show /NOUNLOAD",
+      "contents": "Animate::show /NOUNLOAD ${1:options} \"${2:file}\""
+    },
+    {
+      "trigger": "Animate::show",
+      "contents": "Animate::show ${1:options} \"${2:file}\""
+    },
+    {
+      "trigger": "Animate::wait",
+      "contents": "Animate::wait ${1:options} ${2:time_in_ms}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "CreateMutex.dll": "http://nsis.sourceforge.net/CreateMutex_plug-in"
+    },
+    {
+      "trigger": "CreateMutex::nsCreateMutex",
+      "contents": "CreateMutex::nsCreateMutex \"${1:mutex_name}\" ${2:parameter}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

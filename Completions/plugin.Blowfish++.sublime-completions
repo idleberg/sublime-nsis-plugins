@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "Blowfish++": "http://nsis.sourceforge.net/Blowfish%2B%2B_plug-in"
+    },
+    {
+      "trigger": "Blowfish::decrypt",
+      "contents": "Blowfish::decrypt \"${1:text_to_decrypt}\" \"${2:password_key}\""
+    },
+    {
+      "trigger": "Blowfish::encrypt",
+      "contents": "Blowfish::encrypt \"${1:text_to_encrypt}\" \"${2:password_key}\""
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

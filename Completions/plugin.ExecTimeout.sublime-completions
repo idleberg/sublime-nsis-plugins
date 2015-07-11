@@ -1,0 +1,19 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "ExecTimeout": "http://nsis.sourceforge.net/ExecTimeout_plug-in"
+    },
+    {
+      "trigger": "${ExecTimeout}",
+      "contents": "\\${ExecTimeout} \"${1:application_to_run}.exe\" ${2:timeout} ${3:terminate} \\${1:exit_code}"
+    },
+    {
+      "trigger": "Timeout::ExecTimeout",
+      "contents": "Timeout::ExecTimeout \"${1:application_to_run}.exe\" ${2:timeout} ${3:terminate} \\${1:exit_code}"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}

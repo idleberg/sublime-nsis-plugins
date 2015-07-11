@@ -1,0 +1,143 @@
+{
+  "scope": "source.nsis",
+  "completions": [
+    {
+      "IpConfig.dll": "http://nsis.sourceforge.net/IpConfig_plugin"
+    },
+    {
+      "trigger": "IpConfig::GetAllNetworkAdaptersIDs",
+      "contents": "IpConfig::GetAllNetworkAdaptersIDs"
+    },
+    {
+      "trigger": "IpConfig::GetAllNetworkAdaptersIDsCB",
+      "contents": "IpConfig::GetAllNetworkAdaptersIDsCB \"${1:callback}\""
+    },
+    {
+      "trigger": "IpConfig::GetDNSSuffixSearchList",
+      "contents": "IpConfig::GetDNSSuffixSearchList"
+    },
+    {
+      "trigger": "IpConfig::GetEnabledNetworkAdaptersIDs",
+      "contents": "IpConfig::GetEnabledNetworkAdaptersIDs"
+    },
+    {
+      "trigger": "IpConfig::GetEnabledNetworkAdaptersIDsCB",
+      "contents": "IpConfig::GetEnabledNetworkAdaptersIDsCB \"${1:callback}\""
+    },
+    {
+      "trigger": "IpConfig::GetHostName",
+      "contents": "IpConfig::GetHostName"
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterConnectionID",
+      "contents": "IpConfig::GetNetworkAdapterConnectionID \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterConnectionSpecificDNSSuffix",
+      "contents": "IpConfig::GetNetworkAdapterConnectionSpecificDNSSuffix \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterDefaultIPGateways",
+      "contents": "IpConfig::GetNetworkAdapterDefaultIPGateways \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterDefaultIPGatewaysCB",
+      "contents": "IpConfig::GetNetworkAdapterDefaultIPGatewaysCB \"${1:network_adapter_id}\" \"${2:callback}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterDescription",
+      "contents": "IpConfig::GetNetworkAdapterDescription \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterDHCPLeaseExpires",
+      "contents": "IpConfig::GetNetworkAdapterDHCPLeaseExpires \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterDHCPLeaseObtained",
+      "contents": "IpConfig::GetNetworkAdapterDHCPLeaseObtained \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterDHCPServer",
+      "contents": "IpConfig::GetNetworkAdapterDHCPServer \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterDNSServers",
+      "contents": "IpConfig::GetNetworkAdapterDNSServers \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterDNSServersCB",
+      "contents": "IpConfig::GetNetworkAdapterDNSServersCB \"${1:network_adapter_id}\" \"${2:callback}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterIDFromDescription",
+      "contents": "IpConfig::GetNetworkAdapterIDFromDescription \"${1:description}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterIDFromIPAddress",
+      "contents": "IpConfig::GetNetworkAdapterIDFromIPAddress \"${1:ip_address}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterIDFromMACAddress",
+      "contents": "IpConfig::GetNetworkAdapterIDFromMACAddress \"${1:mac_address}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterIPAddresses",
+      "contents": "IpConfig::GetNetworkAdapterIPAddresses \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterIPAddressesCB",
+      "contents": "IpConfig::GetNetworkAdapterIPAddressesCB \"${1:network_adapter_id}\" \"${2:callback}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterIPSubNets",
+      "contents": "IpConfig::GetNetworkAdapterIPSubNets \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterIPSubNetsCB",
+      "contents": "IpConfig::GetNetworkAdapterIPSubNetsCB \"${1:network_adapter_id}\" \"${2:callback}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterMACAddress",
+      "contents": "IpConfig::GetNetworkAdapterMACAddress \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterPrimaryWINSServer",
+      "contents": "IpConfig::GetNetworkAdapterPrimaryWINSServer \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterSecondaryWINSServer",
+      "contents": "IpConfig::GetNetworkAdapterSecondaryWINSServer \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNetworkAdapterType",
+      "contents": "IpConfig::GetNetworkAdapterType \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::GetNodeType",
+      "contents": "IpConfig::GetPrimaryDNSSuffix"
+    },
+    {
+      "trigger": "IpConfig::GetPrimaryDNSSuffix",
+      "contents": "IpConfig::GetPrimaryDNSSuffix"
+    },
+    {
+      "trigger": "IpConfig::IsIPRoutingEnabled",
+      "contents": "IpConfig::IsIPRoutingEnabled"
+    },
+    {
+      "trigger": "IpConfig::IsNetworkAdapterAutoSense",
+      "contents": "IpConfig::IsNetworkAdapterAutoSense \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::IsNetworkAdapterDHCPEnabled",
+      "contents": "IpConfig::IsNetworkAdapterDHCPEnabled \"${1:network_adapter_id}\""
+    },
+    {
+      "trigger": "IpConfig::IsWINSProxyEnabled",
+      "contents": "IpConfig::IsWINSProxyEnabled"
+    },
+    {
+      "note": "It ain't over 'til the fat lady sings"
+    }
+  ]
+}
