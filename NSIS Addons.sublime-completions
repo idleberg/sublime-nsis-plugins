@@ -116,7 +116,7 @@
                 { "CallAnsiPlugin.dll": "http://nsis.sourceforge.net/CallAnsiPlugin_plug-in" },
                 { "trigger": "CallAnsiPlugin::Call", "contents": "CallAnsiPlugin::Call \"${1:plugin_path}\" \"${2:function}\" \"${3:parameter_count}\" ${4:parameters}" },
 
-                { "CDRom.dll": "http://nsis.sourceforge.net/CharToASCII" },
+                { "CDRom.dll": "http://nsis.sourceforge.net/CDRom_plug-in" },
                 { "trigger": "CDRom::Close", "contents": "CDRom::Close \"${1:drive}\" .${2:R0}" },
                 { "trigger": "CDRom::FindNext", "contents": "CDRom::FindNext /NOUNLOAD \"${1:drive}\" .${2:R0}" },
                 { "trigger": "CDRom::Open", "contents": "CDRom::Open \"${1:drive}\" .${2:R0}" },
@@ -249,7 +249,7 @@
                 { "trigger": "${ExecTimeout}", "contents": "\\${ExecTimeout} \"${1:application_to_run}.exe\" ${2:timeout} ${3:terminate} \\${1:exit_code}" },
                 { "trigger": "Timeout::ExecTimeout", "contents": "Timeout::ExecTimeout \"${1:application_to_run}.exe\" ${2:timeout} ${3:terminate} \\${1:exit_code}" },
 
-                { "ExDlg.dll": "http://nsis.sourceforge.net/ExtractDLLEx_plug-in" },
+                { "ExDlg.dll": "http://nsis.sourceforge.net/ExDlg_plug-in" },
                 { "trigger": "ExDlg::create_dlg", "contents": "ExDlg::create_dlg \"${1:dialog_id}\" \"${2:file}.res\"" },
                 { "trigger": "ExDlg::dealloc", "contents": "ExDlg::dealloc \\$${2:handle}" },
                 { "trigger": "ExDlg::push_windowtext", "contents": "ExDlg::push_windowtext \"${1:control_id}\" \\$\"${2:handle}\"" },
@@ -559,8 +559,8 @@
                 { "nsArray.nsh": "http://nsis.sourceforge.net/Arrays_in_NSIS" },
                 { "trigger": "${ForEachIn}", "contents": "\\${ForEachIn} ${1:array} \\$${2:key} \\$${3:value}\n\t${4:# your code here}\n\\${Next}" },
                 { "trigger": "${ForEachInReverse}", "contents": "\\${ForEachInReverse} ${1:array} \\$${2:key} \\$${3:value}\n\t${4:# your code here}\n\\${Next}" },
-                { "trigger": "${nsArray_Copy}", "contents": "\\${nsArray_Copy} ${1:source_array} ${1:destination_array}" },
-                { "trigger": "${nsArray_CopyKeys}", "contents": "\\${nsArray_CopyKeys} ${1:source_array} ${1:destination_array}" },
+                { "trigger": "${nsArray_Copy}", "contents": "\\${nsArray_Copy} ${1:source_array} ${2:destination_array}" },
+                { "trigger": "${nsArray_CopyKeys}", "contents": "\\${nsArray_CopyKeys} ${1:source_array} ${2:destination_array}" },
                 { "trigger": "${nsArray_ToString}", "contents": "\\${nsArray_ToString} ${1:array}" },
 
                 { "NsExpr.nsh": "http://nsis.sourceforge.net/NsExpr_plug-in" },
