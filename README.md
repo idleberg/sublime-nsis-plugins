@@ -210,6 +210,10 @@ There's also a collection of [Sublime Text Packages](https://github.com/NSIS-Dev
 * Download the files using the GitHub [.zip](https://github.com/idleberg/NSIS-Sublime-Text-Addons/archive/master.zip) download option
 * Unzip the files to your Sublime Text `Packages` directory
 
+## Usage
+
+As of [version 3.0](https://github.com/idleberg/NSIS-Sublime-Text-Addons/releases), command completion is case-sensitive to reduce accidental triggering.
+
 ## License
 
 The MIT License (MIT)
