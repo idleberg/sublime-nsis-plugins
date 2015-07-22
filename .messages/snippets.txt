@@ -1,0 +1,5 @@
+It might not seem like a big change, but as of this version most completions
+have been converted to snippets. The big advantage is that commands are less
+likely completed by accident. On the downside, the triggers are now case-
+sensitive. We hope to optimize this package over the next weeks to make this
+new behaviour more predictable!
