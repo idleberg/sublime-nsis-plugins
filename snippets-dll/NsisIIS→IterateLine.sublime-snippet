@@ -1,0 +1,8 @@
+<!-- http://github.com/idleberg/sublime-tinkertools -->
+<snippet>
+  <content><![CDATA[
+NsisIIS::IterateLine /NOUNLOAD "${1:url}"
+]]></content>
+  <tabTrigger>NsisIIS::IterateLine</tabTrigger>
+  <scope>source.nsis</scope>
+</snippet>
