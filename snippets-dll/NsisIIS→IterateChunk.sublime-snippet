@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisIIS::IterateChunk /NOUNLOAD "${1:url}"
 ]]></content>
-  <tabTrigger>NsisIIS::IterateChunk</tabTrigger>
+  <tabTrigger>nsisIIS::IterateChunk</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

@@ -3,6 +3,6 @@
   <content><![CDATA[
 NSISDirEx::GetUncompressedSize /NOUNLOAD
 ]]></content>
-  <tabTrigger>NSISDirEx::GetUncompressedSize</tabTrigger>
+  <tabTrigger>nsisDirEx::GetUncompressedSize</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

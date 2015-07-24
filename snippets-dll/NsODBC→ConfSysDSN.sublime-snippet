@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsODBC::ConfSysDSN "${1:driver}" "${2:parameters}"
 ]]></content>
-  <tabTrigger>NsODBC::ConfSysDSN</tabTrigger>
+  <tabTrigger>nsODBC::ConfSysDSN</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

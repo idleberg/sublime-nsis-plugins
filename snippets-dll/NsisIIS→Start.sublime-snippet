@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisIIS::Start
 ]]></content>
-  <tabTrigger>NsisIIS::Start</tabTrigger>
+  <tabTrigger>nsisIIS::Start</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

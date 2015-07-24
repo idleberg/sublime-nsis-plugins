@@ -1,0 +1,3 @@
+As previously announced, steps have been taken to make certain triggers more
+predictable. So as of this version, triggers starting with the prefixes `ns` or
+`nsis` are now lowercase.

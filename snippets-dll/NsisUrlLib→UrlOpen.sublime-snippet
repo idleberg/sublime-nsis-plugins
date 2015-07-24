@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisUrlLib::UrlOpen /NOUNLOAD "${1:url}"
 ]]></content>
-  <tabTrigger>NsisUrlLib::UrlOpen</tabTrigger>
+  <tabTrigger>nsisUrlLib::UrlOpen</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

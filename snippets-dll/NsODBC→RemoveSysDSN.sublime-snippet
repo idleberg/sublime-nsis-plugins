@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsODBC::RemoveSysDSN "${1:driver}" "${2:parameters}"
 ]]></content>
-  <tabTrigger>NsODBC::RemoveSysDSN</tabTrigger>
+  <tabTrigger>nsODBC::RemoveSysDSN</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

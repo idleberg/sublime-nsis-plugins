@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisIIS::ListVDirs
 ]]></content>
-  <tabTrigger>NsisIIS::ListVDirs</tabTrigger>
+  <tabTrigger>nsisIIS::ListVDirs</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

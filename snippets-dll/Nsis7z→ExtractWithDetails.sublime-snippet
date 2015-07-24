@@ -3,6 +3,6 @@
   <content><![CDATA[
 Nsis7z::ExtractWithDetails "${1:file}.7z" "${2:%s}"
 ]]></content>
-  <tabTrigger>Nsis7z::ExtractWithDetails</tabTrigger>
+  <tabTrigger>nsis7z::ExtractWithDetails</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

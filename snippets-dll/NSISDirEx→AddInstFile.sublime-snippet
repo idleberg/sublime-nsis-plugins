@@ -3,6 +3,6 @@
   <content><![CDATA[
 NSISDirEx::AddInstFile /NOUNLOAD "${1:file}" "${2:text}"
 ]]></content>
-  <tabTrigger>NSISDirEx::AddInstFile</tabTrigger>
+  <tabTrigger>nsisDirEx::AddInstFile</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

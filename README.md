@@ -212,7 +212,7 @@ There's also a collection of [Sublime Text Packages](https://github.com/NSIS-Dev
 
 ## Usage
 
-As of [version 3.0](https://github.com/idleberg/NSIS-Sublime-Text-Addons/releases), command completion is case-sensitive to reduce accidental triggering.
+As of [version 3.0](https://github.com/idleberg/NSIS-Sublime-Text-Addons/releases), command completion is case-sensitive to reduce accidental triggering. However, to make triggers more predictable, plug-ins and headers starting with the prefixes `ns` or `nsis` are lowercase.
 
 ## License
 
