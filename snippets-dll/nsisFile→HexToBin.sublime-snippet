@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisFile::HexToBin "${1:hex_string}"
 ]]></content>
-  <tabTrigger>nsisFile::HexToBin</tabTrigger>
+  <tabTrigger>NsisFile::HexToBin</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisXML::select "${1:xpath_expression}"
 ]]></content>
-  <tabTrigger>nsisXML::select</tabTrigger>
+  <tabTrigger>NsisXML::select</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

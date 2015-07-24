@@ -3,6 +3,6 @@
   <content><![CDATA[
 NSISDirEx::Install "${1:directory}"
 ]]></content>
-  <tabTrigger>nsisDirEx::Install</tabTrigger>
+  <tabTrigger>NsisDirEx::Install</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

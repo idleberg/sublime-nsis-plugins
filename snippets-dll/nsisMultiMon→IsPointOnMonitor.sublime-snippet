@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisMultiMon::IsPointOnMonitor ${1:id} ${2:x} ${3:y}
 ]]></content>
-  <tabTrigger>nsisMultiMon::IsPointOnMonitor</tabTrigger>
+  <tabTrigger>NsisMultiMon::IsPointOnMonitor</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisdt::currentdate
 ]]></content>
-  <tabTrigger>nsisdt::currentdate</tabTrigger>
+  <tabTrigger>Nsisdt::currentdate</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

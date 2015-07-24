@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisXML::setText "${1:text}"
 ]]></content>
-  <tabTrigger>nsisXML::setText</tabTrigger>
+  <tabTrigger>NsisXML::setText</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

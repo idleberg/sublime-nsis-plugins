@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisXML::release "${1:node_reference}"
 ]]></content>
-  <tabTrigger>nsisXML::release</tabTrigger>
+  <tabTrigger>NsisXML::release</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

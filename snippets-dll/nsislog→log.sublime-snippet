@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsislog::log "${1:file}.log" "${2:text}"
 ]]></content>
-  <tabTrigger>nsislog::log</tabTrigger>
+  <tabTrigger>Nsislog::log</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

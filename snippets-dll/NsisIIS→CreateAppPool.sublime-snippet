@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisIIS::CreateAppPool "${1:app_pool}"
 ]]></content>
-  <tabTrigger>nsisIIS::CreateAppPool</tabTrigger>
+  <tabTrigger>NsisIIS::CreateAppPool</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisXML::load "${1:file}.xml"
 ]]></content>
-  <tabTrigger>nsisXML::load</tabTrigger>
+  <tabTrigger>NsisXML::load</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

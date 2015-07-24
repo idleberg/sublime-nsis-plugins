@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisFile::FileTruncate "${1:file_handle}"
 ]]></content>
-  <tabTrigger>nsisFile::FileTruncate</tabTrigger>
+  <tabTrigger>NsisFile::FileTruncate</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

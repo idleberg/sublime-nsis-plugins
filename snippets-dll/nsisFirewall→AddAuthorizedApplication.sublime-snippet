@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisFirewall::AddAuthorizedApplication "${1:application_path}" "${2:rule_name}"
 ]]></content>
-  <tabTrigger>nsisFirewall::AddAuthorizedApplication</tabTrigger>
+  <tabTrigger>NsisFirewall::AddAuthorizedApplication</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

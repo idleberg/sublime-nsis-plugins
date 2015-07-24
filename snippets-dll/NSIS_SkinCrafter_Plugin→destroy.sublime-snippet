@@ -3,6 +3,6 @@
   <content><![CDATA[
 NSIS_SkinCrafter_Plugin::destroy
 ]]></content>
-  <tabTrigger>nsis_SkinCrafter_Plugin::destroy</tabTrigger>
+  <tabTrigger>NSIS_SkinCrafter_Plugin::destroy</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

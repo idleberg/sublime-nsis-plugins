@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisos::osversion
 ]]></content>
-  <tabTrigger>nsisos::osversion</tabTrigger>
+  <tabTrigger>Nsisos::osversion</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

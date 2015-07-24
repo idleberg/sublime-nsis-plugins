@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisFile::FileFindBytes "${1:file_handle}" "${2:string}" "${3:length}"
 ]]></content>
-  <tabTrigger>nsisFile::FileFindBytes</tabTrigger>
+  <tabTrigger>NsisFile::FileFindBytes</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

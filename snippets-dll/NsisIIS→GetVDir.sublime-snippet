@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisIIS::GetVDir "${1:vdir_name}"
 ]]></content>
-  <tabTrigger>nsisIIS::GetVDir</tabTrigger>
+  <tabTrigger>NsisIIS::GetVDir</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

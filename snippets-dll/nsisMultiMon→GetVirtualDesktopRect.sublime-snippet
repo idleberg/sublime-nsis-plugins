@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisMultiMon::GetVirtualDesktopRect
 ]]></content>
-  <tabTrigger>nsisMultiMon::GetVirtualDesktopRect</tabTrigger>
+  <tabTrigger>NsisMultiMon::GetVirtualDesktopRect</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisCrypt::Hash "${1:string}" "${2:algorithm}"
 ]]></content>
-  <tabTrigger>nsisCrypt::Hash</tabTrigger>
+  <tabTrigger>NsisCrypt::Hash</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

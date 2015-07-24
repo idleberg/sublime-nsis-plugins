@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisMultiMon::CenterInstallerOnMonitor ${1:id} ${2:work_area}
 ]]></content>
-  <tabTrigger>nsisMultiMon::CenterInstallerOnMonitor</tabTrigger>
+  <tabTrigger>NsisMultiMon::CenterInstallerOnMonitor</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

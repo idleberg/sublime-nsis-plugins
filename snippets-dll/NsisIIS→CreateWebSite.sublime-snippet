@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisIIS::CreateWebSite "${1:name}" "${2:physical_path}" "${3:host}:${4:port}"
 ]]></content>
-  <tabTrigger>nsisIIS::CreateWebSite</tabTrigger>
+  <tabTrigger>NsisIIS::CreateWebSite</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

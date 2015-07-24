@@ -3,6 +3,6 @@
   <content><![CDATA[
 NSISDirEx::Init /NOUNLOAD "${1:caption}" "${2:text}" "${3:directory}" "${2:required_space}"
 ]]></content>
-  <tabTrigger>nsisDirEx::Init</tabTrigger>
+  <tabTrigger>NsisDirEx::Init</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

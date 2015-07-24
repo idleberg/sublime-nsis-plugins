@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisFirewall::RemoveAuthorizedApplication "${1:application_path}"
 ]]></content>
-  <tabTrigger>nsisFirewall::RemoveAuthorizedApplication</tabTrigger>
+  <tabTrigger>NsisFirewall::RemoveAuthorizedApplication</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

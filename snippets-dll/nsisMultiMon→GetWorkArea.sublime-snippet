@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisMultiMon::GetWorkArea ${1:id}
 ]]></content>
-  <tabTrigger>nsisMultiMon::GetWorkArea</tabTrigger>
+  <tabTrigger>NsisMultiMon::GetWorkArea</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisIIS::DeleteVDir "${1:vdir_name}"
 ]]></content>
-  <tabTrigger>nsisIIS::DeleteVDir</tabTrigger>
+  <tabTrigger>NsisIIS::DeleteVDir</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

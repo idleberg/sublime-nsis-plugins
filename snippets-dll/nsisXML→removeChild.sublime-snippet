@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisXML::removeChild
 ]]></content>
-  <tabTrigger>nsisXML::removeChild</tabTrigger>
+  <tabTrigger>NsisXML::removeChild</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

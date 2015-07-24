@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisIIS::ListWebSites
 ]]></content>
-  <tabTrigger>nsisIIS::ListWebSites</tabTrigger>
+  <tabTrigger>NsisIIS::ListWebSites</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

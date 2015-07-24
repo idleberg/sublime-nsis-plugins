@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisMultiMon::GetMonitorName ${1:id}
 ]]></content>
-  <tabTrigger>nsisMultiMon::GetMonitorName</tabTrigger>
+  <tabTrigger>NsisMultiMon::GetMonitorName</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

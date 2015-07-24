@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisSlideshow::show /NOUNLOAD ${1:options} "${2:picture}"
 ]]></content>
-  <tabTrigger>nsisSlideshow::show [/options]</tabTrigger>
+  <tabTrigger>NsisSlideshow::show [/options]</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

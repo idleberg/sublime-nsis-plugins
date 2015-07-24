@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisMultiMon::GetActiveMonitorCount
 ]]></content>
-  <tabTrigger>nsisMultiMon::GetActiveMonitorCount</tabTrigger>
+  <tabTrigger>NsisMultiMon::GetActiveMonitorCount</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisXML::insertBefore
 ]]></content>
-  <tabTrigger>nsisXML::insertBefore</tabTrigger>
+  <tabTrigger>NsisXML::insertBefore</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

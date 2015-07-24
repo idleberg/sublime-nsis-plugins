@@ -3,6 +3,6 @@
   <content><![CDATA[
 NSIS_SkinCrafter_Plugin::skin /NOUNLOAD "${1:file}.skf"
 ]]></content>
-  <tabTrigger>nsis_SkinCrafter_Plugin::skin [file]</tabTrigger>
+  <tabTrigger>NSIS_SkinCrafter_Plugin::skin [file]</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

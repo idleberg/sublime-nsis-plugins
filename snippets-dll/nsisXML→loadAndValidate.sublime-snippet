@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisXML::loadAndValidate "${1:file}.xml"
 ]]></content>
-  <tabTrigger>nsisXML::loadAndValidate</tabTrigger>
+  <tabTrigger>NsisXML::loadAndValidate</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

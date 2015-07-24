@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisCrypt::Base64Decode "${1:string}"
 ]]></content>
-  <tabTrigger>nsisCrypt::Base64Decode</tabTrigger>
+  <tabTrigger>NsisCrypt::Base64Decode</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

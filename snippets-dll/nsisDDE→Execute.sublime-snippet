@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisDDE::Execute ${1:options} "${2:appname}" "${3:commands}"
 ]]></content>
-  <tabTrigger>nsisDDE::Execute</tabTrigger>
+  <tabTrigger>NsisDDE::Execute</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisXML::createElement "${1:tag}"
 ]]></content>
-  <tabTrigger>nsisXML::createElement</tabTrigger>
+  <tabTrigger>NsisXML::createElement</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

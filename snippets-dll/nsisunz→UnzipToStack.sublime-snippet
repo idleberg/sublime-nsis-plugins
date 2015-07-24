@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisunz::UnzipToStack "${1:zip_file}" "${2:target}"
 ]]></content>
-  <tabTrigger>nsisunz::UnzipToStack</tabTrigger>
+  <tabTrigger>Nsisunz::UnzipToStack</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

@@ -3,6 +3,6 @@
   <content><![CDATA[
 nsisXML::createProcessingInstruction "${1:target}" "${2:data}"
 ]]></content>
-  <tabTrigger>nsisXML::createProcessingInstruction</tabTrigger>
+  <tabTrigger>NsisXML::createProcessingInstruction</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

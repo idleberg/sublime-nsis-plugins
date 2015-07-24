@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisCrypt::DecryptSymmetric "${1:encoded_cipher}" "${2:algorithm}" "${3:encoded_key}" "${4:encoded_iv}"
 ]]></content>
-  <tabTrigger>nsisCrypt::DecryptSymmetric</tabTrigger>
+  <tabTrigger>NsisCrypt::DecryptSymmetric</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>

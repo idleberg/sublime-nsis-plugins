@@ -3,6 +3,6 @@
   <content><![CDATA[
 NsisIIS::DeleteWebSite "${1:index}"
 ]]></content>
-  <tabTrigger>nsisIIS::DeleteWebSite</tabTrigger>
+  <tabTrigger>NsisIIS::DeleteWebSite</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>
