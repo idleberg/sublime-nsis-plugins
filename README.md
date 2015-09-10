@@ -1,6 +1,7 @@
 # NSIS Plug-in Completions
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![Package Control](https://packagecontrol.herokuapp.com/downloads/NSIS%20Plug-in%20Completions.svg?style=flat-square)](https://packagecontrol.io/packages/NSIS%20Plug-in%20Completions)
 [![Travis](https://img.shields.io/travis/idleberg/NSIS-Sublime-Text-Addons.svg?style=flat-square)](https://travis-ci.org/idle/NSIS-Sublime-Text-Addons)
 
 [NSIS](http://nsis.sourceforge.net/) syntax completions for [Sublime Text](http://www.sublimetext.com/), extending the [basic package](https://github.com/idleberg/NSIS-Sublime-Text/) with commands for third-party plug-ins.
