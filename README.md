@@ -2,12 +2,12 @@
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![Package Control](https://packagecontrol.herokuapp.com/downloads/NSIS%20Plug-in%20Completions.svg?style=flat-square)](https://packagecontrol.io/packages/NSIS%20Plug-in%20Completions)
-[![Travis](https://img.shields.io/travis/idleberg/NSIS-Sublime-Text-Addons.svg?style=flat-square)](https://travis-ci.org/idle/NSIS-Sublime-Text-Addons)
+[![Travis](https://img.shields.io/travis/idleberg/sublime-nsis-plugins.svg?style=flat-square)](https://travis-ci.org/idle/sublime-nsis-plugins)
 [![Gitter](https://img.shields.io/badge/chat-Gitter-ff69b4.svg?style=flat-square)](https://gitter.im/NSIS-Dev/SublimeText)
 
-[NSIS](http://nsis.sourceforge.net/) syntax completions for [Sublime Text](http://www.sublimetext.com/), extending the [basic package](https://github.com/idleberg/NSIS-Sublime-Text/) with commands for third-party plug-ins.
+[NSIS](http://nsis.sourceforge.net/) syntax completions for [Sublime Text](http://www.sublimetext.com/), extending the [basic package](https://github.com/idleberg/sublime-nsis/) with commands for third-party plug-ins.
 
-![Screenshot](https://raw.github.com/idleberg/NSIS-Sublime-Text-Addons/master/screenshot.gif)
+![Screenshot](https://raw.github.com/idleberg/sublime-nsis-plugins/master/screenshot.gif)
 
 *Screenshot of NSIS file in Sublime Text*
 
@@ -198,23 +198,23 @@ With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings/)
 
 ### Windows Installer
 
-Assuming that you're already familiar with NSIS, you can build yourself a setup executable to install this package. Download `installer.nsi` from the [main package](https://github.com/idleberg/NSIS-Sublime-Text)'s scripts folder, compile the source and execute the generated file. You can choose which packages you want to install.
+Assuming that you're already familiar with NSIS, you can build yourself a setup executable to install this package. Download `installer.nsi` from the [main package](https://github.com/idleberg/sublime-nsis)'s scripts folder, compile the source and execute the generated file. You can choose which packages you want to install.
 
 There's also a collection of [Sublime Text Packages](https://github.com/NSIS-Dev/Sublime-Text-Packages) available as a Windows installer.
 
 ### GitHub
 
 1. Change to your Sublime Text `Packages` directory
-2. Clone repository `git clone https://github.com/idleberg/NSIS-Sublime-Text-Addons.git 'NSIS Plug-in Completions'`
+2. Clone repository `git clone https://github.com/idleberg/sublime-nsis-plugins.git 'NSIS Plug-in Completions'`
 
 ### Download Manually
 
-1. Download the latest [stable release](https://github.com/idleberg/NSIS-Sublime-Text-Addons/releases)
+1. Download the latest [stable release](https://github.com/idleberg/sublime-nsis-plugins/releases)
 2. Unzip the archive to your Sublime Text `Packages` directory
 
 ## Usage
 
-As of [version 3.0](https://github.com/idleberg/NSIS-Sublime-Text-Addons/releases), command completion is case-sensitive to reduce accidental triggering. However, to make triggers more predictable, plug-ins and headers starting with the prefix `ns` are lowercase, those starting `nsis` capitalized.
+As of [version 3.0](https://github.com/idleberg/sublime-nsis-plugins/releases), command completion is case-sensitive to reduce accidental triggering. However, to make triggers more predictable, plug-ins and headers starting with the prefix `ns` are lowercase, those starting `nsis` capitalized.
 
 ## License
 
@@ -222,4 +222,4 @@ This work is licensed under the [The MIT License](LICENSE).
 
 ## Donate
 
-You are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/NSIS-Sublime-Text-Addons) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
+You are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/sublime-nsis-plugins) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
