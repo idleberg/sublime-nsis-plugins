@@ -1,7 +1,7 @@
 <!-- http://github.com/idleberg/sublime-tinkertools -->
 <snippet>
   <content><![CDATA[
-InetBgDL::Get "${1:url}" "local_file1" /END
+InetBgDL::Get "${1:url}" "${2:local_file1}" /END
 ]]></content>
   <tabTrigger>InetBgDL::Get</tabTrigger>
   <scope>source.nsis</scope>
