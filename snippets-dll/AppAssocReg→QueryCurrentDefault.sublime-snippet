@@ -1,7 +1,7 @@
 <!-- http://github.com/idleberg/sublime-tinkertools -->
 <snippet>
   <content><![CDATA[
-AppAssocReg::QueryCurrentDefault "${1:assoc_name}" "${2:type}" "${1:level}"
+AppAssocReg::QueryCurrentDefault "${1:assoc_name}" "${2:type}" "${3:level}"
 ]]></content>
   <tabTrigger>AppAssocReg::QueryCurrentDefault</tabTrigger>
   <scope>source.nsis</scope>
