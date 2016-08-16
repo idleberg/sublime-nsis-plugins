@@ -1,8 +1,8 @@
 <!-- http://github.com/idleberg/sublime-tinkertools -->
 <snippet>
   <content><![CDATA[
-Dumpstate::debug
+DumpState::debug
 ]]></content>
-  <tabTrigger>Dumpstate::debug</tabTrigger>
+  <tabTrigger>DumpState::debug</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>
