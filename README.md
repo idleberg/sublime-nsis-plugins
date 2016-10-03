@@ -4,7 +4,7 @@
 [![Package Control](https://packagecontrol.herokuapp.com/downloads/NSIS%20Plug-in%20Completions.svg?style=flat-square)](https://packagecontrol.io/packages/NSIS%20Plug-in%20Completions)
 [![GitHub release](https://img.shields.io/github/release/idleberg/sublime-nsis-plugins.svg?style=flat-square)](https://github.com/idleberg/sublime-nsis-plugins/releases)
 [![Travis](https://img.shields.io/travis/idleberg/sublime-nsis-plugins.svg?style=flat-square)](https://travis-ci.org/idleberg/sublime-nsis-plugins)
-[![Gitter](https://img.shields.io/badge/chat-Gitter-ff69b4.svg?style=flat-square)](https://gitter.im/NSIS-Dev/SublimeText)
+[![Gitter](https://img.shields.io/badge/chat-Gitter-ed1965.svg?style=flat-square)](https://gitter.im/NSIS-Dev/SublimeText)
 
 [NSIS](http://nsis.sourceforge.net/) syntax completions for [Sublime Text](http://www.sublimetext.com/), extending the [basic package](https://github.com/idleberg/sublime-nsis/) with commands for third-party plug-ins.
 
