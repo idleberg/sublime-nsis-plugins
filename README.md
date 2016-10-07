@@ -13,6 +13,7 @@
 *Screenshot of NSIS file in Sublime Text*
 
 ### Supported plugins
+
 * [AccessControl](http://nsis.sourceforge.net/AccessControl_plug-in)
 * [Aero](http://nsis.sourceforge.net/Aero_plug-in)
 * [Animate](http://nsis.sourceforge.net/Animate_plug-in)
@@ -117,8 +118,7 @@
 * [nsisStartMenu](http://nsis.sourceforge.net/NsisStartMenu_plug-in)
 * [nsisunz](http://nsis.sourceforge.net/Nsisunz_plug-in)
 * [NsisUrlLib](http://nsis.sourceforge.net/NsisUrlLib_plug-in)
-* [nsisXML (by Joel)](http://nsis.sourceforge.net/NsisXML_plug-in_\(by_Joel\))
-* [nsisXML (by Wizou)](http://nsis.sourceforge.net/NsisXML_plug-in_\(by_Wizou\))
+* [nsisXML (by Wizou)](http://nsis.sourceforge.net/NsisXML_plug-in_(by_Wizou))
 * [nsJSON](http://nsis.sourceforge.net/NsJSON_plug-in)
 * [nsKeyHook](http://nsis.sourceforge.net/NsKeyHook_plug-in)
 * [NsMCI](http://nsis.sourceforge.net/NsMCI_plug-in)
@@ -135,7 +135,7 @@
 * [nsUnzip](http://nsis.sourceforge.net/NsUnzip_plugin)
 * [nsVersionInfo](http://nsis.sourceforge.net/NsVersionInfo_plugin)
 * [nsWeb](http://nsis.sourceforge.net/NsWeb_plug-in)
-* [nsXML](http://nsis.sourceforge.net/NsXML_plug-in_\(by_rsegal\))
+* [nsXML](http://nsis.sourceforge.net/NsXML_plug-in_(by_rsegal))
 * [Nwiz](http://nsis.sourceforge.net/Nwiz_plug-in)
 * [PassDialog](http://nsis.sourceforge.net/PassDialog_plug-in)
 * [Perl](http://nsis.sourceforge.net/Perl_plugin)
