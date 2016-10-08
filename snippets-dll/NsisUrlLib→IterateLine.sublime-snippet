@@ -1,8 +1,8 @@
 <!-- http://github.com/idleberg/sublime-tinkertools -->
 <snippet>
   <content><![CDATA[
-NsisIIS::IterateChunk /NOUNLOAD "${1:url}"
+NsisIIS::NsisUrlLib /NOUNLOAD "${1:url}"
 ]]></content>
-  <tabTrigger>NsisIIS::IterateChunk</tabTrigger>
+  <tabTrigger>NsisUrlLib::IterateLine</tabTrigger>
   <scope>source.nsis</scope>
 </snippet>
