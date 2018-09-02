@@ -1,0 +1,7 @@
+<!-- Generated with Atomizr - https://github.com/idleberg/sublime-atomizr -->
+<snippet>
+  <content><![CDATA[EnvVar::AddValue ${1:variable} "${2:path}"]]></content>
+  <tabTrigger>EnvVar::AddValue</tabTrigger>
+  <scope>source.nsis</scope>
+  <description>Usage: EnvVar::AddValue variable_name path</description>
+</snippet>

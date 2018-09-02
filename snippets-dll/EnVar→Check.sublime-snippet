@@ -1,0 +1,7 @@
+<!-- Generated with Atomizr - https://github.com/idleberg/sublime-atomizr -->
+<snippet>
+  <content><![CDATA[EnvVar::Check ${1:variable} "${2:path}"]]></content>
+  <tabTrigger>EnvVar::Check</tabTrigger>
+  <scope>source.nsis</scope>
+  <description>Usage: EnvVar::Check variable_name path</description>
+</snippet>

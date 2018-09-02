@@ -1,0 +1,7 @@
+<!-- Generated with Atomizr - https://github.com/idleberg/sublime-atomizr -->
+<snippet>
+  <content><![CDATA[EnvVar::Delete ${1:variable}]]></content>
+  <tabTrigger>EnvVar::Delete</tabTrigger>
+  <scope>source.nsis</scope>
+  <description>Usage: EnvVar::Delete variable_name</description>
+</snippet>
